@@ -12,6 +12,9 @@ simplytest_dependencies[] = jquery_update
 stylesheets[all][] = css/style.css
 
 
+scripts[] = js/jquery.overlay.min.js
+scripts[] = js/js.js
+
 ;;;;;;;;;;;;;;;;;;;;;
 ;; Regions
 ;;;;;;;;;;;;;;;;;;;;;
