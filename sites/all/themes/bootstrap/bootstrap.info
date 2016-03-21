@@ -17,11 +17,9 @@ stylesheets[all][] = css/style.css
 
 regions[navigation]     = 'Navigation'
 regions[header]         = 'Top Bar'
-regions[highlighted]    = 'Highlighted'
+regions[home-block]    = 'Home block'
 regions[help]           = 'Help'
 regions[content]        = 'Content'
-regions[sidebar_first]  = 'Primary'
-regions[sidebar_second] = 'Secondary'
 regions[footer]         = 'Footer'
 regions[footer-bottom]  = 'Footer-bottom'
 regions[page_top]       = 'Page top'
