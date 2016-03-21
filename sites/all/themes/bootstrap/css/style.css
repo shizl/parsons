@@ -2,7 +2,8 @@ nav{
 overflow:hidden;
 }
 #navbar{
-max-width:100%;
+max-width:1400px;
+width:100%;
 border: none;
 background:none;
 }
@@ -19,7 +20,7 @@ font-size: 16px;
 margin:22.5px -15px 0px 10px;
 float:left;
 }
-h2.block-title{
+#block-lang-dropdown-language h2.block-title{
 display:none;
 }
 #lang_dropdown_form_language{
@@ -29,7 +30,7 @@ width:100%;
 width:84px !important;
 padding:0px;
 border: none;
-    box-shadow: none;
+box-shadow: none;
 }
 .region-navigation{
 width:84px;
