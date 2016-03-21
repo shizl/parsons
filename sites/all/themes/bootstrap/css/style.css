@@ -89,6 +89,8 @@ max-width:1400px;
 width:100%;
 border: none;
 background:none;
+padding-left:30px;
+padding-right:30px;
 }
 .navbar-default .navbar-nav > li > a{
 background:none !important;
