@@ -118,9 +118,8 @@ background:none;
 }
 .region-navigation{
 width:79px;
-float:right;
+float:left;
 margin-top: 28px;
-margin-right:30%;
 background:transparent url("../images/kaka.png") no-repeat left center;
 padding-left: 9px;
 }
