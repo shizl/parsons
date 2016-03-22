@@ -1,0 +1,34 @@
+.col-sm-12 .page-header{
+display:none;
+}
+#node-89 .submitted span{
+display:none;
+}
+#block-webform-client-block-105{
+width:48%;
+float:left;
+margin-left:20px;
+}
+#block-block-3{
+width:48%;
+float:left;
+margin-left:20px;
+}
+#block-block-4{
+clear:both;
+}
+#block-webform-client-block-105 h2{
+font-size:20px;
+}
+#edit-submitted-company{
+width:100%;
+background:none;
+height:34px;
+border:1px solid #ccc;
+}
+#edit-submitted-company:focus{
+}
+#webform-client-form-105 input,
+#webform-client-form-105 textarea{
+border-radius:0px;
+}

@@ -2,6 +2,7 @@ name = Parsons
 description = Built to use Bootstrap, a sleek, intuitive, and powerful front-end framework for faster and easier web development.
 core = 7.x
 stylesheets[all][] = css/style.css
+stylesheets[all][] = css/contact.css
 ;;;;;;;;;;;;;;;;;;;;;
 ;; SimplyTest.me
 ;;;;;;;;;;;;;;;;;;;;;
