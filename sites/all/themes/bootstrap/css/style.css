@@ -81,7 +81,7 @@ height:auto;
 margin-top:70px;
 margin-bottom:45px;
 }
-nav{
+.navbar-collapse nav{
 overflow:hidden;
 }
 #navbar{
@@ -89,6 +89,8 @@ max-width:1400px;
 width:100%;
 border: none;
 background:none;
+padding-left:30px;
+padding-right:30px;
 }
 .navbar-default .navbar-nav > li > a{
 background:none !important;
@@ -106,20 +108,24 @@ float:left;
 #block-lang-dropdown-language h2.block-title{
 display:none;
 }
-#lang_dropdown_form_language{
-width:100%;
-}
 #lang-dropdown-select-language{
-width:84px !important;
+width:79px !important;
 padding:0px;
 border: none;
 box-shadow: none;
+background:none;
+-webkit-appearance: none;
 }
 .region-navigation{
-width:84px;
+width:79px;
 float:left;
-margin-top: 30px;
-margin-left: 15%;
+margin-top: 28px;
+background:transparent url("../images/kaka.png") no-repeat left center;
+padding-left: 9px;
+}
+.container .navbar-collapse{
+width:45%;
+float:left;
 }
 
 .container{
@@ -143,15 +149,58 @@ z-index:1111;
 
 }
 
-@media only screen and (min-width:320px) and (max-width:767px){
+@media only screen and (min-width:320px) and (max-width:353px){
 .region-navigation{
-margin:0px;
-float:left;
-margin-left:21px;
-width:98%;
-border-bottom:none;
+margin-top: 0px;
+margin-right: 0px;
+position:absolute;
+top:50px;
+}
+.container .navbar-collapse{
+width:100%;
+margin-top:20px;
+}
+.navbar-header{
+width:100%;
+}
+.navbar-btn{
+width:77%;
+}
+.navbar-btn img{
+width:100%;
+}
+.navbar-toggle{
+margin-top: 14px;
+margin-right:0px;
 }
 }
+@media only screen and (min-width:354px) and (max-width:767px){
+.region-navigation{
+margin-top: 0px;
+margin-right: 0px;
+position:absolute;
+top:60px;
+}
+.container .navbar-collapse{
+width:100%;
+margin-top:20px;
+}
+.navbar-toggle{
+margin-top:20px;
+}
+}
+@media only screen and (min-width:768px) and (max-width:1251px){
+.container .navbar-collapse{
+width:66%;
+}
+.region-navigation{
+clear:both;
+position:absolute;
+bottom:-19px;
+left:35px;
+}
+}
+
 #block-block-1 .share .jiathis_style .jtico{
 
 background:none !important;
@@ -163,7 +212,6 @@ padding-left:0px !important;
 margin:0px !important;
 }
 #block-block-1 .share img{
-
 width:36px;
 height:36px;
 }
