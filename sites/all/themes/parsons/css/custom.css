@@ -1,0 +1,52 @@
+@media (max-width:1400px){
+
+#header div.section,
+#messages div.section,
+#main,
+#footer-wrapper div.section {
+ width: 1200px;
+ margin:0 auto;
+}
+}
+
+@media (max-width:1200px){
+#header div.section,
+#messages div.section,
+#main,
+#footer-wrapper div.section {
+ width: 960px;
+ margin:0 auto;
+}
+}
+@media (max-width:960px){
+
+#header div.section,
+#messages div.section,
+#main,
+#footer-wrapper div.section {
+ width: 95%;
+}
+
+}
+@media (max-width:640px){
+
+#header div.section,
+#messages div.section,
+#main,
+#footer-wrapper div.section {
+ width: 90%;
+}
+
+}
+
+@media (max-width:480px){
+
+#header div.section,
+#messages div.section,
+#main,
+#footer-wrapper div.section {
+ width: 100%;
+}
+
+
+}
