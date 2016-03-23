@@ -89,7 +89,7 @@ max-width:1400px;
 width:100%;
 border: none;
 background:none;
-padding-left:30px;
+padding-left:40px;
 padding-right:30px;
 }
 .navbar-default .navbar-nav > li > a{
@@ -102,7 +102,7 @@ background:none;
 font-size: 16px;
 }
 .navbar-nav{
-margin:22.5px -15px 0px 10px;
+margin:22.5px -15px 0px 0px;
 float:left;
 }
 #block-lang-dropdown-language h2.block-title{
@@ -122,10 +122,10 @@ width:79px;
 float:left;
 margin-top: 28px;
 background:transparent url("../images/kaka.png") no-repeat left center;
-padding-left: 9px;
+padding-left: 11px;
 }
 .container .navbar-collapse{
-width:45%;
+width:48%;
 float:left;
 }
 
@@ -198,7 +198,7 @@ width:66%;
 clear:both;
 position:absolute;
 bottom:-19px;
-left:35px;
+left:40px;
 }
 }
 
