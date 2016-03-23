@@ -74,6 +74,16 @@ color:#333;
 overflow:hidden;
 position:relative;
 }
+#webform-client-form-105 .reload-captcha-wrapper{
+    position: absolute;
+    left: 22%;
+    bottom: 8.5%;
+ }
+#webform-client-form-105 .reload-captcha{
+   background:url("../images/re.png") no-repeat;
+    display:block;
+    text-indent: -20cm;
+}
 @media only screen and (min-width:320px) and (max-width:479px){
 #block-webform-client-block-105{
 width:100%;
