@@ -56,7 +56,21 @@
         <?php print render($tabs); ?>
       <?php endif; ?>
 
+      <?php if ($page['content-banner']) : ?>
+        <?php print render($page['content-banner']);?>
+      <?php endif; ?>
+
+      <?php if ($page['content-middle']) : ?>
+        <?php print render($page['content-middle']);?>
+      <?php endif; ?>
+
+      <?php if ($page['content-bottom']) : ?>
+        <?php print render($page['content-bottom']);?>
+      <?php endif; ?>
+
+      <?php if($page['content']): ?>
       <?php print render($page['content']); ?>
+      <?php endif;  ?>
     </section>
 
   </div>
