@@ -153,10 +153,12 @@ z-index:1111;
 .region-navigation{
 margin-top: 0px;
 margin-right: 0px;
-float:none;
+position:absolute;
+top:50px;
 }
 .container .navbar-collapse{
 width:100%;
+margin-top:20px;
 }
 .navbar-header{
 width:100%;
@@ -176,10 +178,12 @@ margin-right:0px;
 .region-navigation{
 margin-top: 0px;
 margin-right: 0px;
-float:none;
+position:absolute;
+top:60px;
 }
 .container .navbar-collapse{
 width:100%;
+margin-top:20px;
 }
 .navbar-toggle{
 margin-top:20px;
