@@ -1,3 +1,6 @@
+.page-node-89 #block-system-main{
+margin-bottom:40px;
+}
 .col-sm-12 .page-header{
 display:none;
 }
@@ -18,10 +21,13 @@ overflow: auto;
 }
 #block-block-4{
 clear:both;
-width:48%;
+width:40%;
 position:absolute;
-bottom: 7%;
+bottom:4%;
 left: 51%;
+border:1px solid #ccc;
+border-radius:4px;
+padding:15px;
 }
 #block-webform-client-block-105 h2{
 font-size:20px;
@@ -76,13 +82,17 @@ position:relative;
 }
 #webform-client-form-105 .reload-captcha-wrapper{
     position: absolute;
-    left: 22%;
-    bottom: 8.5%;
+    left: 43%;
+    top: 7px;
+    width:25px;
  }
 #webform-client-form-105 .reload-captcha{
    background:url("../images/re.png") no-repeat;
     display:block;
     text-indent: -20cm;
+}
+#webform-client-form-105 .captcha{
+position:relative;
 }
 @media only screen and (min-width:320px) and (max-width:479px){
 #block-webform-client-block-105{
@@ -110,6 +120,9 @@ width:100%;
 float:left;
 position:static;
 margin-top: 20px;
+}
+#webform-client-form-105 .reload-captcha-wrapper{
+left: 78%;
 }
 }
 @media only screen and (min-width:480px) and (max-width:639px){
@@ -139,6 +152,9 @@ float:left;
 position:static;
 margin-top: 20px;
 }
+#webform-client-form-105 .reload-captcha-wrapper{
+left: 67%;
+}
 }
 @media only screen and (min-width:640px) and (max-width:960px){
 #block-webform-client-block-105{
@@ -167,6 +183,9 @@ float:left;
 position:static;
 margin-top: 20px;
 }
+#webform-client-form-105 .reload-captcha-wrapper{
+left: 60%;
+}
 }
 @media only screen and (min-width:961px) and (max-width:1295px){
 #webform-client-form-105 #edit-captcha-response{
@@ -181,5 +200,8 @@ bottom: 8%;
 #webform-client-form-105 .form-actions button{
 padding: 6px 58px;
 width: 35%;
+}
+#webform-client-form-105 .reload-captcha-wrapper{
+left: 65%;
 }
 }
