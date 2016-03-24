@@ -18,6 +18,8 @@ regions[content]        = 'Content'
 regions[footer]         = 'Footer'
 regions[footer-bottom]  = 'Footer-bottom'
 
+scripts[] = js/jquery.overlay.min.js
+scripts[] = js/js.js
 
 settings[shortcut_module_link] = 0
 

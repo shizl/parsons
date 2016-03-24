@@ -1,13 +1,4 @@
-@media (max-width:1400px){
 
-#header div.section,
-#messages div.section,
-#main,
-#footer-wrapper div.section {
- width: 1200px;
- margin:0 auto;
-}
-}
 
 @media (max-width:1200px){
 #header div.section,
