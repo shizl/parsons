@@ -455,10 +455,6 @@ h1#site-name {
 }
 
 /* --------------- Main Menu ------------ */
-
-#main-menu {
-  clear: both;
-}
 #main-menu-links {
   font-size: 0.929em;
   margin: 0;
@@ -1960,4 +1956,30 @@ min-height:155px;
 padding-left:0px;
 margin-top: 20px;
 }
+}
+#block-lang-dropdown-language h2{
+display:none;
+}
+#main-menu{
+width:45%;
+float:left;
+margin-top: 25px;
+}
+#header .region-page-top{
+width:84px;
+float:left;
+margin-top: 22px;
+}
+#main-menu-links li a{
+font-size:16px;
+}
+#lang-dropdown-select-language{
+background:none;
+-webkit-appearance:none;
+-moz-appearance:none;
+background:url("../images/xia.png") no-repeat left center;
+padding-left:12px;
+}
+#header .section{
+width:100% !important;
 }

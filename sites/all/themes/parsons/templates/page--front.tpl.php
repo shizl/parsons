@@ -8,9 +8,7 @@
       </a>
     <?php endif; ?>
 
-    <?php if ($page['page-top']): ?>
-    <?php print render($page['page-top']); ?>
-    <?php endif; ?>
+  
 
     <?php if ($main_menu): ?>
       <div id="main-menu" class="navigation">
@@ -28,7 +26,9 @@
         )); ?>
       </div> <!-- /#main-menu -->
     <?php endif; ?>
-
+  <?php if ($page['page-top']): ?>
+    <?php print render($page['page-top']); ?>
+    <?php endif; ?>
   </div></div> <!-- /.section, /#header -->
 
 
