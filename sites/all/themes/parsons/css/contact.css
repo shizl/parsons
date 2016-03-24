@@ -18,10 +18,18 @@ overflow: auto;
 }
 #block-block-4{
 clear:both;
-width:48%;
+width:37.5%;
 position:absolute;
 bottom: 7%;
 left: 51%;
+border:1px solid #ccc;
+padding:15px;
+}
+#block-block-4 .content{
+margin:0px;
+}
+#block-block-4 .content p{
+margin:0px;
 }
 #block-webform-client-block-105 h2{
 font-size:20px;
@@ -48,16 +56,8 @@ margin-right:59%;
 border:1px solid #ccc;
 }
 #webform-client-form-105 #edit-captcha-response{
-width:25%;
+width:100%;
 float:left;
-}
-#webform-client-form-105 .form-actions button{
-border-radius:0px;
-background:#c3c3c3;
-padding: 10px 61px;
-margin-top: 15px;
-color:white;
-font-size:18px;
 }
 .company-header{
 border-bottom:1px solid #ccc;
@@ -76,13 +76,66 @@ position:relative;
 }
 #webform-client-form-105 .reload-captcha-wrapper{
     position: absolute;
-    left: 22%;
-    bottom: 8.5%;
+    left: 41%;
+    top: 19%;
  }
 #webform-client-form-105 .reload-captcha{
    background:url("../images/re.png") no-repeat;
     display:block;
     text-indent: -20cm;
+}
+.page-node-89 #main{
+width:100% !important;
+}
+#webform-client-form-105 input{
+width:98.5%;
+height: 24px;
+}
+.company-detail img{
+vertical-align:middle;
+}
+.company-header p{
+margin:0px;
+margin-bottom:5px;
+}
+.company-footer p{
+margin:0px;
+}
+#webform-client-form-105 .captcha{
+overflow:hidden;
+position:relative;
+}
+#webform-client-form-105 .form-item-captcha-response{
+width:25%;
+}
+#webform-client-form-105 .captcha img{
+float:right;
+width:80px;
+height:32px;
+border: 1px solid #ccc;
+margin-right: 60%;
+margin-top:4px;
+}
+#webform-client-form-105 .form-item label{
+display:none;
+}
+#webform-client-form-105 .form-item .description{
+display:none;
+}
+#webform-client-form-105 .form-actions input{
+width: 26.5%;
+border:none;
+background:#c3c3c3;
+color:white;
+height:auto;
+font-size: 20px;
+padding:10px;
+}
+#webform-client-form-105 .form-actions{
+padding:0px;
+}
+#block-block-4 p img{
+vertical-align:middle;
 }
 @media only screen and (min-width:320px) and (max-width:479px){
 #block-webform-client-block-105{
