@@ -465,10 +465,6 @@ h1#site-name {
 }
 
 /* --------------- Main Menu ------------ */
-
-#main-menu {
-  clear: both;
-}
 #main-menu-links {
   font-size: 0.929em;
   margin: 0;
@@ -1741,6 +1737,7 @@ margin-left:21px;
 width:98%;
 border-bottom:none;
 }
+
 }
 #block-block-1 .share .jiathis_style .jtico{
 
@@ -1874,5 +1871,90 @@ min-height:155px;
 
 padding-left:0px;
 margin-top: 20px;
+}
+}
+#block-lang-dropdown-language h2{
+display:none;
+}
+#main-menu{
+width:45%;
+float:left;
+margin-top: 25px;
+}
+#header .region-page-top{
+width:84px;
+float:left;
+margin-top: 22px;
+}
+#main-menu-links li a{
+font-size:16px;
+}
+#lang-dropdown-select-language{
+background:none;
+-webkit-appearance:none;
+-moz-appearance:none;
+background:url("../images/xia.png") no-repeat left center;
+padding-left:12px;
+}
+#header .section{
+width:100% !important;
+max-width:1400px;
+}
+#logo img{
+width:100%;
+}
+#block-block-6{
+position:absolute;
+right: 0;
+top:20px;
+display:none;
+}
+@media only screen and (min-width:320px) and (max-width:640px){
+
+#main-menu{
+width:100% !important;
+border-top:1px solid #ccc;
+}
+#main-menu li{
+width:100%;
+}
+#block-lang-dropdown-language{
+position:absolute;
+margin: 0px;
+top: 72px;
+left: 15px;
+}
+}
+@media only screen and (min-width:641px) and (max-width:960px){
+#logo{
+width:19%;
+}
+#header .region-page-top{
+margin-top:8px;
+}
+#lang-dropdown-select-language{
+font-size:12px;
+}
+#main-menu{
+margin-top: 16px;
+}
+#main-menu ul li a{
+font-size:12px;
+padding: 0px 0.5em;
+}
+#main-menu-links{
+padding:0px;
+}
+}
+@media only screen and (min-width:961px) and (max-width:1030px){
+#logo{
+width:19% !important;
+}
+#main-menu{
+width:50%;
+margin-top: 18px;
+}
+#header .region-page-top{
+margin-top: 16px;
 }
 }

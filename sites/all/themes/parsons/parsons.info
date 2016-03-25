@@ -11,7 +11,7 @@ stylesheets[all][] = css/style.css
 stylesheets[all][] = css/custom.css
 
 stylesheets[print][] = css/print.css
-
+scripts[] = js/menu-new.js
 regions[page-top]     = 'Page top'
 regions[home-block]    = 'Home block'
 regions[content-banner]     = 'Content banner'
