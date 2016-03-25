@@ -1905,12 +1905,11 @@ width:100%;
 }
 #block-block-6{
 position:absolute;
-right: 0;
-top:20px;
+left: 20px;
+top: 73px;
 display:none;
 }
 @media only screen and (min-width:320px) and (max-width:640px){
-
 #main-menu{
 width:100% !important;
 border-top:1px solid #ccc;
@@ -1922,12 +1921,17 @@ width:100%;
 position:absolute;
 margin: 0px;
 top: 72px;
-left: 15px;
+right: 15px;
 }
 #header .region-page-top{
-margin-top:105px;
+clear:both;
+float:none;
+margin:0px;
+height: auto;
+min-height: 17px;
 }
 }
+
 @media only screen and (min-width:641px) and (max-width:960px){
 #logo{
 width:19%;
