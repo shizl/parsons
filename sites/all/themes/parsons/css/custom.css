@@ -37,6 +37,12 @@
  width: 90%;
 }
 
+#block-block-6{
+display:block;
+}
+#main-menu{
+display:none;
+}
 }
 
 @media (max-width:480px){
