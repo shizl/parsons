@@ -78,6 +78,7 @@ position:relative;
     position: absolute;
     left: 41%;
     top: 19%;
+    width:21px;
  }
 #webform-client-form-105 .reload-captcha{
    background:url("../images/re.png") no-repeat;
@@ -138,6 +139,9 @@ padding:0px;
 vertical-align:middle;
 }
 @media only screen and (min-width:320px) and (max-width:479px){
+#webform-client-form-105 .form-item-captcha-response{
+width:33%;
+}
 #block-webform-client-block-105{
 width:100%;
 margin-left:0px;
@@ -146,7 +150,7 @@ margin-left:0px;
 margin-right:24%;
 }
 #webform-client-form-105 #edit-captcha-response{
-width:43%;
+width:100%;
 }
 #webform-client-form-105 .form-actions button{
 padding: 5px 44px;
@@ -163,18 +167,31 @@ width:100%;
 float:left;
 position:static;
 margin-top: 20px;
+}
+#webform-client-form-105 .form-actions input{
+padding:3px;
+width:36%;
+}
+#webform-client-form-105 .captcha img{
+margin-right:36%;
+}
+#webform-client-form-105 .reload-captcha-wrapper{
+left: 67%;
 }
 }
 @media only screen and (min-width:480px) and (max-width:639px){
+#webform-client-form-105 .form-item-captcha-response{
+width:33%;
+}
 #block-webform-client-block-105{
 width:100%;
 margin-left:0px;
 }
 #webform-client-form-105 .img-responsive{
-margin-right:35%;
+margin-right:24%;
 }
 #webform-client-form-105 #edit-captcha-response{
-width:43%;
+width:100%;
 }
 #webform-client-form-105 .form-actions button{
 padding: 5px 44px;
@@ -191,18 +208,31 @@ width:100%;
 float:left;
 position:static;
 margin-top: 20px;
+}
+#webform-client-form-105 .form-actions input{
+padding:3px;
+width:35%;
+}
+#webform-client-form-105 .captcha img{
+margin-right:46%;
+}
+#webform-client-form-105 .reload-captcha-wrapper{
+left: 55%;
 }
 }
 @media only screen and (min-width:640px) and (max-width:960px){
+#webform-client-form-105 .form-item-captcha-response{
+width:33%;
+}
 #block-webform-client-block-105{
 width:100%;
 margin-left:0px;
 }
 #webform-client-form-105 .img-responsive{
-margin-right:41%;
+margin-right:24%;
 }
 #webform-client-form-105 #edit-captcha-response{
-width:43%;
+width:100%;
 }
 #webform-client-form-105 .form-actions button{
 padding: 5px 44px;
@@ -219,14 +249,36 @@ width:100%;
 float:left;
 position:static;
 margin-top: 20px;
+}
+#webform-client-form-105 .form-actions input{
+padding: 13px 3px;
+width: 34.5%;
+}
+#webform-client-form-105 .captcha img{
+margin-right:51%;
+}
+#webform-client-form-105 .reload-captcha-wrapper{
+left: 50%;
 }
 }
 @media only screen and (min-width:961px) and (max-width:1295px){
 #webform-client-form-105 #edit-captcha-response{
-width: 35%;
+width: 100%;
+}
+#webform-client-form-105 .form-item-captcha-response{
+width:25%;
 }
 #webform-client-form-105 .img-responsive{
 margin-right: 37%;
+}
+#webform-client-form-105 .captcha img{
+margin-right: 53%;
+}
+#webform-client-form-105 .reload-captcha-wrapper{
+left:50%;
+}
+#webform-client-form-105 .form-actions input{
+width:27%;
 }
 #block-block-4{
 bottom: 8%;
