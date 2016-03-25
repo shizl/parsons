@@ -1962,7 +1962,7 @@ margin-top: 20px;
 display:none;
 }
 #main-menu{
-width:45%;
+width:45.7%;
 float:left;
 margin-top: 25px;
 }
@@ -1970,6 +1970,7 @@ margin-top: 25px;
 width:84px;
 float:left;
 margin-top: 22px;
+margin-top: 105px;
 }
 #main-menu-links li a{
 font-size:16px;
@@ -1979,7 +1980,7 @@ background:none;
 -webkit-appearance:none;
 -moz-appearance:none;
 background:url("../images/xia.png") no-repeat left center;
-padding-left:12px;
+padding-left:15px;
 }
 #header .section{
 width:100% !important;
