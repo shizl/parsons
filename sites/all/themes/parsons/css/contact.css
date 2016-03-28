@@ -105,6 +105,9 @@ margin-bottom:5px;
 .company-footer p{
 margin:0px;
 }
+.company-footer p img{
+vertical-align:middle;
+}
 #webform-client-form-105 .captcha{
 overflow:hidden;
 position:relative;
@@ -140,6 +143,24 @@ padding:0px;
 }
 #block-block-4 p img{
 vertical-align:middle;
+}
+#block-block-11{
+display:none;
+clear:both;
+width:100%;
+}
+#block-block-11 #new_select{
+width:100%;
+border-radius:0px;
+background:none;
+border:1px solid #ccc;
+height:34px;
+}
+#block-block-11 p.new_add{
+margin:0px;
+}
+#block-block-11 #info_box{
+margin-top:10px;
 }
 @media only screen and (min-width:320px) and (max-width:479px){
 #webform-client-form-105 .form-item-captcha-response{

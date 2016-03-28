@@ -29,14 +29,18 @@
 
 }
 @media (max-width:640px){
-
 #header div.section,
 #messages div.section,
 #main,
 #footer-wrapper div.section {
  width: 90%;
 }
-
+#block-block-3{
+display:none;
+}
+#block-block-11{
+display:block;
+}
 }
 
 @media (max-width:480px){
