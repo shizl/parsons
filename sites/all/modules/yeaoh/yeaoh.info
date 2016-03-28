@@ -1,0 +1,13 @@
+name = yeaoh
+description = Allows to edit content with client-side editors.
+package = yeaoh Features
+core = 7.x
+
+
+
+; Information added by drupal.org packaging script on 2012-10-02
+version = "7.x-2.2"
+core = "7.x"
+project = "yeaoh"
+datestamp = "1349213776"
+
