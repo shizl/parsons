@@ -70,6 +70,11 @@ border-top:2px solid #ccc;
 box-shadow:none;
 background:none;
 }
+
+.flexslider .slides img{
+height:auto;
+}
+
 #block-views-banner-slider-block-1 .flex-control-nav{
 position: inherit;
 bottom: 10px;
@@ -79,17 +84,23 @@ margin-top: 90px !important;
 .flex-control-thumbs{
     z-index: 2;
     position: absolute;
-    bottom: 20px;
+    bottom: 0px;
 text-align:center;
+height:93px;
+background:rgba(0,0,0,0.5);
+
 }
 .flex-control-thumbs li{
 width:120px;
 margin-left:20px;
 float:none;
 display:inline-block;
+margin-top:20px;
+margin-bottom:15px;
 }
 .flex-control-thumbs li:hover{
 width:150px;
+border:1px solid #333;
 }
 .flex-control-paging li a{
 width:8px;
@@ -111,23 +122,23 @@ overflow:hidden;
 .product-middle .col-1{
 float:left;
 width:29%;
-height:350px;
+height:450px;
 margin-right:1%;
 }
 .product-middle .col-2{
 float:left;
 width:70%;
-height:350px;
+height:450px;
 }
 
 .product-middle .col-1 li{
-height:350px;
+height:450px;
 }
 
 .product-middle .col-2 li{
 float:left;
 width:48%;
-height:160px;
+height:210px;
 margin-left:2%;
 margin-bottom:15px;
 }
@@ -146,10 +157,167 @@ color:#fff;
 }
 .product-middle li img{
 width:100%;
-height:160px;
+height:210px;
 }
 .product-middle .col-1 li img{
-height:350px;
+height:450px;
+}
+.education-middle .row-1{
+clear:both;
+overflow:hidden;
+}
+.education-middle .row-1 .col-1{
+width:69%;
+float:left;
+height:480px;
+margin-right:1%;
+}
+.education-middle .row-1 .col-1 .row-11{
+height:265px;
+margin-bottom:15px;
+overflow:hidden;
+}
+.education-middle .row-1 .col-1 .row-11 li{
+height:265px;
+}
+
+.education-middle .row-1 .col-1 .row-22{
+height:200px;
+}
+.education-middle .row-1 .col-1 .row-22 li{
+width:50%;
+float:left;
+height:200px;
+}
+
+.education-middle .row-1 .col-2{
+width:30%;
+float:left;
+height:480px;
+}
+.education-middle .row-1 .col-2 li{
+height:480px;
+}
+.education-middle .row-2{
+ margin-top:15px;
+overflow:hidden;
+clear:both;
+}
+.education-middle .row-2 li{
+width:50%;
+float:left;
+height:280px;
+}
+
+
+.education-middle ul li{
+position: relative;
+}
+.education-middle ul li img{
+width:100%;
+height:100%;
+}
+.education-middle ul li p{
+    position: absolute;
+    bottom: 0px;
+    width: 100%;
+    background: rgba(0,0,0,0.4);
+    margin: 0px;
+    line-height: 40px;
+text-indent: 10px;
+color:#fff;
+}
+.manufacture-middle .col-1{
+width:31%;
+float:left;
+margin-right:1%;
+height:980px;
+}
+
+
+.manufacture-middle .col-2{
+width:33%;
+float:left;
+margin-right:1%;
+height:980px;
+}
+.manufacture-middle .col-3{
+width:34%;
+float:left;
+height:980px;
+}
+.manufacture-middle  li{
+position: relative;
+}
+.manufacture-middle  li img{
+width:100%;
+}
+.manufacture-middle ul li p{
+    position: absolute;
+    bottom: 0px;
+    width: 100%;
+    background: rgba(0,0,0,0.4);
+    margin: 0px;
+    line-height: 40px;
+text-indent: 10px;
+color:#fff;
+}
+.culture-middle .row-1{
+clear:both;
+overflow:hidden;
+height:400px;
+}
+.culture-middle .row-2{
+clear:both;
+overflow:hidden;
+height:220px;
+margin-top:15px;
+}
+.culture-middle .row-1 .col-1{
+width:38%;
+float:left;
+margin-right:1%;
+}
+.culture-middle .row-1 .col-2{
+width:30%;
+float:left;
+margin-right:1%;
+}
+.culture-middle .row-1 .col-3{
+width:30%;
+float:left;
+}
+
+.culture-middle .row-2 li{
+width:40%;
+float:left;
+margin-right:1%;
+}
+.culture-middle .row-2 li img{
+height:220px;
+}
+
+.culture-middle .row-2 li:last-child{
+width:59%;
+float:left;
+margin-right:0px;
+}
+.culture-middle li{
+position: relative;
+}
+.culture-middle li img{
+width:100%;
+}
+
+.culture-middle ul li p{
+    position: absolute;
+    bottom: 0px;
+    width: 100%;
+    background: rgba(0,0,0,0.4);
+    margin: 0px;
+    line-height: 40px;
+text-indent: 10px;
+color:#fff;
 }
 
 
