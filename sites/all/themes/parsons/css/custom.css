@@ -377,6 +377,42 @@ width:100%;
 text-indent: 10px;
 color:#fff;
 }
+
+.about-middle .col-1{
+ width:32%;
+float:left;
+margin-right:1%;
+}
+.about-middle .col-2{
+ width:34%;
+float:left;
+margin-right:1%;
+}
+
+.about-middle .col-3{
+ width:32%;
+float:left;
+}
+.about-middle li{
+position: relative;
+}
+
+.about-middle li img{
+width:100%;
+}
+
+.about-middle ul li p{
+    position: absolute;
+    bottom: 0px;
+    width: 100%;
+    background: rgba(0,0,0,0.4);
+    margin: 0px;
+    line-height: 40px;
+text-indent: 10px;
+color:#fff;
+}
+
+
 .region-content-banner{
 overflow: hidden;
 clear: both;
