@@ -441,7 +441,41 @@ location.href = ur.replace(ur.substr(ur.indexOf("pager="),10),"pager=1");
 
 }
 
-?>
+
+/**
+
+**hook_menu
+
+**/
+
+
+function yeaoh_menu(){
+
+   $items['morelink'] = array(
+     'page callback' => 'get_link_content',
+     'access callback' =>true,
+  );
+
+ return $items;
+}
+
+function get_link_content(){
+
+ $arr_content = array();
+
+ if(isset($_POST['nid'])){
+    $nid = $_POST['nid'];
+    $node = node_load(intval($nid));
+       if(!empty($node->body['und'][0]['value'])){
+	   $arr_content['body'] = $node->body['und'][0]['value'];
+       }else{
+	  $arr_content['body'] = '';
+	}
+    $arr_content['title'] = $node->title;  	
+  }
+	echo json_encode($arr_content);
+	exit;
+}
 
 
 

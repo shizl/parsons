@@ -106,6 +106,37 @@ jQuery('.home-video .video-content3').hide();
 
 });
 
+jQuery('.morelink').click(function(){
+
+   nid = jQuery(this).attr('data-id');
+   	jQuery.post("/morelink", {nid:nid},function(data){
+		jQuery('#more-link-content .content').html(data.body);
+		jQuery('#more-link-content .title').html(data.title);
+	 jQuery('body').overlay({
+		 //preventDefault();
+		  effect: 'fade',
+		  opacity: 0.6,
+		  closeOnClick:true, 
+		 onShow: function() {
+	     	jQuery('#more-link-content').show();
+		 },
+		onHide: function() {
+		 jQuery('#more-link-content').hide();
+		}, 
+		});
+
+	     },'json');
+
+});
+
+jQuery('#more-link-content .close').click(function(){
+
+jQuery("body .overlay").remove();
+jQuery('#more-link-content').hide();
+ jQuery("body").removeClass("overlay-trigger");
+ jQuery("body").css({"overflow":"inherit"});
+
+});
 
 
 });
