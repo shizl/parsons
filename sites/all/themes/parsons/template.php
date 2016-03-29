@@ -160,8 +160,7 @@ function parsons_pager($variables) {
   $element = $variables['element'];
   $parameters = $variables['parameters'];
   $quantity = $variables['quantity'];
-  global $pager_page_array, $pager_total;
-  global 
+  global $pager_page_array, $pager_total,$pager_total_items;
   // Calculate various markers within this pager piece:
   // Middle is used to "center" pages around the current page.
   $pager_middle = ceil($quantity / 2);
