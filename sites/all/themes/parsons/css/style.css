@@ -1863,9 +1863,9 @@ padding-top: 10px;
 
 display:none;
 padding-top: 5px;
-    padding-bottom: 5px;
-    border-top: solid 1px #E8E8E8;
-    border-bottom: solid 1px #E8E8E8;
+    padding-bottom: 15px;
+
+    border-bottom: solid 2px #C7C7C7;
 }
 .region-footer .block h2 a{
 
@@ -2059,7 +2059,9 @@ top:20px;
 display:none;
 }
 @media only screen and (min-width:320px) and (max-width:640px){
-
+.section{
+width:100% !important;
+}
 #main-menu{
 width:100% !important;
 border-top:1px solid #ccc;
