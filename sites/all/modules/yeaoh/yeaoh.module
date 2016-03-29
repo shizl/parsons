@@ -1,0 +1,448 @@
+<?php
+function yeaoh_block_info() {
+  $blocks = array();
+  $blocks['YOUR_BLOCK_ABC'] = array(
+    'info' => t('product-images-block'),
+  );
+  return $blocks;
+}
+
+function yeaoh_block_view() {
+
+
+$block['content'] = array(
+  '#markup' => mycontent(),
+);
+
+return $block;
+}
+
+function mycontent(){
+
+$nid = arg(1);
+$gallery = "";
+ $r = 0;
+$node = node_load($nid);
+
+ if(isset($_GET['brand'])){
+
+	if($_GET['brand']=='hongkongbs'){
+	$category_id = 1;
+	}elseif($_GET['brand']=='chinabs'){
+	$category_id = 2;		
+	}else{
+	$category_id = 0;
+	}
+  }else{
+	$category_id = 0;
+  }
+
+if(isset($_GET['pager'])){
+
+
+}else{
+
+
+
+}
+
+ $collection_arr = array();
+   $collections = $node->field_product_collection['und'];
+   foreach($collections as $collection_id){
+    array_push($collection_arr,$collection_id['value']);
+   }
+
+
+if($category_id == 1){
+     $fileaccount = db_query("select count (field_image_fid) from {field_data_field_image} where bundle = 'field_product_collection' and entity_id = (select entity_id from {field_data_field_brand} where field_brand_value = :brand_value and entity_id in (:entity_id) ) limit 0,1",array(':brand_value'=>1,':entity_id'=>$collection_arr))->fetchField();
+$allpage = ceil (((int)$fileaccount)/16);
+$page = "";
+$pre = '';
+$next = '';
+if($allpage <=6){
+for($i=1; $i<=$allpage; $i++){
+$page .= '<a class=" page-item-'.$i.'" href="/'.drupal_get_path_alias('node/' . $node->nid).'/?brand=hongkongbs&pager='.$i.'"> '.$i.'</a>';
+}
+
+}else{
+   if(isset($_GET['pager']) && ($_GET['pager'] >3) && ($_GET['pager'] < $allpage)){
+
+    $page = '<a class=" page-item-1" href="/'.drupal_get_path_alias('node/' . $node->nid).'/?brand=hongkongbs&pager=1">1</a>
+         <p class="omit">....</p>
+        <a class=" page-item-'.((int)$_GET['pager']-1).'" href="/'.drupal_get_path_alias('node/' . $node->nid).'/?brand=hongkongbs&pager='.((int)$_GET['pager']-1).'"> '.((int)$_GET['pager']-1).'</a>
+
+        <a class=" page-item-'.$_GET['pager'].'" href="/'.drupal_get_path_alias('node/' . $node->nid).'/?brand=hongkongbs&pager='.$_GET['pager'].'"> '.$_GET['pager'].'</a>
+      <a class=" page-item-'.((int)$_GET['pager']+1).'" href="/'.drupal_get_path_alias('node/' . $node->nid).'/?brand=hongkongbs&pager='.((int)$_GET['pager']+1).'"> '.((int)$_GET['pager']+1).'</a>
+         <p class="omit">....</p>
+         <a class=" page-item-'.$allpage.'" href="/'.drupal_get_path_alias('node/' . $node->nid).'/?brand=hongkongbs&pager='.$allpage.'"> '.$allpage.'</a>
+';     
+
+
+}
+
+elseif (isset($_GET['pager']) && ($_GET['pager'] >3) && ($_GET['pager'] >= $allpage-2)){
+
+$page = ' <a class=" page-item-1" href="/'.drupal_get_path_alias('node/' . $node->nid).'/?brand=hongkongbs&pager=1">1</a>
+          <p class="omit"> ....</p>
+         <a class="  page-item-'.($allpage-3).'" href="/'.drupal_get_path_alias('node/' . $node->nid).'/?brand=hongkongbs&pager='.($allpage-3).'"> '.($allpage-3).'</a>
+         <a class="  page-item-'.($allpage-2).'" href="/'.drupal_get_path_alias('node/' . $node->nid).'/?brand=hongkongbs&pager='.($allpage-2).'"> '.($allpage-2).'</a>
+         <a class="  page-item-'.($allpage-1).'" href="/'.drupal_get_path_alias('node/' . $node->nid).'/?brand=hongkongbs&pager='.($allpage-1).'"> '.($allpage-1).'</a>
+         <a class="  page-item-'.$allpage.'" href="/'.drupal_get_path_alias('node/' . $node->nid).'/?brand=hongkongbs&pager='.$allpage.'"> '.$allpage.'</a>
+
+
+        ';
+
+}
+
+
+
+
+else{
+
+$page = '<a class=" page-item-1" href="/'.drupal_get_path_alias('node/' . $node->nid).'/?brand=hongkongbs&pager=1">1</a>
+         <a class=" page-item-2" href="/'.drupal_get_path_alias('node/' . $node->nid).'/?brand=hongkongbs&pager=2">2</a>
+         <a class=" page-item-3" href="/'.drupal_get_path_alias('node/' . $node->nid).'/?brand=hongkongbs&pager=3">3</a>
+         <p class="omit">....</p>
+         <a class="page-item-'.$allpage.'" href="/'.drupal_get_path_alias('node/' . $node->nid).'/?brand=hongkongbs&pager='.$allpage.'"> '.$allpage.'</a>
+';
+   }
+}
+
+ if( (isset($_GET['pager']) && $_GET['pager'] == $allpage) || $allpage == 1 ){
+
+      $next = '';
+ 
+   }else{
+      $next = '<a class="next" href="/'.drupal_get_path_alias('node/' . $node->nid).'/?brand=hongkongbs&pager='.((isset($_GET['pager'])?intval($_GET['pager']):1)+1).' ">下一页</a>';
+  }
+
+
+if( isset($_GET['pager']) && ($_GET['pager'] >= 2) ){
+
+      $pre = '<a class="pre" href="/'.drupal_get_path_alias('node/' . $node->nid).'/?brand=hongkongbs&pager='.((isset($_GET['pager'])?intval($_GET['pager']):1)-1).' ">上一页</a>';
+ 
+   }else{
+      $pre = '';
+  }
+
+
+
+     $file = db_query("select field_image_fid from {field_data_field_image} where bundle = 'field_product_collection' and entity_id = (select entity_id from {field_data_field_brand} where field_brand_value = :brand_value and entity_id in (:entity_id) ) limit ".(((isset($_GET['pager'])?intval($_GET['pager']):1)-1) *16).",16",array(':brand_value'=>1,':entity_id'=>$collection_arr));
+  
+  }elseif($category_id == 2){
+
+
+     $fileaccount = db_query("select count (field_image_fid) from {field_data_field_image} where bundle = 'field_product_collection' and entity_id = (select entity_id from {field_data_field_brand} where field_brand_value = :brand_value and entity_id in (:entity_id) ) limit 0,1",array(':brand_value'=>2,':entity_id'=>$collection_arr))->fetchField();
+$allpage = ceil (((int)$fileaccount)/16);
+$page = "";
+$pre = '';
+$next = '';
+if($allpage <=6){
+for($i=1; $i<=$allpage; $i++){
+$page .= '<a class=" page-item-'.$i.'" href="/'.drupal_get_path_alias('node/' . $node->nid).'/?brand=chinabs&pager='.$i.'"> '.$i.'</a>';
+}
+
+}else{
+   if(isset($_GET['pager']) && ($_GET['pager'] >3) && ($_GET['pager'] < $allpage)){
+
+    $page = '<a class=" page-item-1" href="/'.drupal_get_path_alias('node/' . $node->nid).'/?brand=chinabs&pager=1">1</a>
+         <p class="omit">....</p>
+        <a class=" page-item-'.((int)$_GET['pager']-1).'" href="/'.drupal_get_path_alias('node/' . $node->nid).'/?brand=chinabs&pager='.((int)$_GET['pager']-1).'"> '.((int)$_GET['pager']-1).'</a>
+
+        <a class=" page-item-'.$_GET['pager'].'" href="/'.drupal_get_path_alias('node/' . $node->nid).'/?brand=chinabs&pager='.$_GET['pager'].'"> '.$_GET['pager'].'</a>
+       <a class=" page-item-'.((int)$_GET['pager']+1).'" href="/'.drupal_get_path_alias('node/' . $node->nid).'/?brand=chinabs&pager='.((int)$_GET['pager']+1).'"> '.((int)$_GET['pager']+1).'</a>
+         <p class="omit">....</p>
+         <a class=" page-item-'.$allpage.'" href="/'.drupal_get_path_alias('node/' . $node->nid).'/?brand=chinabs&pager='.$allpage.'"> '.$allpage.'</a>
+';     
+
+
+}
+ elseif (isset($_GET['pager']) && ($_GET['pager'] >3) && ($_GET['pager'] >= $allpage-2)){
+
+$page = ' <a class=" page-item-1" href="/'.drupal_get_path_alias('node/' . $node->nid).'/?brand=chinabs&pager=1">1</a>
+          <p class="omit"> ....</p>
+         <a class="  page-item-'.($allpage-3).'" href="/'.drupal_get_path_alias('node/' . $node->nid).'/?brand=chinabs&pager='.($allpage-3).'"> '.($allpage-3).'</a>
+         <a class="  page-item-'.($allpage-2).'" href="/'.drupal_get_path_alias('node/' . $node->nid).'/?brand=chinabs&pager='.($allpage-2).'"> '.($allpage-2).'</a>
+         <a class="  page-item-'.($allpage-1).'" href="/'.drupal_get_path_alias('node/' . $node->nid).'/?brand=chinabs&pager='.($allpage-1).'"> '.($allpage-1).'</a>
+         <a class="  page-item-'.$allpage.'" href="/'.drupal_get_path_alias('node/' . $node->nid).'/?brand=chinabs&pager='.$allpage.'"> '.$allpage.'</a>
+
+
+        ';
+
+}
+
+
+
+ else{
+
+$page = '<a class=" page-item-1" href="/'.drupal_get_path_alias('node/' . $node->nid).'/?brand=chinabs&pager=1">1</a>
+         <a class=" page-item-2" href="/'.drupal_get_path_alias('node/' . $node->nid).'/?brand=chinabs&pager=2">2</a>
+         <a class=" page-item-3" href="/'.drupal_get_path_alias('node/' . $node->nid).'/?brand=chinabs&pager=3">3</a>
+         <p class="omit">....</p>
+         <a class=" page-item-'.$allpage.'" href="/'.drupal_get_path_alias('node/' . $node->nid).'/?brand=chinabs&pager='.$allpage.'"> '.$allpage.'</a>
+';
+   }
+}
+
+ if( (isset($_GET['pager']) && $_GET['pager'] == $allpage) || $allpage == 1 ){
+
+      $next = '';
+ 
+   }else{
+      $next = '<a class="next" href="/'.drupal_get_path_alias('node/' . $node->nid).'/?brand=chinabs&pager='.((isset($_GET['pager'])?intval($_GET['pager']):1)+1).' ">下一页</a>';
+  }
+
+
+
+if( isset($_GET['pager']) && ($_GET['pager'] >= 2) ){
+
+     $pre = '<a class="pre" href="/'.drupal_get_path_alias('node/' . $node->nid).'/?brand=chinabs&pager='.((isset($_GET['pager'])?intval($_GET['pager']):1)-1).' ">上一页</a>';
+ 
+   }else{
+      $pre = '';
+  }
+
+
+
+     $file = db_query("select field_image_fid from {field_data_field_image} where bundle = 'field_product_collection' and entity_id = (select entity_id from {field_data_field_brand} where field_brand_value = :brand_value and entity_id in (:entity_id) ) limit ".(((isset($_GET['pager'])?intval($_GET['pager']):1)-1) *16).",16",array(':brand_value'=>2,':entity_id'=>$collection_arr));
+
+
+
+
+  }else{
+
+$fileaccount = db_query("select count(field_image_fid) from {field_data_field_image} where bundle = 'field_product_collection' and entity_id in (:entity_id) ",array(':entity_id'=>$collection_arr))->fetchField();
+
+$allpage = ceil (((int)$fileaccount)/16);
+$page = "";
+$next = "";
+$pre ="";
+
+if($allpage <=6){
+for($i=1; $i<=$allpage; $i++){
+$page .= '<a class="  page-item-'.$i.'" href="/'.drupal_get_path_alias('node/' . $node->nid).'/?brand=all&pager='.$i.'"> '.$i.'</a>';
+}
+
+}else{
+   if(isset($_GET['pager']) && ($_GET['pager'] >3) && ($_GET['pager'] < $allpage-2)){
+
+    $page = '<a class=" page-item-1" href="/'.drupal_get_path_alias('node/' . $node->nid).'/?brand=all&pager=1">1</a>
+        <p class="omit">....</p>
+        <a class=" page-item-'.((int)$_GET['pager']-1).'" href="/'.drupal_get_path_alias('node/' . $node->nid).'/?brand=all&pager='.((int)$_GET['pager']-1).'"> '.((int)$_GET['pager']-1).'</a>
+
+        <a class=" page-item-'.$_GET['pager'].'" href="/'.drupal_get_path_alias('node/' . $node->nid).'/?brand=all&pager='.$_GET['pager'].'"> '.$_GET['pager'].'</a>
+        
+         <a class=" page-item-'.((int)$_GET['pager']-1).'" href="/'.drupal_get_path_alias('node/' . $node->nid).'/?brand=all&pager='.((int)$_GET['pager']+1).'"> '.((int)$_GET['pager']+1).'</a>
+         <p class="omit">....</p>
+         <a class=" page-item-'.$allpage.'" href="/'.drupal_get_path_alias('node/' . $node->nid).'/?brand=all&pager='.$allpage.'"> '.$allpage.'</a>
+';     
+
+
+}
+
+ elseif (isset($_GET['pager']) && ($_GET['pager'] >3) && ($_GET['pager'] >= $allpage-2)){
+
+$page = ' <a class=" page-item-1" href="/'.drupal_get_path_alias('node/' . $node->nid).'/?brand=all&pager=1">1</a>
+          <p class="omit"> ....</p>
+         <a class="  page-item-'.($allpage-3).'" href="/'.drupal_get_path_alias('node/' . $node->nid).'/?brand=all&pager='.($allpage-3).'"> '.($allpage-3).'</a>
+         <a class="  page-item-'.($allpage-2).'" href="/'.drupal_get_path_alias('node/' . $node->nid).'/?brand=all&pager='.($allpage-2).'"> '.($allpage-2).'</a>
+         <a class="  page-item-'.($allpage-1).'" href="/'.drupal_get_path_alias('node/' . $node->nid).'/?brand=all&pager='.($allpage-1).'"> '.($allpage-1).'</a>
+         <a class="  page-item-'.$allpage.'" href="/'.drupal_get_path_alias('node/' . $node->nid).'/?brand=all&pager='.$allpage.'"> '.$allpage.'</a>
+
+
+        ';
+
+}else{
+
+$page = '<a class=" page-item-1" href="/'.drupal_get_path_alias('node/' . $node->nid).'/?brand=all&pager=1">1</a>
+         <a class=" page-item-2" href="/'.drupal_get_path_alias('node/' . $node->nid).'/?brand=all&pager=2">2</a>
+         <a class=" page-item-3" href="/'.drupal_get_path_alias('node/' . $node->nid).'/?brand=all&pager=3">3</a>
+         <a class=" page-item-4" href="/'.drupal_get_path_alias('node/' . $node->nid).'/?brand=all&pager=4">4</a>
+         <p class="omit"> ....</p>
+         <a class="  page-item-'.$allpage.'" href="/'.drupal_get_path_alias('node/' . $node->nid).'/?brand=all&pager='.$allpage.'"> '.$allpage.'</a>
+';
+   }
+}
+
+ if( (isset($_GET['pager']) && $_GET['pager'] == $allpage) || $allpage == 1){
+
+      $next = '';
+ 
+   }else{
+      $next = '<a class="next" href="/'.drupal_get_path_alias('node/' . $node->nid).'/?brand=all&pager='.((isset($_GET['pager'])?intval($_GET['pager']):1)+1).' ">下一页</a>';
+  }
+
+ if( isset($_GET['pager']) && ($_GET['pager'] >= 2) ){
+
+       $pre = '<a class="pre" href="/'.drupal_get_path_alias('node/' . $node->nid).'/?brand=all&pager='.((isset($_GET['pager'])?intval($_GET['pager']):1)-1).' ">上一页</a>';
+ 
+   }else{
+      $pre ='';
+  }
+
+
+
+ $file = db_query("select field_image_fid from {field_data_field_image} where bundle = 'field_product_collection' and entity_id in (:entity_id) limit ".(((isset($_GET['pager'])?intval($_GET['pager']):1)-1) *16).",16",array(':entity_id'=>$collection_arr));
+ }
+
+
+
+	foreach($file as $f){
+	  $fid = $f->field_image_fid;
+	  $files =  file_load($fid);
+	  $uri = $files->uri;
+	  $url = file_create_url($uri);
+          $gallery .= '<div class="item item-'.$r.'" data-ri= "'.$r.'"><img src="'.$url.'" /></div>';
+          
+		$r++;
+	}
+
+ $output = '
+<div class="brands-filter">
+<a class="all active" href="/'.drupal_get_path_alias('node/' . $node->nid).'/?brand=all">'.t('所有品牌').'</a>
+<a class="hongkongbs" href="/'.drupal_get_path_alias('node/' . $node->nid).'/?brand=hongkongbs">'.t('香港品牌').'</a>
+<a class="chinabs" href="/'.drupal_get_path_alias('node/' . $node->nid) .'/?brand=chinabs">'.t('大陆品牌').'</a>
+</div>
+
+<div class="brands-images">
+'.$gallery.'
+
+</div>
+<div class="pager">
+
+<div class="pre-page">'.$pre.'</div>
+<div class="page">'.$page.'</div>
+<div class="next-page">'.$next.'</div>
+<div class="all-page">共<span id="total">'.$allpage.'</span>页</div>
+<div class="tiaozhuan">
+<p>到第&nbsp;<input type="text" 　name="ye" />&nbsp;页</p>
+<a class="submit">确定</a>
+
+</div>
+</div>
+
+<script type="text/javascript">
+
+jQuery(document).ready(function(){
+
+var url = document.URL;
+var hongkong = new RegExp("hongkongbs");
+var china = new RegExp("chinabs");
+var all = new RegExp("all");
+if (hongkong.test(url)){
+
+jQuery(".brands-filter .hongkongbs ").addClass("active");
+jQuery(".brands-filter .all ").removeClass("active");
+jQuery(".brands-filter .chinabs ").removeClass("active");
+}
+if (china.test(url)){
+
+jQuery(".brands-filter .chinabs ").addClass("active");
+jQuery(".brands-filter .all ").removeClass("active");
+jQuery(".brands-filter .hongkongbs ").removeClass("active");
+
+}if(all.test(url)){
+
+jQuery(".brands-filter .all ").addClass("active");
+jQuery(".brands-filter .chinabs ").removeClass("active");
+jQuery(".brands-filter .hongkongbs ").removeClass("active");
+
+}
+
+
+
+
+jQuery(".pager .page a").each(function(){
+
+var href = jQuery(this).attr("href");
+href2 = href.substr(href.length-7,7);
+href3 = href.substr(href.length-7,5);
+var url7 = url.substr(url.length-7,7);
+
+if(href.indexOf(url7)>0 && url.indexOf(href3)>0){
+
+ jQuery(this).addClass("active");
+}
+
+if(url.indexOf(href2)<0 && url.indexOf(href3)>0){
+
+jQuery(this).removeClass("active");
+}
+
+if(url.indexOf(href3)<0){
+
+jQuery(".pager .page .page-item-1").addClass("active");
+
+}
+
+
+});
+
+jQuery(".pager .tiaozhuan .submit").click(function(){
+
+var val = jQuery(".pager .tiaozhuan input").val();
+var r = /^[0-9]*[1-9][0-9]*$/;
+
+var total = parseInt(jQuery(".pager .all-page #total").text());
+
+var ur = window.location.href;
+if(r.test(val) == false){
+
+jQuery(".pager .tiaozhuan input").val("");
+}
+
+if( r.test(val) == true && val <= total && ur.indexOf("?brand") <0){
+
+location.href = ur+"/?brand=all&pager="+val;
+
+}
+
+if( r.test(val) == true && val > total && ur.indexOf("?brand") <0){
+
+location.href = ur+"/?brand=all&pager=1";
+
+}
+
+if( r.test(val) == true && val <= total && ur.indexOf("?brand") >0 && ur.indexOf("pager")<0){
+
+location.href = ur+"&pager="+val;
+
+}
+
+if( r.test(val) == true && val > total && ur.indexOf("?brand") >0 && ur.indexOf("pager")<0){
+
+location.href = ur+"&pager=1";
+
+}
+
+if( r.test(val) == true && val <= total && ur.indexOf("?brand") >0 && ur.indexOf("pager")>0){
+
+location.href = ur.replace(ur.substr(ur.indexOf("pager="),10),"pager="+val);
+
+}
+
+if( r.test(val) == true && val > total && ur.indexOf("?brand") >0 && ur.indexOf("pager")>0){
+
+location.href = ur.replace(ur.substr(ur.indexOf("pager="),10),"pager=1");
+
+}
+
+});
+
+});
+
+</script>
+
+
+';
+
+
+ return $output;
+
+}
+
+?>
+
+
+
+
