@@ -73,17 +73,17 @@ text-align:center;
 
 
 
-#block-views-banner-slider-block-1 {
+.page-bottom-slider {
 background:#f0f0f0;
 }
 
-#block-views-banner-slider-block-1 .view-header{
+.page-bottom-slider .view-header{
 text-align:center;
 margin-bottom:20px;
 margin-top:20px;
 position: relative;
 }
-#block-views-banner-slider-block-1 .view-header a{
+.page-bottom-slider .view-header a{
  background:#ccc;
  color:#fff;
  padding:8px 16px;
@@ -92,10 +92,10 @@ position: relative;
     right: 30px;
 }
 
-#block-views-banner-slider-block-1 .view-header img{
+.page-bottom-slider .view-header img{
 max-width:100%;
 }
-#block-views-banner-slider-block-1 .views-field-field-image{
+.page-bottom-slider .views-field-field-image{
 width:50%;
 float:left;
 }
@@ -104,13 +104,18 @@ padding:0px;
 margin:0px;
 }
 
-#block-views-banner-slider-block-1 .views-field-body,
-#block-views-banner-slider-block-1 .views-field-title{
+.page-bottom-slider .views-field-body,
+.page-bottom-slider .views-field-title,
+.page-bottom-slider .views-field-view-node{
 width:46%;
 float:left;
 margin-left:2%;
 }
-#block-views-banner-slider-block-1 .views-field-title{
+
+.page-bottom-slider .views-field-view-node{
+font-size:18px;
+}
+.page-bottom-slider .views-field-title{
 font-size:24px;
 color:#333;
     padding-top: 10px;
@@ -128,7 +133,7 @@ background:none;
 height:auto;
 }
 
-#block-views-banner-slider-block-1 .flex-control-nav{
+.page-bottom-slider .flex-control-nav{
 position: inherit;
 bottom: 10px;
 margin-top: 90px !important;
@@ -372,8 +377,19 @@ width:100%;
 text-indent: 10px;
 color:#fff;
 }
-
-
+.region-content-banner{
+overflow: hidden;
+clear: both;
+}
+.region-content-middle{
+overflow: hidden;
+clear: both;
+}
+.region-content-bottom{
+margin-top:50px;
+overflow: hidden;
+clear: both;
+}
 
 
 

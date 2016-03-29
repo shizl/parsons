@@ -1689,6 +1689,7 @@ bottom:40px;
 left:48%;
 z-index:1111;
 }
+/*
 #block-views-banner-slider-block .view-header{
     position: absolute;
     z-index: 1111;
@@ -1724,7 +1725,7 @@ float:left;
 width:45%;
 float:right;
 }
-
+*/
 
 @media (min-width: 1200px){
 .container {
