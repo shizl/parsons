@@ -1782,11 +1782,11 @@ margin:0 auto;
 }
 .free-content .content{
 
-overflow:hidden;
-overflow: scroll;
+overflow:auto;
+
 height:90%;
 border-top: solid 1px;
-   
+   font-size: 20px;
 padding-top:5px;
 margin-top: 5px;
 }
@@ -1832,45 +1832,96 @@ padding-left:15px;
 .region-footer-bottom{
 
 
-width:95%;
+width:100%;
+}
+
+.region-footer{
+
+padding-top:10px;
 }
 
 .region-footer .block{
 
-width:48%;
-min-height:285px;
-padding:0;
-}
-#block-menu-block-2,
-#block-menu-block-4{
 
-float:right;
-border:none;
-padding-left:0px;
-}
-#block-menu-block-2 .content,
-#block-menu-block-2 h2,
-#block-menu-block-4 .content,
-#block-menu-block-4  h2,
-#block-block-1 .content{
 
-padding-left:20px;
+float: none;
+    width: 95%;
+    border-right: none;
+padding:0px;
+min-height: auto;
+    margin-top: 15px;
+margin:0 auto;
+}
+.region-footer .block h2 {
+   margin-top: 0px !important;
+display: block;
+   border-bottom: solid 2px #C7C7C7;
+padding-top: 10px;
+    padding-bottom: 10px;
+}
+.region-footer  .block-menu-block .content{
+
+display:none;
+padding-top: 5px;
+    padding-bottom: 5px;
+    border-top: solid 1px #E8E8E8;
+    border-bottom: solid 1px #E8E8E8;
+}
+.region-footer .block h2 a{
+
+font-size:16px;
+padding-left: 4px;
+}
+.region-footer .menu-block-wrapper a{
+
+font-size:14px;
 }
 #block-block-1{
 
 padding-left:0px;
-
+padding-top:0px;
+width:100%;
 }
-#block-menu-block-1,
-#block-menu-block-2{
+#block-block-1 .title{
 
-min-height:155px;
+font-size:16px;
+border: none;
 }
+#block-block-1 .top{
 
+margin-top:0px;
+width: 95%;
+    margin: 0 auto;
+}
+#block-block-1 .bottom{
+
+overflow:hidden;
+background:#fff;
+padding-left: 2.5%;
+}
+#block-block-1 .focus{
+
+width:85px;
+float:left;
+border:none;
+padding-top: 0px;
+    padding-bottom: 5px;
+}
+#block-block-1 .share{
+
+float:left;
+    margin-top: 16px;
+}
 #block-block-2{
 
-padding-left:0px;
-margin-top: 20px;
+margin-top:35px;
+text-align: center;
+    font-size: 14px;
+}
+#block-block-1 .share img{
+
+width:30px;
+height:30px;
 }
 }
 .node-product .brands-filter{

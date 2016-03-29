@@ -23,6 +23,19 @@ jQuery('#block-block-2 .free').click(function(){
 
 });
 
+jQuery('.region-footer .block-menu-block').each(function(){
 
+jQuery('.region-footer .block-menu-block h2').click(function(){
+var width = jQuery(window).width()
+
+if (parseInt(width)<=640 ){
+
+jQuery(this).parent().find('.content').toggle();
+
+}
+
+});
+
+});
 
 });
