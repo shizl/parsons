@@ -1,0 +1,33 @@
+.node-type-article .field-name-field-image{
+width:1360px;
+overflow:hidden;
+}
+.node-type-article .field-name-field-image .field-items{
+width:3000px;
+}
+.node-type-article .field-name-field-image .field-items .field-item{
+width:440px;
+float:left;
+margin-right:20px;	
+}
+.node-type-article .field-name-field-image .field-items .field-item img{
+width:100%;
+height:auto;
+}
+#block-block-13{
+overflow:hidden;
+width:1360px;
+}
+#block-block-13 .content{
+margin:0 auto;
+}
+#block-block-13 p{
+overflow:hidden;
+margin:0  auto;
+}
+#block-block-13 .bt-left{
+float:left;
+}
+#block-block-13 .bt-right{
+float:right;
+}
