@@ -1802,9 +1802,8 @@ color:#fff;
 font-size: 18px;
 cursor: pointer;
 }
+
 @media only screen and (max-width: 1330px){
-
-
 
 .region-footer .block{
 
@@ -1824,9 +1823,14 @@ padding-left:15px;
 
 
 }
+.title-contact-us{
+color: #666 !important;
+}
 @media only screen and (max-width: 640px){
 
-
+.title-contact-us{
+ color: #000 !important;
+}
 
 .region-footer,
 .region-footer-bottom{
