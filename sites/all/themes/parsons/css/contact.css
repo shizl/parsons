@@ -1,11 +1,11 @@
-#node-89 .field-item img{
+.page-node-89 #node-89 .field-item img{
 width:100%;
 height:auto;
 }
-.col-sm-12 .page-header{
+.page-node-89 #node-89 .col-sm-12 .page-header{
 display:none;
 }
-#node-89 .submitted span{
+.page-node-89 #node-89 .submitted span{
 display:none;
 }
 #block-webform-client-block-105{
@@ -63,15 +63,15 @@ border:1px solid #ccc;
 width:100%;
 float:left;
 }
-.company-header{
+.page-node-89 #node-89 .company-header{
 border-bottom:1px solid #ccc;
 width:95%;
 }
-.company-header h2{
+.page-node-89 #node-89 .company-header h2{
 font-size:20px;
 margin-bottom:5px;
 }
-.company-footer a{
+#node-89 .company-footer a{
 color:#333;
 }
 .page-node-89 .region-content{
