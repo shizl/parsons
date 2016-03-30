@@ -216,6 +216,9 @@ width:95%;
 margin:0 auto;
 float:none;
 }
+#webform-client-form-105 .form-actions{
+width:33%;
+}
 }
 @media only screen and (min-width:480px) and (max-width:639px){
 #webform-client-form-105 .form-item-captcha-response{
@@ -262,6 +265,9 @@ left: 70%;
 width:95%;
 margin:0 auto;
 float:none;
+}
+#webform-client-form-105 .form-actions{
+width:33%;
 }
 }
 @media only screen and (min-width:640px) and (max-width:960px){
@@ -312,6 +318,9 @@ margin:0 auto;
 float:none;
 display:block;
 }
+#webform-client-form-105 .form-actions{
+width:33%;
+}
 }
 @media only screen and (min-width:961px) and (max-width:1295px){
 #webform-client-form-105 #edit-captcha-response{
@@ -338,5 +347,8 @@ bottom: 8%;
 #webform-client-form-105 .form-actions button{
 padding: 6px 58px;
 width: 35%;
+}
+#webform-client-form-105 .form-actions{
+width:33%;
 }
 }
