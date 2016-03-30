@@ -6,6 +6,7 @@ z-index:11;
 }
 #block-views-banner-slider-block{
 position: relative;
+margin-bottom: 50px;
 }
 #block-views-banner-slider-block .view-header{
     position: absolute;
@@ -132,6 +133,7 @@ border-top:2px solid #ccc;
  border-radius:0;
 box-shadow:none;
 background:none;
+margin-bottom:0px;
 }
 
 .flexslider .slides img{
@@ -421,6 +423,7 @@ color:#fff;
 .region-content-banner{
 overflow: hidden;
 clear: both;
+margin-bottom: 50px;
 }
 .region-content-middle{
 overflow: hidden;
@@ -474,15 +477,13 @@ border-top:1px solid #ccc;
 #more-link-content .control .prv{
 float:left;
 display:block;
-cursor: pointer;
 margin-left:10px;
 }
 #more-link-content .control .next{
 float:right;
 display:block;
-cursor: pointer;
 margin-right:10px;
-color:#208a38;
+
 }
 
 @media (max-width:1400px){
@@ -505,6 +506,20 @@ color:#208a38;
 #footer-wrapper div.section {
  width: 95%;
 }
+#block-views-banner-slider-block .view-header{
+margin-top:20px;
+margin-left:10px;
+}
+#block-views-banner-slider-block .view-header a img{
+width:100px;
+height:70px;
+}
+
+
+#block-views-banner-slider-block .view-footer .home-video .video-button{
+position:initial;
+}
+
 
 }
 @media (max-width:640px){
@@ -515,6 +530,10 @@ color:#208a38;
 #footer-wrapper div.section {
  width: 90%;
 }
+#block-views-banner-slider-block .view-header{
+display:none;
+}
+
 
 #block-block-6{
 display:block;
