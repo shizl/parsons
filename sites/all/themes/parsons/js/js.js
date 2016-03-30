@@ -23,6 +23,11 @@ jQuery('#block-block-2 .free').click(function(){
 
 });
 
+jQuery(window).resize(function(){
+   
+var width = jQuery('.node-product .brands-images .item').width();
+jQuery('.node-product .brands-images .item').css('height',width+'px');
 
+});
 
 });

@@ -1827,7 +1827,6 @@ padding-left:15px;
 @media only screen and (max-width: 640px){
 
 
-
 .region-footer,
 .region-footer-bottom{
 
@@ -1871,6 +1870,28 @@ min-height:155px;
 
 padding-left:0px;
 margin-top: 20px;
+}
+
+.node-product .brands-images .item{
+width:31% !important;
+margin-left:2% !important;
+}
+.node-product .brands-filter{
+
+width:100% !important;
+text-align:center !important;
+padding-right:0px !important;
+overflow: hidden;
+}
+.node-product .brands-filter a{
+
+
+    padding: 7px 0px !important;
+    margin-left: 2% !important;
+    width: 31%;
+    display: block;
+    float: left;
+
 }
 }
 .node-product .brands-filter{
