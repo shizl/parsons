@@ -25,25 +25,31 @@ jQuery('#block-block-2 .free').click(function(){
 
 
 
+jQuery(window).resize(function(){
 
 jQuery('.region-footer .block-menu-block').each(function(){
-
 var width = jQuery(window).width();
-
 if (parseInt(width)<=640 ){
-
 jQuery('.region-footer .block-menu-block h2').click(function(){
-
-
-
 jQuery(this).parent().find('.content').toggle();
 
-
-
 });
+}else{
+
+jQuery(this).parent().find('.content').show();
+
+
 }
 });
 
+
+
+
+});
+
+jQuery(window).resize(function(){
+var width = jQuery(window).width();
+if(width<=640){
 jQuery('.region-footer .block-menu-block h2').click(function(){
 
 var display1 = jQuery(this).parent().find('.content').css('display');
@@ -58,6 +64,10 @@ jQuery(this).css('background-image','url(/sites/all/themes/parsons/images/1.png)
 //alert(22);
 }
 });
+}else{
 
 
+jQuery('.region-footer .block-menu-block h2').css('background-image','none');
+}
+});
 });
