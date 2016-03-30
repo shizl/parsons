@@ -244,6 +244,38 @@ $output = '<div class="parsons-pager">
 
 jQuery(document).ready(function(){
 
+
+jQuery(".parsons-pager .parsons-page a").each(function(){
+
+var href = jQuery(this).attr("href");
+
+
+var url = document.URL;
+
+
+
+if(url.indexOf("page")<0){
+
+jQuery(".parsons-pager .parsons-page .page-item-0").addClass("active");
+
+}
+if(url.indexOf(href)>0 && url.indexOf("page")>0){
+
+jQuery(this).addClass("active");
+
+}
+
+if(url.indexOf(href)<0 && url.indexOf("page")>0){
+
+jQuery(this).removeClass("active");
+
+}
+
+
+});
+
+
+
 jQuery(".parsons-pager .parsons-tiaozhuan .parsons-submit").click(function(){
 
 var val = jQuery(".parsons-pager .parsons-tiaozhuan input").val();
@@ -346,7 +378,7 @@ margin-top: 6px;
 
 width: 21px;
     height: 20px;
-margin-top: -2px;
+margin-top: 6px;
 }
  .parsons-pager .parsons-tiaozhuan a{
 
