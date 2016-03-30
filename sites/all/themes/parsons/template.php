@@ -254,18 +254,18 @@ var url = document.URL;
 
 
 
-if(url.indexOf("page")<0){
+if(url.indexOf("page=")<0){
 
 jQuery(".parsons-pager .parsons-page .page-item-0").addClass("active");
 
 }
-if(url.indexOf(href)>0 && url.indexOf("page")>0){
+if(url.indexOf(href)>0 && url.indexOf("page=")>0){
 
 jQuery(this).addClass("active");
 
 }
 
-if(url.indexOf(href)<0 && url.indexOf("page")>0){
+if(url.indexOf(href)<0 && url.indexOf("page=")>0){
 
 jQuery(this).removeClass("active");
 
@@ -294,25 +294,25 @@ jQuery(".parsons-pager .parsons-tiaozhuan input").val("");
 
 }
 
-if(r.test(val) == true && ur.indexOf("page")<0 && val > total){
+if(r.test(val) == true && ur.indexOf("page=")<0 && val > total){
 
 location.href = ur+"?page=0";
 
 }
 
-if(r.test(val) == true && ur.indexOf("page")<0 && val <= total){
+if(r.test(val) == true && ur.indexOf("page=")<0 && val <= total){
 
 location.href = ur+"?page="+val2;
 
 }
 
-if(r.test(val) == true && ur.indexOf("page")>0 && val > total ){
+if(r.test(val) == true && ur.indexOf("page=")>0 && val > total ){
 
 location.href = ur.replace(ur.substr(ur.indexOf("page="),10),"page=0");
 
 }
 
-if(r.test(val) == true && ur.indexOf("page")>0 && val <= total ){
+if(r.test(val) == true && ur.indexOf("page=")>0 && val <= total ){
 
 location.href = ur.replace(ur.substr(ur.indexOf("page="),10),"page="+val2);
 
