@@ -1838,6 +1838,7 @@ width:100%;
 .region-footer{
 
 padding-top:10px;
+background:#f0f0f0;
 }
 
 .region-footer .block{
@@ -1851,6 +1852,7 @@ padding:0px;
 min-height: auto;
     margin-top: 15px;
 margin:0 auto;
+
 }
 .region-footer .block h2 {
    margin-top: 0px !important;
@@ -1858,6 +1860,15 @@ display: block;
    border-bottom: solid 2px #C7C7C7;
 padding-top: 10px;
     padding-bottom: 10px;
+background-image:url(../images/2.png);
+background-repeat: no-repeat;
+    background-position: right;
+color:#000;
+}
+.region-footer #block-block-1 h2{
+
+background:none;
+
 }
 .region-footer  .block-menu-block .content{
 
