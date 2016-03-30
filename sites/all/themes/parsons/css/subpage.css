@@ -3,7 +3,8 @@ width:1360px;
 overflow:hidden;
 }
 .node-type-article .field-name-field-image .field-items{
-width:3000px;
+overflow:hidden;
+position:relative;
 }
 .node-type-article .field-name-field-image .field-items .field-item{
 width:440px;
@@ -14,9 +15,14 @@ margin-right:20px;
 width:100%;
 height:auto;
 }
+.node-type-article .region-content{
+position:relative;
+}
 #block-block-13{
 overflow:hidden;
 width:1360px;
+top: 48%;
+position: absolute;
 }
 #block-block-13 .content{
 margin:0 auto;
@@ -27,7 +33,9 @@ margin:0  auto;
 }
 #block-block-13 .bt-left{
 float:left;
+margin-left:10px;
 }
 #block-block-13 .bt-right{
 float:right;
+margin-right:10px;
 }
