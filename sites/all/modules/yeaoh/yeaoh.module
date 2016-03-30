@@ -444,7 +444,7 @@ location.href = ur.replace(ur.substr(ur.indexOf("pager="),10),"pager=1");
 
 /**
 
-**hook_menu
+** hook_menu()
 
 **/
 
@@ -477,6 +477,12 @@ function get_link_content(){
 	exit;
 }
 
+
+/****
+
+** hook_form_alter()
+
+***/
 
 
 

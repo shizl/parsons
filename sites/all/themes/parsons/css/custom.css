@@ -489,6 +489,14 @@ margin-right:10px;
 
 }
 
+#views-exposed-form-about-us-page-3{
+display:none;
+}
+
+.about-overview .view-header{
+text-align:center;
+}
+
 @media (max-width:1400px){
 }
 
