@@ -50,18 +50,33 @@ jQuery(this).parent().find('.content').show();
 jQuery(window).resize(function(){
 var width = jQuery(window).width();
 if(width<=640){
+jQuery('.region-footer .block-menu-block h2').each(function(){
+var display1 = jQuery(this).parent().find('.content').css('display');
+
+if(display1 == 'none'){
+
+jQuery(this).css('background-image','url(/sites/all/themes/parsons/images/2.png)');
+
+
+}else{
+
+jQuery(this).css('background-image','url(/sites/all/themes/parsons/images/1.png)');
+
+}
+
+});
 jQuery('.region-footer .block-menu-block h2').click(function(){
 
 var display1 = jQuery(this).parent().find('.content').css('display');
 if(display1 == 'none'){
 
 jQuery(this).css('background-image','url(/sites/all/themes/parsons/images/2.png)');
-//alert(11);
+
 
 }else{
 
 jQuery(this).css('background-image','url(/sites/all/themes/parsons/images/1.png)');
-//alert(22);
+
 }
 });
 }else{
