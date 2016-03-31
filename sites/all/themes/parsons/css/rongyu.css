@@ -1,12 +1,12 @@
-.page-rongyu .views-field-body ul{
+.page-honor .views-field-body ul{
 list-style:none;
 padding:0px;
 }
-.page-rongyu .views-field-body ul li{
+.page-honor .views-field-body ul li{
 background:url("../images/disc-small.png") no-repeat left center;
 padding-left: 30px;
 }
-.page-rongyu .views-row .views-field-field-date{
+.page-honor .views-row .views-field-field-date{
 font-size:20px;
 font-weight:bold;
 color:#298143;
