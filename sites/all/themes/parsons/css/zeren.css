@@ -24,7 +24,7 @@ margin-left:15px;
 .page-social-responsibility .views-field-body a{
 color:#416148;
 display: block;
-margin-top: 32px;
+margin-top: 36px;
 }
 .page-social-responsibility .views-row{
 overflow:hidden;
@@ -38,13 +38,32 @@ width:100%;
 }
 .page-social-responsibility .views-field-title{
 width:100%;
+margin:0px;
+margin-top:10px;
 }
 .page-social-responsibility .views-field-body{
 width:100%;
+margin:0px;
+}
+.page-social-responsibility .views-field-body p{
+max-height: 60px;
+overflow: hidden;
+}
+.page-social-responsibility .views-field-body a{
+margin-top:0px;
+}
+.page-social-responsibility .view-content{
+width:90%;
+margin:0 auto;
 }
 }
 @media only screen and (min-width:961px) and (max-width:1199px){
 .page-social-responsibility .views-field-body a{
 margin-top:0px;
+}
+.page-social-responsibility .views-field-body p{
+max-height: 82px;
+overflow: hidden;
+margin-bottom: 9px;
 }
 }
