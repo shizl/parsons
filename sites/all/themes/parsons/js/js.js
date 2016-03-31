@@ -26,25 +26,19 @@ jQuery('#block-block-2 .free').click(function(){
 
 
 jQuery(window).resize(function(){
-
-jQuery('.region-footer .block-menu-block').each(function(){
 var width = jQuery(window).width();
 if (parseInt(width)<=640 ){
-jQuery('.region-footer .block-menu-block h2').click(function(){
-jQuery(this).parent().find('.content').toggle();
+jQuery('.region-footer .block-menu-block .content').css('display','none');
+ jQuery('.region-footer .block-menu-block h2').click(function(){
 
-});
+   jQuery(this).parent().find('.content').toggle();
+
+    });
 }else{
 
-jQuery(this).parent().find('.content').show();
-
+jQuery('.region-footer .block-menu-block .content').css('display','block');
 
 }
-});
-
-
-
-
 });
 
 jQuery(window).resize(function(){
