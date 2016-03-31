@@ -154,116 +154,242 @@ function parsons_field__taxonomy_term_reference($variables) {
 
   return $output;
 }
-
 function parsons_pager($variables) {
-  $tags = $variables['tags'];
+ 
+$tags = $variables['tags'];
   $element = $variables['element'];
   $parameters = $variables['parameters'];
   $quantity = $variables['quantity'];
-  global $pager_page_array, $pager_total,$pager_total_items;
-  // Calculate various markers within this pager piece:
-  // Middle is used to "center" pages around the current page.
-  $pager_middle = ceil($quantity / 2);
-  // current is the page we are currently paged to
-  $pager_current = $pager_page_array[$element] + 1;
-  // first is the first page listed by this pager piece (re quantity)
-  $pager_first = $pager_current - $pager_middle + 1;
-  // last is the last page listed by this pager piece (re quantity)
-  $pager_last = $pager_current + $quantity - $pager_middle;
-  // max is the maximum page number
-  $pager_max = $pager_total[$element];
-  // End of marker calculations.
+  global $pager_page_array, $pager_total;
 
-  // Prepare for generation loop.
-  $i = $pager_first;
-  if ($pager_last > $pager_max) {
-    // Adjust "center" if at end of query.
-    $i = $i + ($pager_max - $pager_last);
-    $pager_last = $pager_max;
-  }
-  if ($i <= 0) {
-    // Adjust "center" if at start of query.
-    $pager_last = $pager_last + (1 - $i);
-    $i = 1;
-  }
-  // End of generation loop preparation.
+ $pre = theme('pager_previous', array('text' => (isset($tags[1]) ? $tags[1] : t('‹ previous')), 'element' => $element, 'interval' => 1, 'parameters' => $parameters));
 
-  $li_first = theme('pager_first', array('text' => (isset($tags[0]) ? $tags[0] : t('« first')), 'element' => $element, 'parameters' => $parameters));
-  $li_previous = theme('pager_previous', array('text' => (isset($tags[1]) ? $tags[1]:'' ), 'element' => $element, 'interval' => 1, 'parameters' => $parameters));
-  $li_next = theme('pager_next', array('text' => (isset($tags[3]) ? $tags[3] : ''), 'element' => $element, 'interval' => 1, 'parameters' => $parameters));
-  $li_last = theme('pager_last', array('text' => (isset($tags[4]) ? $tags[4] : t('last »')), 'element' => $element, 'parameters' => $parameters));
-  $li_first = "";
-  $li_last = "";
+$next = theme('pager_next', array('text' => (isset($tags[3]) ? $tags[3] : t('next ›')), 'element' => $element, 'interval' => 1, 'parameters' => $parameters));
 
-  if ($pager_total[$element] > 1) {
-    if ($li_first) {
-      $items[] = array(
-        'class' => array('pager-first'), 
-        'data' => $li_first,
-      );
-    }
-    if ($li_previous) {
-      $items[] = array(
-        'class' => array('pager-previous','f_left'), 
-        'data' => decode_entities($li_previous),
-      );
-    }
+$allpage = $pager_total[0];
 
-    // When there is more than one page, create the pager list.
-    if ($i != $pager_max) {
-      if ($i > 1) {
-        $items[] = array(
-          'class' => array('pager-ellipsis'), 
-          'data' => '…',
-        );
-      }
-      // Now generate the actual pager piece.
-      for (; $i <= $pager_last && $i <= $pager_max; $i++) {
-        if ($i < $pager_current) {
-          $items[] = array(
-            'class' => array('pager-item'), 
-            'data' => $i,
-          );
-        }
-        if ($i == $pager_current) {
-          $items[] = array(
-            'class' => array('pager-current'), 
-            'data' => $i,
-          );
-        }
-        if ($i > $pager_current) {
-          $items[] = array(
-            'class' => array('pager-item'), 
-            'data' => $i,
-          );
-        }
-      }
-      if ($i < $pager_max) {
-        $items[] = array(
-          'class' => array('pager-ellipsis'), 
-          'data' => '…',
-        );
-      }
-    }
-    // End generation.
-    if ($li_next) {
-      $items[] = array(
-        'class' => array('pager-next','f_right'), 
-        'data' => decode_entities($li_next),
-      );
-    }
-    if ($li_last) {
-      $items[] = array(
-        'class' => array('pager-last'), 
-        'data' => $li_last,
-      );
-    }
-    return '<h2 class="element-invisible">' . t('Pages') . '</h2>' . theme('item_list', array(
-      'items' => $items, 
-      'attributes' => array('class' => array('pager')),
-    ));
-  }
+$page = "";
+
+
+if($allpage <=6){
+for($i=1; $i<=$allpage; $i++){
+
+$page .= '<a class="  page-item-'.($i-1).'" href="/'.arg(0).'?page='.($i-1).'"> '.$i.'</a>';
+}
+}else{
+
+ if(isset($_GET['page']) && ($_GET['page'] >2) && ($_GET['page'] < $allpage-3)){
+
+    $page = '<a class=" page-item-0" href="/'.arg(0).'?page=0">1</a>
+        <p class="omit">....</p>
+       
+
+        <a class=" page-item-'.((int)$_GET['page']-1).'" href="/'.arg(0).'?page='.((int)$_GET['page']-1).'"> '.$_GET['page'].'</a>
+        <a class=" page-item-'.$_GET['page'].'" href="/'.arg(0).'?page='.$_GET['page'].'"> '.((int)$_GET['page']+1).'</a>
+        <a class=" page-item-'.((int)$_GET['page']+1).'" href="/'.arg(0).'?page='.((int)$_GET['page']+1).'"> '.((int)$_GET['page']+2).'</a>
+        <p class="omit">....</p>
+        <a class=" page-item-'.((int)$allpage-1).'" href="/'.arg(0).'?page='.((int)$allpage-1).'"> '.$allpage.'</a>
+';     
+}
+
+    else if(isset($_GET['page']) && ($_GET['page'] >2) && ($_GET['page'] >= $allpage-3)){
+
+
+$page = '<a class=" page-item-0" href="/'.arg(0).'?page=0">1</a>
+        <p class="omit">....</p>
+        <a class=" page-item-'.((int)$allpage-4).'" href="/'.arg(0).'?page='.((int)$allpage-4).'"> '.((int)$allpage-3).'</a>
+        <a class=" page-item-'.((int)$allpage-3).'" href="/'.arg(0).'?page='.((int)$allpage-3).'"> '.((int)$allpage-2).'</a>
+        <a class=" page-item-'.((int)$allpage-2).'" href="/'.arg(0).'?page='.((int)$allpage-2).'"> '.((int)$allpage-1).'</a>
+        <a class=" page-item-'.((int)$allpage-1).'" href="/'.arg(0).'?page='.((int)$allpage-1).'"> '.$allpage.'</a>
+';     
+
+}else{
+
+$page = '<a class=" page-item-0" href="/'.arg(0).'?page=0">1</a>
+         <a class=" page-item-1" href="/'.arg(0).'?page=1">2</a>
+         <a class=" page-item-2" href="/'.arg(0).'?page=2">3</a>
+         <a class=" page-item-3" href="/'.arg(0).'?page=3">4</a>
+        <p class="omit">....</p>
+        
+        <a class=" page-item-'.((int)$allpage-1).'" href="/'.arg(0).'?page='.((int)$allpage-1).'"> '.$allpage.'</a>
+';     
+
+
+
+}
+
 }
 
 
+//echo '<pre>';
+//print_r(arg(0));exit;
 
+$output = '<div class="parsons-pager">
+
+<div class="parsons-pre-page">'.$pre.'</div>
+<div class="parsons-page">'.$page.'</div>
+<div class="parsons-next-page">'.$next.'</div>
+<div class="parsons-all-page">共<span id="parsons-total">'.$allpage.'</span>页</div>
+<div class="parsons-tiaozhuan">
+<p>到第&nbsp;<input type="text" 　name="ye" />&nbsp;页</p>
+<a class="parsons-submit">确定</a>
+
+</div>
+</div>
+
+<script type="text/javascript">
+
+jQuery(document).ready(function(){
+
+
+jQuery(".parsons-pager .parsons-page a").each(function(){
+
+var href = jQuery(this).attr("href");
+
+
+var url = document.URL;
+
+
+
+if(url.indexOf("page=")<0){
+
+jQuery(".parsons-pager .parsons-page .page-item-0").addClass("active");
+
+}
+if(url.indexOf(href)>0 && url.indexOf("page=")>0){
+
+jQuery(this).addClass("active");
+
+}
+
+if(url.indexOf(href)<0 && url.indexOf("page=")>0){
+
+jQuery(this).removeClass("active");
+
+}
+
+
+});
+
+
+
+jQuery(".parsons-pager .parsons-tiaozhuan .parsons-submit").click(function(){
+
+var val = jQuery(".parsons-pager .parsons-tiaozhuan input").val();
+
+var val2 = parseInt(val) - 1 ;
+
+var r = /^[0-9]*[1-9][0-9]*$/;
+
+var total = parseInt(jQuery(".parsons-pager .parsons-all-page #parsons-total").text());
+
+var ur = window.location.href;
+
+if(r.test(val) == false){
+
+jQuery(".parsons-pager .parsons-tiaozhuan input").val("");
+
+}
+
+if(r.test(val) == true && ur.indexOf("page=")<0 && val > total){
+
+location.href = ur+"?page=0";
+
+}
+
+if(r.test(val) == true && ur.indexOf("page=")<0 && val <= total){
+
+location.href = ur+"?page="+val2;
+
+}
+
+if(r.test(val) == true && ur.indexOf("page=")>0 && val > total ){
+
+location.href = ur.replace(ur.substr(ur.indexOf("page="),10),"page=0");
+
+}
+
+if(r.test(val) == true && ur.indexOf("page=")>0 && val <= total ){
+
+location.href = ur.replace(ur.substr(ur.indexOf("page="),10),"page="+val2);
+
+
+}
+
+});
+});
+</script>
+
+<style type="text/css">
+
+ .parsons-pager{
+
+clear:both;
+
+overflow:hidden;
+width: 545px;
+float: right;
+margin-top: 20px;
+}
+ .parsons-pager div{
+
+float:left;
+    overflow: hidden;
+}
+
+.parsons-pager a,
+.parsons-pager .parsons-page p{
+
+padding: 3px 10px 3px 10px;
+background: #4b4b4b;
+color:#fff;
+margin-left: 5px;
+text-decoration: none;
+display: block;
+    float: left;
+}
+ .parsons-pager .parsons-page .active{
+
+background:#017518;
+}
+ .parsons-pager .parsons-all-page{
+
+padding-top: 5px;
+margin-left: 8px;
+}
+ .parsons-pager .parsons-tiaozhuan{
+
+margin-left: 10px;
+}
+ .parsons-pager .parsons-tiaozhuan p,
+ .parsons-pager .parsons-tiaozhuan a{
+
+display:block;
+float: left;
+}
+ .parsons- pager .parsons-tiaozhuan p{
+
+margin-top: 6px;
+}
+.parsons-pager .parsons-tiaozhuan input{
+
+width: 21px;
+    height: 20px;
+margin-top: 6px;
+}
+ .parsons-pager .parsons-tiaozhuan a{
+
+background: #017518;
+}
+ .parsons-pager .parsons-page .omit{
+
+background:none;
+color:#000;
+padding: 0px;
+}
+</style>
+';
+
+
+return $output;
+}
