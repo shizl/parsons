@@ -1969,6 +1969,47 @@ text-align: center;
 width:30px;
 height:30px;
 }
+
+.node-product .brands-images .item{
+width:31% !important;
+margin-left:2% !important;
+}
+.node-product .brands-filter{
+
+width:100% !important;
+text-align:center !important;
+padding-right:0px !important;
+overflow: hidden;
+}
+.node-product .brands-filter a{
+
+
+    padding: 7px 0px !important;
+    margin-left: 2% !important;
+    width: 31%;
+    display: block;
+    float: left;
+
+}
+.node-product .pager{
+
+width:98% !important;
+float:none !important;
+margin:0 auto;
+}
+.node-product .pager .tiaozhuan{
+
+float:none;
+clear:both;
+padding-top: 15px;
+
+width: 150px;
+    margin: 0 auto !important;
+}
+.node-product .pager .tiaozhuan p{
+
+margin-top:3px !important;
+}
 }
 .node-product .brands-filter{
 
