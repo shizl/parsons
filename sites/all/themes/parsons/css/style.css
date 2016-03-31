@@ -1893,6 +1893,25 @@ overflow: hidden;
     float: left;
 
 }
+.node-product .pager{
+
+width:98% !important;
+float:none !important;
+margin:0 auto;
+}
+.node-product .pager .tiaozhuan{
+
+float:none;
+clear:both;
+padding-top: 15px;
+
+width: 150px;
+    margin: 0 auto !important;
+}
+.node-product .pager .tiaozhuan p{
+
+margin-top:3px !important;
+}
 }
 .node-product .brands-filter{
 
