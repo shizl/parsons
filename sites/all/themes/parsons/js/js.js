@@ -24,20 +24,20 @@ jQuery('#block-block-2 .free').click(function(){
 });
 
 
-jQuery('.region-footer .block-menu-block').click(function(){
+jQuery('.region-footer .block-menu-block h2').click(function(){
         var width = jQuery(window).width()+17;
         if(width<=640){
-   	jQuery(this).find('.content').toggle();
-	var display1 = jQuery(this).find('.content').css('display');
+   	jQuery(this).parent().find('.content').toggle();
+	var display1 = jQuery(this).parent().find('.content').css('display');
 
 	if(display1 == 'none'){
 
-		jQuery(this).find('h2').css('background-image','url(/sites/all/themes/parsons/images/2.png)');
+		jQuery(this).css('background-image','url(/sites/all/themes/parsons/images/2.png)');
 
 
 	}else{
 
-		jQuery(this).find('h2').css('background-image','url(/sites/all/themes/parsons/images/1.png)');
+		jQuery(this).css('background-image','url(/sites/all/themes/parsons/images/1.png)');
 
 	}
 }
