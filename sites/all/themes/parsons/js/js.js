@@ -229,5 +229,53 @@ jQuery('#more-link-content').hide();
 
 });
 
+jQuery('.year_filter a').each(function(){
+  url = window.location.href;
+   url_request = jQuery(this).attr('href');
+
+  if(url.indexOf(url_request)>0){
+	jQuery(this).addClass('active');
+   }else{
+	jQuery(this).removeClass('active');
+   }
+
+});
+
+
+views_row = 1;
+jQuery('.about-overview .views-row').each(function(){
+
+   if(views_row>1){
+	jQuery(this).hide();
+    }
+ views_row++;
+
+});
+
+
+if(jQuery('.about-overview .views-row:last').is(":visible")){
+		jQuery('.about-overview .more-link').hide();
+	}
+
+init_views_row = 2;
+jQuery('.about-overview .more-link').click(function(){
+
+ i = 0;
+jQuery('.about-overview .views-row').each(function(){
+   if(i<init_views_row){
+	jQuery(this).fadeIn(800);	
+    }
+ i++;
+});
+
+init_views_row = init_views_row+1;
+	if(jQuery('.about-overview .views-row:last').is(":visible")){
+		jQuery('.about-overview .more-link').hide();
+	}
+
+});
+
+
+
 
 });

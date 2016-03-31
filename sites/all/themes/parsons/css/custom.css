@@ -488,6 +488,32 @@ display:block;
 margin-right:10px;
 
 }
+.subpage-banner{
+position: relative;
+}
+.subpage-banner .flex-control-nav{
+position: absolute;
+    padding: 0px;
+    bottom: 4px;
+    z-index: 11;
+}
+
+.subpage-banner .view-footer{
+background:rgba(0,0,0,0.5);
+position: absolute;
+bottom:0px;
+z-index: 10;
+width:100%;
+font-size:18px;
+color:#fff;
+font-weight:bold;
+height:45px;
+line-height:45px;
+text-indent: 20px;
+}
+.subpage-banner .view-footer p{
+margin:0px;
+}
 
 #views-exposed-form-about-us-page-3{
 display:none;
@@ -496,6 +522,81 @@ display:none;
 .about-overview .view-header{
 text-align:center;
 }
+.about-overview .view-header .year_filter .dian{
+    width: 8px;
+    height: 8px;
+    border-radius: 20px;
+    display: inline-block;
+    background: #ccc;
+    margin-right: 20px;
+    margin-top: 36px;
+    margin-left: 36px;
+}
+.about-overview .view-header .year_filter a{
+    width: 65px;
+    display: inline-block;
+}
+
+
+
+.about-overview .view-header .year_filter a:hover .year,
+.about-overview .view-header .year_filter a.active .year{
+ background:#208a38;
+color:#fff;
+}
+.about-overview .view-header .year_filter a:hover .dian,
+.about-overview .view-header .year_filter a.active .dian{
+background:#208a38;
+}
+
+.about-overview .view-header .year_filter .year{
+    position: absolute;
+ padding:3px 20px;
+color:#fff;
+}
+
+.about-overview .view-content{
+margin-top:40px;
+}
+
+.about-overview .view-content .views-row{
+overflow: hidden;
+    clear: both;
+    height: 296px;
+}
+
+.about-overview .view-content .views-row .views-field-field-image{
+width:38%;
+float:left;
+margin-right:2%;
+}
+.about-overview .view-content .views-row .views-field-title ,
+.about-overview .view-content .views-row .views-field-body{
+width:60%;
+float:left;
+} 
+.about-overview .view-content .views-row .views-field-title {
+border-bottom:1px solid #ccc;
+font-size:14px;
+color:#333;
+font-weight:bold;
+padding-bottom:5px;
+}
+.about-overview .view-content .views-row .views-field-title .date{
+font-size:20px;
+color:#208a38;
+margin-right:20px;
+}
+.about-overview .view-content .views-row .views-field-title .date .y{
+font-size:14px;
+}
+.about-overview .view-content .views-row .views-field-body{
+margin-top:10px;
+}
+.about-overview .view-footer{
+text-align:center;
+}
+
 
 @media (max-width:1400px){
 }
