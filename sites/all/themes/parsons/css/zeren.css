@@ -32,6 +32,9 @@ border-bottom:1px solid #ccc;
 margin-bottom:15px;
 padding-bottom:10px;
 }
+.page-social-responsibility .parsons-pager{
+width:308px;
+}
 @media only screen and (min-width:320px) and (max-width:960px){
 .page-social-responsibility .views-field-field-image{
 width:100%;
