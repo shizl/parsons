@@ -25,7 +25,19 @@ disHeight=subHeight*3;
 dnum=jQuery(".field-name-field-image .field-items .field-item").length;
 h=dnum*284;
 jQuery('.field-name-field-image .field-items').css('height',h+'px');
+
 jQuery('.field-name-field-image').css('height',disHeight+'px');
-alert(disHeight);
+jQuery(".field-name-field-image").append("<p><img src='/sites/default/files/bt-top.png'</p>");
+jQuery(".field-name-field-image").append("<p><img src='/sites/default/files/bt-bottom.png'</p>");
+
+jQuery(window).resize(function(){
+subHeight=jQuery('.field-name-field-image .field-items .field-item').height();
+disHeight=subHeight*3;
+dnum=jQuery(".field-name-field-image .field-items .field-item").length;
+h=dnum*284;
+jQuery('.field-name-field-image .field-items').css('height',h+'px');
+
+jQuery('.field-name-field-image').css('height',disHeight+'px');
+});
 }
 });

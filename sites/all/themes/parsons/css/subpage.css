@@ -58,6 +58,11 @@ height:auto;
 .node-type-article .field-name-field-image .field-items .field-item img{
 height:auto;
 }
+.node-type-article .field-name-field-image>p:nth-child(1n){
+position:absolute;
+top:5.5%;
+left:50%;
+}
 }
 @media only screen and (min-width:961px) and (max-width:1359px){
 .node-type-article .field-name-field-image{
