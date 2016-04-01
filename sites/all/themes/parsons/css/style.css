@@ -1611,12 +1611,12 @@ padding-left: 35px;
 #block-block-1 .title{
 
 font-size:16px;
-
+color: #000;
 padding-left: 4px;
 }
 #block-block-1 .top{
 
-margin-top:-35px;
+margin-top:-58px;
 }
 #block-block-2{
 
@@ -1685,6 +1685,7 @@ bottom:40px;
 left:48%;
 z-index:1111;
 }
+/*
 #block-views-banner-slider-block .view-header{
     position: absolute;
     z-index: 1111;
@@ -1720,7 +1721,7 @@ float:left;
 width:45%;
 float:right;
 }
-
+*/
 
 @media (min-width: 1200px){
 .container {
@@ -1956,7 +1957,7 @@ padding-top: 0px;
 #block-block-1 .share{
 
 float:left;
-    margin-top: 16px;
+    margin-top: 13px;
 }
 #block-block-2{
 
@@ -1969,11 +1970,59 @@ text-align: center;
 width:30px;
 height:30px;
 }
+
+.node-product .brands-images .item{
+width:31% !important;
+margin-left:2% !important;
+}
+.node-product .brands-filter{
+
+width:100% !important;
+text-align:center !important;
+padding-right:0px !important;
+overflow: hidden;
+}
+.node-product .brands-filter a{
+
+
+    padding: 7px 0px !important;
+    margin-left: 2% !important;
+    width: 31%;
+    display: block;
+    float: left;
+
+}
+.node-product .pager{
+
+width:98% !important;
+float:none !important;
+margin:0 auto;
+}
+.node-product .pager .tiaozhuan{
+
+float:none;
+clear:both;
+padding-top: 15px;
+
+width: 150px;
+    margin: 0 auto !important;
+}
+.node-product .pager .tiaozhuan p{
+
+margin-top:3px !important;
+}
+
+.node-product .brands-images{
+
+
+padding-right: 0px !important;
+}
+
 }
 .node-product .brands-filter{
 
 text-align:right;
-padding-right: 30px;
+padding-right: 2%;
 }
 .node-product .brands-filter a{
 
@@ -1989,14 +2038,15 @@ background: #017518;
 .node-product .brands-images{
 
 overflow:hidden;
+padding-right: 2%;
 }
 .node-product .brands-images .item{
 
-width:250px;
-height:250px;
+width:18%;
+
 border:1px solid;
 float:left;
-margin-left: 23px;
+margin-left: 2%;
     margin-top: 20px;
 }
 .node-product .brands-images .item img{
@@ -2054,13 +2104,14 @@ margin-top: 6px;
 }
 .node-product .pager .tiaozhuan input{
 
-width: 21px;
-    height: 20px;
+width: 23px;
+    height: 23px;
 margin-top: -2px;
 }
 .node-product .pager .tiaozhuan a{
 
 background: #017518;
+cursor:pointer;
 }
 .node-product .pager .page .omit{
 
@@ -2100,8 +2151,8 @@ width:100%;
 }
 #block-block-6{
 position:absolute;
-right: 0;
-top:20px;
+left: 20px;
+top: 73px;
 display:none;
 }
 @media only screen and (min-width:320px) and (max-width:640px){
@@ -2119,12 +2170,17 @@ width:100%;
 position:absolute;
 margin: 0px;
 top: 72px;
-left: 15px;
+right: 15px;
 }
 #header .region-page-top{
-margin-top:105px;
+clear:both;
+float:none;
+margin:0px;
+height: auto;
+min-height: 17px;
 }
 }
+
 @media only screen and (min-width:641px) and (max-width:960px){
 #logo{
 width:19%;
@@ -2158,3 +2214,18 @@ margin-top: 18px;
 margin-top: 16px;
 }
 }
+
+@media only screen and (max-width: 960px){
+
+
+.node-product .brands-images .item{
+
+width:23%;
+margin-left: 2%;
+}
+
+
+
+}
+
+
