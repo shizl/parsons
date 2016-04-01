@@ -154,3 +154,245 @@ function parsons_field__taxonomy_term_reference($variables) {
 
   return $output;
 }
+
+
+
+function parsons_pager($variables) {
+ 
+$tags = $variables['tags'];
+  $element = $variables['element'];
+  $parameters = $variables['parameters'];
+  $quantity = $variables['quantity'];
+  global $pager_page_array, $pager_total;
+
+ $pre = theme('pager_previous', array('text' => (isset($tags[1]) ? $tags[1] : t('‹ previous')), 'element' => $element, 'interval' => 1, 'parameters' => $parameters));
+
+$next = theme('pager_next', array('text' => (isset($tags[3]) ? $tags[3] : t('next ›')), 'element' => $element, 'interval' => 1, 'parameters' => $parameters));
+
+$allpage = $pager_total[0];
+
+$page = "";
+
+
+if($allpage <=6){
+for($i=1; $i<=$allpage; $i++){
+
+$page .= '<a class="  page-item-'.($i-1).'" href="/'.arg(0).'?page='.($i-1).'"> '.$i.'</a>';
+}
+}else{
+
+ if(isset($_GET['page']) && ($_GET['page'] >2) && ($_GET['page'] < $allpage-3)){
+
+    $page = '<a class=" page-item-0" href="/'.arg(0).'?page=0">1</a>
+        <p class="omit">....</p>
+       
+
+        <a class=" page-item-'.((int)$_GET['page']-1).'" href="/'.arg(0).'?page='.((int)$_GET['page']-1).'"> '.$_GET['page'].'</a>
+        <a class=" page-item-'.$_GET['page'].'" href="/'.arg(0).'?page='.$_GET['page'].'"> '.((int)$_GET['page']+1).'</a>
+        <a class=" page-item-'.((int)$_GET['page']+1).'" href="/'.arg(0).'?page='.((int)$_GET['page']+1).'"> '.((int)$_GET['page']+2).'</a>
+        <p class="omit">....</p>
+        <a class=" page-item-'.((int)$allpage-1).'" href="/'.arg(0).'?page='.((int)$allpage-1).'"> '.$allpage.'</a>
+';     
+}
+
+    else if(isset($_GET['page']) && ($_GET['page'] >2) && ($_GET['page'] >= $allpage-3)){
+
+
+$page = '<a class=" page-item-0" href="/'.arg(0).'?page=0">1</a>
+        <p class="omit">....</p>
+        <a class=" page-item-'.((int)$allpage-4).'" href="/'.arg(0).'?page='.((int)$allpage-4).'"> '.((int)$allpage-3).'</a>
+        <a class=" page-item-'.((int)$allpage-3).'" href="/'.arg(0).'?page='.((int)$allpage-3).'"> '.((int)$allpage-2).'</a>
+        <a class=" page-item-'.((int)$allpage-2).'" href="/'.arg(0).'?page='.((int)$allpage-2).'"> '.((int)$allpage-1).'</a>
+        <a class=" page-item-'.((int)$allpage-1).'" href="/'.arg(0).'?page='.((int)$allpage-1).'"> '.$allpage.'</a>
+';     
+
+}else{
+
+$page = '<a class=" page-item-0" href="/'.arg(0).'?page=0">1</a>
+         <a class=" page-item-1" href="/'.arg(0).'?page=1">2</a>
+         <a class=" page-item-2" href="/'.arg(0).'?page=2">3</a>
+         <a class=" page-item-3" href="/'.arg(0).'?page=3">4</a>
+        <p class="omit">....</p>
+        
+        <a class=" page-item-'.((int)$allpage-1).'" href="/'.arg(0).'?page='.((int)$allpage-1).'"> '.$allpage.'</a>
+';     
+
+
+
+}
+
+}
+
+
+//echo '<pre>';
+//print_r(arg(0));exit;
+
+$output = '<div class="parsons-pager">
+
+<div class="parsons-pre-page">'.$pre.'</div>
+<div class="parsons-page">'.$page.'</div>
+<div class="parsons-next-page">'.$next.'</div>
+<div class="parsons-all-page">共<span id="parsons-total">'.$allpage.'</span>页</div>
+<div class="parsons-tiaozhuan">
+<p>到第&nbsp;<input type="text" 　name="ye" />&nbsp;页</p>
+<a class="parsons-submit">确定</a>
+
+</div>
+</div>
+
+<script type="text/javascript">
+
+jQuery(document).ready(function(){
+
+
+jQuery(".parsons-pager .parsons-page a").each(function(){
+
+var href = jQuery(this).attr("href");
+
+
+var url = document.URL;
+
+
+
+if(url.indexOf("page=")<0){
+
+jQuery(".parsons-pager .parsons-page .page-item-0").addClass("active");
+
+}
+if(url.indexOf(href)>0 && url.indexOf("page=")>0){
+
+jQuery(this).addClass("active");
+
+}
+
+if(url.indexOf(href)<0 && url.indexOf("page=")>0){
+
+jQuery(this).removeClass("active");
+
+}
+
+
+});
+
+
+
+jQuery(".parsons-pager .parsons-tiaozhuan .parsons-submit").click(function(){
+
+var val = jQuery(".parsons-pager .parsons-tiaozhuan input").val();
+
+var val2 = parseInt(val) - 1 ;
+
+var r = /^[0-9]*[1-9][0-9]*$/;
+
+var total = parseInt(jQuery(".parsons-pager .parsons-all-page #parsons-total").text());
+
+var ur = window.location.href;
+
+if(r.test(val) == false){
+
+jQuery(".parsons-pager .parsons-tiaozhuan input").val("");
+
+}
+
+if(r.test(val) == true && ur.indexOf("page=")<0 && val > total){
+
+location.href = ur+"?page=0";
+
+}
+
+if(r.test(val) == true && ur.indexOf("page=")<0 && val <= total){
+
+location.href = ur+"?page="+val2;
+
+}
+
+if(r.test(val) == true && ur.indexOf("page=")>0 && val > total ){
+
+location.href = ur.replace(ur.substr(ur.indexOf("page="),10),"page=0");
+
+}
+
+if(r.test(val) == true && ur.indexOf("page=")>0 && val <= total ){
+
+location.href = ur.replace(ur.substr(ur.indexOf("page="),10),"page="+val2);
+
+
+}
+
+});
+});
+</script>
+
+<style type="text/css">
+
+ .parsons-pager{
+
+clear:both;
+
+overflow:hidden;
+width: 545px;
+float: right;
+margin-top: 20px;
+}
+ .parsons-pager div{
+
+float:left;
+    overflow: hidden;
+}
+
+.parsons-pager a,
+.parsons-pager .parsons-page p{
+
+padding: 3px 10px 3px 10px;
+background: #4b4b4b;
+color:#fff;
+margin-left: 5px;
+text-decoration: none;
+display: block;
+    float: left;
+}
+ .parsons-pager .parsons-page .active{
+
+background:#017518;
+}
+ .parsons-pager .parsons-all-page{
+
+padding-top: 5px;
+margin-left: 8px;
+}
+ .parsons-pager .parsons-tiaozhuan{
+
+margin-left: 10px;
+}
+ .parsons-pager .parsons-tiaozhuan p,
+ .parsons-pager .parsons-tiaozhuan a{
+
+display:block;
+float: left;
+}
+ .parsons- pager .parsons-tiaozhuan p{
+
+margin-top: 6px;
+}
+.parsons-pager .parsons-tiaozhuan input{
+
+width: 21px;
+    height: 20px;
+margin-top: 6px;
+}
+ .parsons-pager .parsons-tiaozhuan a{
+
+background: #017518;
+}
+ .parsons-pager .parsons-page .omit{
+
+background:none;
+color:#000;
+padding: 0px;
+}
+</style>
+';
+
+
+return $output;
+}
