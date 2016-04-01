@@ -8,10 +8,6 @@
       </a>
     <?php endif; ?>
 
-    <?php if ($page['page-top']): ?>
-    <?php print render($page['page-top']); ?>
-    <?php endif; ?>
-
     <?php if ($main_menu): ?>
       <div id="main-menu" class="navigation">
         <?php print theme('links__system_main_menu', array(
@@ -27,6 +23,11 @@
           ),
         )); ?>
       </div> <!-- /#main-menu -->
+    <?php if ($page['page-top']): ?>
+    <?php print render($page['page-top']); ?>
+    <?php endif; ?>
+
+
     <?php endif; ?>
   </div></div> <!-- /.section, /#header -->
 
