@@ -102,6 +102,7 @@ color:#333;
 }
 #block-block-11 .company-footer{
 font-family: sans-serif;
+margin-top:20px;
 }
 #block-block-3 .follow-us{
 border:1px solid #ccc;
@@ -200,7 +201,7 @@ height:34px;
 margin:0px;
 }
 #block-block-11 #info_box{
-margin-top:10px;
+margin-top:20px;
 }
 #block-system-main{
 margin-bottom:20px;
@@ -210,7 +211,7 @@ display:none;
 }
 #block-block-11 #new_select{
 height:40px;
-font-family:	"Lucida Grande", "Lucida Sans Unicode", Verdana, sans-serif;
+font-size:18px;
 }
 #block-block-3 .company-header{
 border-bottom:1px solid #ccc;
@@ -268,6 +269,7 @@ width:33%;
 display:block;
 width:95%;
 margin:0 auto;
+margin-top: 20px;
 }
 }
 @media only screen and (min-width:480px) and (max-width:639px){
