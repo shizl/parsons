@@ -183,12 +183,12 @@ width:140px;
 }
 
 .flex-control-paging li a{
-width:8px;
-height:8px;
+width:12px;
+height:12px;
 background:#ccc;
 }
 .flex-control-paging li a.flex-active{
-background:#208a38;
+background:url(../images/dian.png) no-repeat 0 0;
 }
 
 .flexslider .flex-caption{
@@ -535,8 +535,8 @@ display:none;
 text-align:center;
 }
 .about-overview .view-header .year_filter .dian{
-    width: 8px;
-    height: 8px;
+    width: 12px;
+    height: 12px;
     border-radius: 20px;
     display: inline-block;
     background: #ccc;
@@ -549,16 +549,22 @@ text-align:center;
     display: inline-block;
 }
 
-
-
+.about-overview .view-header .year_filter a:hover,
+.about-overview .view-header .year_filter a.active{
+ background: url(../images/san.png) no-repeat 36px 25px;
+}
 .about-overview .view-header .year_filter a:hover .year,
 .about-overview .view-header .year_filter a.active .year{
  background:#208a38;
 color:#fff;
+
 }
 .about-overview .view-header .year_filter a:hover .dian,
 .about-overview .view-header .year_filter a.active .dian{
-background:#208a38;
+background:url(../images/dian.png) no-repeat 0 0;
+width:12px;
+height:12px;
+border-radius: 0;
 }
 
 .about-overview .view-header .year_filter .year{
@@ -613,7 +619,15 @@ margin-top:10px;
 .about-overview .view-footer{
 text-align:center;
 }
-
+.about-overview .view-footer .more-link{
+background:url(../images/yuan.png) no-repeat 0 0;
+width:50px;
+height:50px;
+display:inline-block;
+text-indent: -9999px;
+cursor: pointer;
+text-align: inherit;
+}
 
 @media (max-width:1400px){
 }
