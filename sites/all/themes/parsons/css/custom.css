@@ -616,7 +616,8 @@ text-align:center;
 #messages div.section,
 #main,
 #footer-wrapper div.section {
- width: 95%;
+
+ width: 100%;
  margin:0 auto;
 }
 }
@@ -891,6 +892,12 @@ width:100%;
 #footer-wrapper div.section {
  width: 100%;
 }
+#block-block-3{
+display:none;
+}
+#block-block-11{
+display:block;
+}
 
 #block-views-banner-slider-block .view-header{
 display:none;
@@ -899,12 +906,6 @@ display:none;
 position:initial;
 padding-left:0px;
 padding-right:0px;
-}
-#block-block-3{
-display:none;
-}
-#block-block-11{
-display:block;
 }
 
 #block-block-6{

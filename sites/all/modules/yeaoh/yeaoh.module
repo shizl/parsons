@@ -55,7 +55,7 @@ if(isset($_GET['pager'])){
 
 if($category_id == 1){
      $fileaccount = db_query("select count (field_image_fid) from {field_data_field_image} where bundle = 'field_product_collection' and entity_id = (select entity_id from {field_data_field_brand} where field_brand_value = :brand_value and entity_id in (:entity_id) ) limit 0,1",array(':brand_value'=>1,':entity_id'=>$collection_arr))->fetchField();
-$allpage = ceil (((int)$fileaccount)/16);
+$allpage = ceil (((int)$fileaccount)/25);
 $page = "";
 $pre = '';
 $next = '';
@@ -127,13 +127,13 @@ if( isset($_GET['pager']) && ($_GET['pager'] >= 2) ){
 
 
 
-     $file = db_query("select field_image_fid from {field_data_field_image} where bundle = 'field_product_collection' and entity_id = (select entity_id from {field_data_field_brand} where field_brand_value = :brand_value and entity_id in (:entity_id) ) limit ".(((isset($_GET['pager'])?intval($_GET['pager']):1)-1) *16).",16",array(':brand_value'=>1,':entity_id'=>$collection_arr));
+     $file = db_query("select field_image_fid from {field_data_field_image} where bundle = 'field_product_collection' and entity_id = (select entity_id from {field_data_field_brand} where field_brand_value = :brand_value and entity_id in (:entity_id) ) limit ".(((isset($_GET['pager'])?intval($_GET['pager']):1)-1) *25).",25",array(':brand_value'=>1,':entity_id'=>$collection_arr));
   
   }elseif($category_id == 2){
 
 
      $fileaccount = db_query("select count (field_image_fid) from {field_data_field_image} where bundle = 'field_product_collection' and entity_id = (select entity_id from {field_data_field_brand} where field_brand_value = :brand_value and entity_id in (:entity_id) ) limit 0,1",array(':brand_value'=>2,':entity_id'=>$collection_arr))->fetchField();
-$allpage = ceil (((int)$fileaccount)/16);
+$allpage = ceil (((int)$fileaccount)/25);
 $page = "";
 $pre = '';
 $next = '';
@@ -204,7 +204,7 @@ if( isset($_GET['pager']) && ($_GET['pager'] >= 2) ){
 
 
 
-     $file = db_query("select field_image_fid from {field_data_field_image} where bundle = 'field_product_collection' and entity_id = (select entity_id from {field_data_field_brand} where field_brand_value = :brand_value and entity_id in (:entity_id) ) limit ".(((isset($_GET['pager'])?intval($_GET['pager']):1)-1) *16).",16",array(':brand_value'=>2,':entity_id'=>$collection_arr));
+     $file = db_query("select field_image_fid from {field_data_field_image} where bundle = 'field_product_collection' and entity_id = (select entity_id from {field_data_field_brand} where field_brand_value = :brand_value and entity_id in (:entity_id) ) limit ".(((isset($_GET['pager'])?intval($_GET['pager']):1)-1) *25).",25",array(':brand_value'=>2,':entity_id'=>$collection_arr));
 
 
 
@@ -213,7 +213,7 @@ if( isset($_GET['pager']) && ($_GET['pager'] >= 2) ){
 
 $fileaccount = db_query("select count(field_image_fid) from {field_data_field_image} where bundle = 'field_product_collection' and entity_id in (:entity_id) ",array(':entity_id'=>$collection_arr))->fetchField();
 
-$allpage = ceil (((int)$fileaccount)/16);
+$allpage = ceil (((int)$fileaccount)/25);
 $page = "";
 $next = "";
 $pre ="";
@@ -282,7 +282,7 @@ $page = '<a class=" page-item-1" href="/'.drupal_get_path_alias('node/' . $node-
 
 
 
- $file = db_query("select field_image_fid from {field_data_field_image} where bundle = 'field_product_collection' and entity_id in (:entity_id) limit ".(((isset($_GET['pager'])?intval($_GET['pager']):1)-1) *16).",16",array(':entity_id'=>$collection_arr));
+ $file = db_query("select field_image_fid from {field_data_field_image} where bundle = 'field_product_collection' and entity_id in (:entity_id) limit ".(((isset($_GET['pager'])?intval($_GET['pager']):1)-1) *25).",25",array(':entity_id'=>$collection_arr));
  }
 
 
