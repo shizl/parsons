@@ -65,17 +65,21 @@ position: fixed;
 
 }
 #block-views-banner-slider-block .view-footer .home-video .close{
-height: 30px;
+    height: 30px;
     float: right;
     font-size: 25px;
     margin-right: 10px;
     position: absolute;
-    right: 0px;
-    color: #fff;
+    right: -20px;
+    top: -10px;
+    color: #ccc;
     cursor: pointer;
-width:30px;
-text-align:center;
-z-index:1002;
+    width: 30px;
+    background: #333;
+    border-radius: 30px;
+    text-align: center;
+    z-index: 1002;
+    opacity: 1;
 }
 
 
@@ -120,6 +124,9 @@ margin-left:2%;
 
 .page-bottom-slider .views-field-nothing{
 font-size:16px;
+float: right;
+margin-right: 2%;
+margin-left: 0px;
 }
 .page-bottom-slider .views-field-nothing span{
 cursor: pointer;
