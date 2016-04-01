@@ -329,7 +329,7 @@ color:#fff;
 #messages div.section,
 #main,
 #footer-wrapper div.section {
- width: 960px;
+ width: 100%;
  margin:0 auto;
 }
 }
