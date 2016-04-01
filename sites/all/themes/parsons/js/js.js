@@ -24,38 +24,34 @@ jQuery('#block-block-2 .free').click(function(){
 });
 
 
-
-
-jQuery('.region-footer .block-menu-block').each(function(){
-
-var width = jQuery(window).width();
-
-if (parseInt(width)<=640 ){
-
 jQuery('.region-footer .block-menu-block h2').click(function(){
+        var width = jQuery(window).width()+17;
+        if(width<=640){
+   	jQuery(this).parent().find('.content').toggle();
+	var display1 = jQuery(this).parent().find('.content').css('display');
+
+	if(display1 == 'none'){
+
+		jQuery(this).css('background-image','url(/sites/all/themes/parsons/images/2.png)');
 
 
+	}else{
 
-jQuery(this).parent().find('.content').toggle();
+		jQuery(this).css('background-image','url(/sites/all/themes/parsons/images/1.png)');
 
-
-
-});
+	}
 }
-});
-
-jQuery('.region-footer .block-menu-block h2').click(function(){
-
-var display1 = jQuery(this).parent().find('.content').css('display');
-if(display1 == 'none'){
-
-jQuery(this).css('background-image','url(/sites/all/themes/parsons/images/2.png)');
-//alert(11);
-
+    });
+jQuery(window).resize(function(){
+var width = jQuery(window).width()+17;
+if (width<=640 ){
+jQuery('.region-footer .block-menu-block .content').css('display','none');
+ jQuery('.region-footer .block-menu-block h2').css('background-image','url(/sites/all/themes/parsons/images/2.png)');
 }else{
 
-jQuery(this).css('background-image','url(/sites/all/themes/parsons/images/1.png)');
-//alert(22);
+jQuery('.region-footer .block-menu-block .content').css('display','block');
+jQuery('.region-footer .block-menu-block h2').css('background-image','none');
+
 }
 });
 
