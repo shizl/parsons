@@ -9,11 +9,12 @@ position:relative;
 .node-type-article .field-name-field-image .field-items .field-item{
 width:440px;
 float:left;
-margin-right:20px;	
+margin-right:20px;
+height:284px;	
 }
 .node-type-article .field-name-field-image .field-items .field-item img{
 width:100%;
-height:auto;
+height:270px	;
 }
 .node-type-article .region-content{
 position:relative;
@@ -52,6 +53,10 @@ width:100% !important;
 .node-type-article .field-name-field-image .field-items .field-item{
 width:100%;
 float:none;
+height:auto;
+}
+.node-type-article .field-name-field-image .field-items .field-item img{
+height:auto;
 }
 }
 @media only screen and (min-width:961px) and (max-width:1359px){
