@@ -58,10 +58,23 @@ height:auto;
 .node-type-article .field-name-field-image .field-items .field-item img{
 height:auto;
 }
-.node-type-article .field-name-field-image>p:nth-child(1n){
-position:absolute;
-top:5.5%;
-left:50%;
+.node-type-article .field-name-field-image>p:nth-child(2n+1){
+position: absolute;
+bottom:5px !important;
+left: 43%;
+background:url("../images/bt-bottom.png") no-repeat;
+width:47px;
+height:24px;
+text-indent: -99999px;
+}
+.node-type-article .field-name-field-image>p:nth-child(2n+2){
+position: absolute;
+top: 60px;
+left: 43%;
+background:url("../images/bt-top.png") no-repeat;
+width:47px;
+height:24px;
+text-indent: -99999px;
 }
 }
 @media only screen and (min-width:961px) and (max-width:1359px){
