@@ -24,6 +24,7 @@ regions[content]        = 'Content'
 regions[footer]         = 'Footer'
 regions[footer-bottom]  = 'Footer-bottom'
 scripts[] = js/jquery.overlay.min.js
+scripts[] = js/jquery.overlay.js
 scripts[] = js/js.js
 scripts[] = js/cap.js
 
