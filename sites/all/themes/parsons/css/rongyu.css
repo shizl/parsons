@@ -16,4 +16,17 @@ padding-left: 30px;
 .page-honor .parsons-pager{
 width:316px;
 }
-	
+.page-honor .view-content{
+width:90%;
+margin:0 auto;
+}
+.page-honor .morelink{
+color:#298143;
+cursor:pointer;
+}
+.page-honor .moresmall{
+font-size:12px;
+}
+.page-honor #more-link-content .control{
+display:none;
+}
