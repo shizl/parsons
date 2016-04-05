@@ -1,5 +1,4 @@
 jQuery(document).ready(function(){
-
 var width = jQuery('.node-product .brands-images .item').width();
 jQuery('.node-product .brands-images .item').css('height',width+'px');
 
@@ -11,7 +10,7 @@ jQuery('#block-block-2 .free').click(function(){
 	  effect: 'fade',
 	  opacity: 0.6,
 	  closeOnClick:true, 
-	 onShow: function() {
+	  onShow: function() {
 
 
      	jQuery('.for-freetiaokuan').show();

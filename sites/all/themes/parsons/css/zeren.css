@@ -21,11 +21,6 @@ width:68%;
 float:left;
 margin-left:15px;
 }
-.page-social-responsibility .views-field-body a{
-color:#416148;
-display: block;
-margin-top: 36px;
-}
 .page-social-responsibility .views-row{
 overflow:hidden;
 border-bottom:1px solid #ccc;
@@ -34,6 +29,22 @@ padding-bottom:10px;
 }
 .page-social-responsibility .parsons-pager{
 width:308px;
+}
+.page-social-responsibility .views-field-nothing{
+float: left;
+margin-left: 15px;
+margin-top: 20px;
+cursor:pointer;
+}
+.page-social-responsibility #more-link-content .control{
+display:none;
+}
+.page-social-responsibility .views-field-nothing a{
+color:#416148;
+}
+#block-views-about-us-block-1{
+clear:both;
+display:none;
 }
 @media only screen and (min-width:320px) and (max-width:960px){
 .page-social-responsibility .views-field-field-image{
@@ -58,6 +69,21 @@ margin-top:0px;
 .page-social-responsibility .view-content{
 width:90%;
 margin:0 auto;
+}
+.page-social-responsibility .view-display-id-page_1{
+display:none;
+}
+#block-views-about-us-block-1{
+display:block;
+}
+.page-social-responsibility .views-field-nothing{
+margin:0px;
+}
+}
+@media only screen and (min-width:408px) and (max-width:960px){
+.page-social-responsibility .parsons-pager{
+width: 381px;
+margin-right: 15px;
 }
 }
 @media only screen and (min-width:961px) and (max-width:1199px){

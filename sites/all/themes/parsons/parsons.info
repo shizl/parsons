@@ -27,6 +27,7 @@ scripts[] = js/jquery.overlay.js
 scripts[] = js/js.js
 scripts[] = js/cap.js
 
+
 settings[shortcut_module_link] = 0
 
 
