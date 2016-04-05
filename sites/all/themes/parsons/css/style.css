@@ -2227,4 +2227,159 @@ margin-left: 2%;
 
 }
 
+.view-culture{
 
+width:95%;
+margin:0 auto;
+overflow: hidden;
+}
+.view-culture .view-content{
+
+overflow:hidden;
+}
+.view-culture .views-exposed-form{
+
+display:none;
+
+}
+
+.view-culture .views-row {
+
+width:33%;
+float:left;
+overflow: hidden;
+border-bottom: solid 1px;
+    margin-top: 10px;
+
+}
+.view-culture .views-field-body,
+.view-culture .views-field-view-node
+{
+
+display:none;
+}
+
+.view-culture .views-field-nothing .body{
+
+float:left;
+
+}
+.view-culture .views-field-field-culture-image,
+.view-culture .views-field-title,
+.view-culture .views-field-nothing{
+
+padding-left:3%;
+padding-right:3%;
+}
+.view-culture .views-field-nothing .body p{
+
+margin:0px;
+    margin-top: 2px;
+}
+.view-culture .views-field-title{
+
+
+margin-top: 15px;
+    margin-bottom: 5px;
+height: 50px;
+    overflow: hidden;
+}
+
+.view-culture .views-field-title a{
+
+color:#017518;
+font-size:16px;
+}
+
+.view-culture .views-field-field-culture-image img{
+
+width:100%;
+height:200px;
+}
+
+.view-culture .views-field-field-culture-image{
+
+height:200px;
+}
+.view-culture .views-field-nothing .link{
+
+float:right;
+    margin-top: 20px;
+}
+.view-culture .views-field-nothing{
+
+overflow:hidden;
+margin-bottom: 15px;
+}
+.view-culture .view-header{
+
+width:15%;
+float:left;
+border: solid 1px;
+text-align: center;
+padding-bottom: 15px;
+border-top:solid 6px #017518;
+}
+
+.view-culture .view-header a{
+
+font-size:16px;
+padding: 10px 20px;
+ border-bottom: solid 1px;
+display: block;
+    width: 80%;
+    margin: 0 auto;
+}
+.view-culture .view-header .active{
+
+color: #017518;
+border-bottom:1px solid #017518;
+font-weight:bold;
+}
+.view-culture .view-header li{
+
+margin-top:10px;
+}
+.view-culture .view-content{
+
+width:83%;
+float:right;
+}
+
+@media only screen and (max-width: 640px){
+
+
+.view-culture .views-row{
+
+width:100%;
+float:none;
+}
+.view-culture .view-header{
+
+width:100%;
+float:none;
+border:none;
+overflow: hidden;
+}
+.view-culture .view-header li{
+
+float:left;
+width:20%;
+}
+.view-culture .view-header li a{
+padding-left:0px;
+padding-right:0px;
+border: 1px solid;
+padding-top: 5px;
+    padding-bottom: 5px;
+}
+.view-culture .view-header .news{
+
+display:none;
+}
+.view-culture .view-content{
+width:100%;
+float:none;
+
+}
+}

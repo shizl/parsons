@@ -80,7 +80,17 @@ jQuery('.node-product .brands-images .item').css('height',width+'px');
 });
 
 
+jQuery('.view-culture .view-header li a').each(function(){
 
+var url = document.URL;
+var href = jQuery(this).attr('href');
+
+if(url.indexOf(href)>0){
+
+jQuery(this).addClass('active');
+}
+
+});
 
 
 });
