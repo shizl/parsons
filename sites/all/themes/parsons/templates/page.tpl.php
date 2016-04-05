@@ -8,10 +8,6 @@
       </a>
     <?php endif; ?>
 
-    <?php if ($page['page-top']): ?>
-    <?php print render($page['page-top']); ?>
-    <?php endif; ?>
-
     <?php if ($main_menu): ?>
       <div id="main-menu" class="navigation">
         <?php print theme('links__system_main_menu', array(
@@ -27,6 +23,11 @@
           ),
         )); ?>
       </div> <!-- /#main-menu -->
+    <?php if ($page['page-top']): ?>
+    <?php print render($page['page-top']); ?>
+    <?php endif; ?>
+
+
     <?php endif; ?>
   </div></div> <!-- /.section, /#header -->
 
@@ -78,6 +79,11 @@
   </div></div> <!-- /.section, /#footer-wrapper -->
 
 </div></div> <!-- /#page, /#page-wrapper -->
+<div id="more-link-content" style="display:none;"><span class="close">×</span>
+<div class="title"></div>
+<div class="content"></div>
+<div class="control"><span class="prv">上一篇</span><span class="next">下一篇</span></div>
+</div>
 <div class="for-freetiaokuan">
 <div class="free-content">
 <div class="closee">X</div>
