@@ -536,7 +536,7 @@ text-indent: 20px;
 margin:0px;
 }
 
-#views-exposed-form-about-us-page-3{
+.about-overview .view-filters{
 display:none;
 }
 
@@ -589,7 +589,6 @@ margin-top:40px;
 .about-overview .view-content .views-row{
 overflow: hidden;
     clear: both;
-    height: 296px;
 }
 
 .about-overview .view-content .views-row .views-field-field-image{
@@ -703,6 +702,11 @@ margin-bottom: 20px;
 }
 .region-content-bottom{
 margin-top:20px;
+}
+
+.region-content-middle{
+padding-left:10px;
+padding-right:10px;
 }
 
 
@@ -970,6 +974,57 @@ height:166px;
 }
 
 
+.about-overview .view-header{
+display:none;
+}
+
+.about-overview .view-filters{
+display:block;
+}
+.about-overview{
+padding-left:10px;
+padding-right:10px;
+}
+
+.about-overview .views-exposed-form .form-item{
+width:100%;
+}
+.about-overview .views-exposed-form .views-exposed-widget{
+float:none;
+padding:0px;
+}
+.about-overview .container-inline-date .date-padding{
+float:none;
+}
+
+.about-overview .view-filters select{
+width:100%;
+border:1px solid #208a38;
+background:#fff;
+color:#208a38;
+}
+.about-overview .view-content .views-row .views-field-field-image{
+width:100%;
+float:none;
+margin-right:0px;
+}
+.about-overview .view-content .views-row .views-field-field-image img{
+padding:5px;
+}
+
+
+.about-overview .view-content .views-row .views-field-title, 
+.about-overview .view-content .views-row .views-field-body{
+width:100%;
+float:none;
+margin-right:0px;
+}
+.about-overview .view-content .views-row .views-field-title{
+font-size:18px;
+}
+.about-overview .view-content .views-row .views-field-title .date{
+font-size:30px;
+}
 }
 
 @media (max-width:480px){
