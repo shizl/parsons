@@ -705,6 +705,11 @@ margin-bottom: 20px;
 margin-top:20px;
 }
 
+.region-content-middle{
+padding-left:10px;
+padding-right:10px;
+}
+
 
 #header div.section,
 #messages div.section,
