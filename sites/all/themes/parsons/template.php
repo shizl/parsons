@@ -174,6 +174,62 @@ $allpage = $pager_total[0];
 $page = "";
 
 
+if(isset($_GET['field_culturee_type_value'])){
+
+ 
+
+          if($allpage <=6){
+for($i=1; $i<=$allpage; $i++){
+
+$page .= '<a class="  page-item-'.($i-1).'" href="/'.arg(0).'?field_culturee_type_value='.$_GET['field_culturee_type_value'].'&page='.($i-1).'"> '.$i.'</a>';
+}
+}else{
+
+ if(isset($_GET['page']) && ($_GET['page'] >2) && ($_GET['page'] < $allpage-3)){
+
+    $page = '<a class=" page-item-0" href="/'.arg(0).'?field_culturee_type_value='.$_GET['field_culturee_type_value'].'&page=0">1</a>
+        <p class="omit">....</p>
+       
+
+        <a class=" page-item-'.((int)$_GET['page']-1).'" href="/'.arg(0).'?field_culturee_type_value='.$_GET['field_culturee_type_value'].'&page='.((int)$_GET['page']-1).'"> '.$_GET['page'].'</a>
+        <a class=" page-item-'.$_GET['page'].'" href="/'.arg(0).'?field_culturee_type_value='.$_GET['field_culturee_type_value'].'&page='.$_GET['page'].'"> '.((int)$_GET['page']+1).'</a>
+        <a class=" page-item-'.((int)$_GET['page']+1).'" href="/'.arg(0).'?field_culturee_type_value='.$_GET['field_culturee_type_value'].'&page='.((int)$_GET['page']+1).'"> '.((int)$_GET['page']+2).'</a>
+        <p class="omit">....</p>
+        <a class=" page-item-'.((int)$allpage-1).'" href="/'.arg(0).'?field_culturee_type_value='.$_GET['field_culturee_type_value'].'&page='.((int)$allpage-1).'"> '.$allpage.'</a>
+';     
+}
+
+    else if(isset($_GET['page']) && ($_GET['page'] >2) && ($_GET['page'] >= $allpage-3)){
+
+
+$page = '<a class=" page-item-0" href="/'.arg(0).'?field_culturee_type_value='.$_GET['field_culturee_type_value'].'&page=0">1</a>
+        <p class="omit">....</p>
+        <a class=" page-item-'.((int)$allpage-4).'" href="/'.arg(0).'?field_culturee_type_value='.$_GET['field_culturee_type_value'].'&page='.((int)$allpage-4).'"> '.((int)$allpage-3).'</a>
+        <a class=" page-item-'.((int)$allpage-3).'" href="/'.arg(0).'?field_culturee_type_value='.$_GET['field_culturee_type_value'].'&page='.((int)$allpage-3).'"> '.((int)$allpage-2).'</a>
+        <a class=" page-item-'.((int)$allpage-2).'" href="/'.arg(0).'?field_culturee_type_value='.$_GET['field_culturee_type_value'].'&page='.((int)$allpage-2).'"> '.((int)$allpage-1).'</a>
+        <a class=" page-item-'.((int)$allpage-1).'" href="/'.arg(0).'?field_culturee_type_value='.$_GET['field_culturee_type_value'].'&page='.((int)$allpage-1).'"> '.$allpage.'</a>
+';     
+
+}else{
+
+$page = '<a class=" page-item-0" href="/'.arg(0).'?field_culturee_type_value='.$_GET['field_culturee_type_value'].'&page=0">1</a>
+         <a class=" page-item-1" href="/'.arg(0).'?field_culturee_type_value='.$_GET['field_culturee_type_value'].'&page=1">2</a>
+         <a class=" page-item-2" href="/'.arg(0).'?field_culturee_type_value='.$_GET['field_culturee_type_value'].'&page=2">3</a>
+         <a class=" page-item-3" href="/'.arg(0).'?field_culturee_type_value='.$_GET['field_culturee_type_value'].'&page=3">4</a>
+        <p class="omit">....</p>
+        
+        <a class=" page-item-'.((int)$allpage-1).'" href="/'.arg(0).'?field_culturee_type_value='.$_GET['field_culturee_type_value'].'&page='.((int)$allpage-1).'"> '.$allpage.'</a>
+';     
+
+
+
+}
+
+}
+
+
+}else{
+
 if($allpage <=6){
 for($i=1; $i<=$allpage; $i++){
 
@@ -222,7 +278,7 @@ $page = '<a class=" page-item-0" href="/'.arg(0).'?page=0">1</a>
 }
 
 }
-
+}
 
 //echo '<pre>';
 //print_r(arg(0));exit;
