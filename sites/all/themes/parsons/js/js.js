@@ -81,9 +81,7 @@ jQuery('.node-product .brands-images .item').css('height',width+'px');
 });
 
 
-jQuery('.view-culture .view-header li a').each(function(){
 
-<<<<<<< HEAD
 video_html1 = jQuery(".home-video .video-content1").html();
 video_html2 = jQuery(".home-video .video-content2").html();
 video_html3 = jQuery(".home-video .video-content3").html();
@@ -268,17 +266,6 @@ jQuery('#more-link-content .control span').click(function(){
 
 
 jQuery('#more-link-content .close').click(function(){
-=======
-var url = document.URL;
-var href = jQuery(this).attr('href');
-
-if(url.indexOf(href)>0){
-
-jQuery(this).addClass('active');
-}
-
-});
->>>>>>> 13a1b0787f4dc5bd9cb8aa8223e21f1135b515dd
 
 jQuery("body .overlay").remove();
 jQuery('#more-link-content').hide();
@@ -330,6 +317,18 @@ init_views_row = init_views_row+1;
 	if(jQuery('.about-overview .views-row:last').is(":visible")){
 		jQuery('.about-overview .more-link').hide();
 	}
+
+});
+
+jQuery('.view-culture .view-header li a').each(function(){
+
+var url = document.URL;
+var href = jQuery(this).attr('href');
+
+if(url.indexOf(href)>0){
+
+jQuery(this).addClass('active');
+}
 
 });
 
