@@ -320,6 +320,18 @@ init_views_row = init_views_row+1;
 
 });
 
+jQuery('.view-culture .view-header li a').each(function(){
+
+var url = document.URL;
+var href = jQuery(this).attr('href');
+
+if(url.indexOf(href)>0){
+
+jQuery(this).addClass('active');
+}
+
+});
+
 });
 
 function video_close1(){
