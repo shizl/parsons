@@ -765,7 +765,9 @@ height:310px;
 }
 
 @media (max-width:768px){
-
+.page-bottom-slider .views-field-title{
+border-bottom: solid 2px #C7C7C7;
+}
 .region-content-banner{
 margin-bottom: 20px;
 }
