@@ -41,8 +41,6 @@ h=dnum*subHeight;
 jQuery('.field-name-field-image .field-items').css('height',h+'px');
 
 jQuery('.field-name-field-image').css('height',disHeight+'px');
-
-
 });
 }
 });

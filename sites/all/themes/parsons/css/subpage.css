@@ -69,7 +69,7 @@ text-indent: -99999px;
 }
 .node-type-article .field-name-field-image>p:nth-child(2n+2){
 position: absolute;
-top: 60px;
+top: 100px;
 left: 43%;
 background:url("../images/bt-top.png") no-repeat;
 width:47px;
