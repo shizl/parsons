@@ -1,0 +1,37 @@
+.page-honor .views-field-body ul{
+list-style:none;
+padding:0px;
+}
+.page-honor .views-field-body ul li{
+background:url("../images/disc-small.png") no-repeat left center;
+padding-left: 30px;
+}
+.page-honor .views-row .views-field-field-date{
+font-size:20px;
+font-weight:bold;
+color:#298143;
+background:url("../images/disc-big.png") no-repeat left center;
+padding-left: 30px;
+}
+.page-honor .parsons-pager{
+width:350px;
+}
+.page-honor .view-content{
+width:90%;
+margin:0 auto;
+}
+.page-honor .morelink{
+color:#298143;
+cursor:pointer;
+}
+.page-honor .moresmall{
+font-size:12px;
+}
+.page-honor #more-link-content .control{
+display:none;
+}
+@media only screen and (min-width:320px) and (max-width:365px){
+.page-honor .parsons-pager{
+width:306px;
+}
+}

@@ -4,6 +4,7 @@ description = A flexible, recolorable theme with many regions.
 package = Core
 version = VERSION
 core = 7.x
+stylesheets[all][] = css/rongyu.css
 stylesheets[all][] = css/linian.css
 stylesheets[all][] = css/contact.css
 stylesheets[all][] = css/bootstrap.css
