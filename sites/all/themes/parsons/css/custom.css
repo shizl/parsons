@@ -682,9 +682,9 @@ margin-top:40px;
 overflow:hidden;
 }
 .view-video .view-content .views-row{
-width:32%;
+width:342px;
 display:inline-block;
-margin-right:1%;
+margin-right:10px;
 background:#f3f4f5;
 margin-bottom:20px;
 }
@@ -696,7 +696,7 @@ margin-left:20px;
 }
 
 .view-video .view-content .views-row .views-field-field-video-image img{
-width:100%;
+width:340px;
 height:250px;
 }
 
