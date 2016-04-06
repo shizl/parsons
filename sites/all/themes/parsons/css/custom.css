@@ -458,7 +458,8 @@ margin-top:50px;
 overflow: hidden;
 clear: both;
 }
-#more-link-content .close{
+#more-link-content .close,
+#more-link-content2 .close{
 position: absolute;
     top: 0px;
     right:0px;
@@ -467,7 +468,8 @@ position: absolute;
     color: #fff;
     font-size: 22px;
 }
-#more-link-content{
+#more-link-content,
+#more-link-content2{
     position: fixed;
     margin: auto;
     left: 0;
@@ -481,29 +483,34 @@ position: absolute;
     padding: 20px;
 
 }
-#more-link-content .title{
+#more-link-content .title,
+#more-link-content2  .title{
 color:#208a38;
 font-size:20px;
 padding:10px 0px;
 border-bottom:1px solid #ccc;
 }
-#more-link-content .content{
+#more-link-content .content,
+#more-link-content2 .content{
     overflow: auto;
     height: 530px;
     margin-top: 2px;
 }
-#more-link-content .control{
+#more-link-content .control,
+#more-link-content2 .control{
 padding-top:10px;
 margin-top:10px;
 overflow:hidden;
 border-top:1px solid #ccc;
 }
-#more-link-content .control .prv{
+#more-link-content .control .prv,
+#more-link-content2 .control .prv{
 float:left;
 display:block;
 margin-left:10px;
 }
-#more-link-content .control .next{
+#more-link-content .control .next,
+#more-link-content2 .control .next{
 float:right;
 display:block;
 margin-right:10px;
