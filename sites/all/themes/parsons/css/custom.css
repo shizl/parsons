@@ -483,7 +483,7 @@ position: absolute;
 }
 #more-link-content .title{
 color:#208a38;
-font-size:16px;
+font-size:20px;
 padding:10px 0px;
 border-bottom:1px solid #ccc;
 }
@@ -672,8 +672,12 @@ border-bottom:none;
 }
 .view-video .view-footer .video_type_list ul li a{
  font-size:18px;
- 
 }
+.view-video .view-footer .video_type_list ul li a.active{
+color:#208a38;
+}
+
+
 .view-video .view-header video{
 width: 100%;
 }
