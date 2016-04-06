@@ -22,7 +22,6 @@ width = width+460;
 if(jQuery(document).width()>319&&jQuery(document).width()<640){
 subHeight=jQuery('.field-name-field-image .field-items .field-item').height();
 disHeight=subHeight*3;
-alert(disHeight);
 dnum=jQuery(".field-name-field-image .field-items .field-item").length;
 h=dnum*subHeight;
 jQuery('.field-name-field-image .field-items').css('height',h+'px');
@@ -42,25 +41,6 @@ h=dnum*subHeight;
 jQuery('.field-name-field-image .field-items').css('height',h+'px');
 
 jQuery('.field-name-field-image').css('height',disHeight+'px');
-height = 0;
-function  pre_(){
- height_item = jQuery('.field-name-field-image .field-items .field-item').height();
-total_height = jQuery(".field-name-field-image .field-items").height();
- _top =  parseInt(total_height) /2;
- if( height<=0 && height > parseInt( '-'+_top)){
-height = height- height_item;
-jQuery(".field-items").animate({top:height+'px'});
-}
-}
-function  next_(){
- height_item = jQuery('.field-name-field-image .field-items .field-item').height();
-total_height = jQuery(".field-name-field-image .field-items").height();
- _top =  parseInt(total_height) /2;
-if(height<0){
-height=height+height_item;
-jQuery(".field-items").animate({top:height+'px'});
-}
-}
 });
 }
 });
