@@ -483,7 +483,7 @@ position: absolute;
 }
 #more-link-content .title{
 color:#208a38;
-font-size:16px;
+font-size:20px;
 padding:10px 0px;
 border-bottom:1px solid #ccc;
 }
@@ -589,6 +589,7 @@ margin-top:40px;
 .about-overview .view-content .views-row{
 overflow: hidden;
     clear: both;
+    margin-bottom: 20px;
 }
 
 .about-overview .view-content .views-row .views-field-field-image{
@@ -671,8 +672,12 @@ border-bottom:none;
 }
 .view-video .view-footer .video_type_list ul li a{
  font-size:18px;
- 
 }
+.view-video .view-footer .video_type_list ul li a.active{
+color:#208a38;
+}
+
+
 .view-video .view-header video{
 width: 100%;
 }
@@ -682,7 +687,7 @@ margin-top:40px;
 overflow:hidden;
 }
 .view-video .view-content .views-row{
-width:342px;
+width:332px;
 display:inline-block;
 margin-right:10px;
 background:#f3f4f5;
@@ -696,7 +701,7 @@ margin-left:20px;
 }
 
 .view-video .view-content .views-row .views-field-field-video-image img{
-width:340px;
+width:332px;
 height:250px;
 }
 
