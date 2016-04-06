@@ -13,9 +13,6 @@ color:#298143;
 background:url("../images/disc-big.png") no-repeat left center;
 padding-left: 30px;
 }
-.page-honor .parsons-pager{
-width:350px;
-}
 .page-honor .view-content{
 width:90%;
 margin:0 auto;
@@ -30,7 +27,7 @@ font-size:12px;
 .page-honor #more-link-content .control{
 display:none;
 }
-@media only screen and (min-width:320px) and (max-width:365px){
+@media only screen and (min-width:320px) and (max-width:580px){
 .page-honor .parsons-pager{
 width:306px;
 }
