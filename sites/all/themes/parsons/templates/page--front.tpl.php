@@ -68,6 +68,13 @@
 <div class="control"><span class="prv">上一篇</span><span class="next">下一篇</span></div>
 </div>
 
+
+<div id="more-link-content2" style="display:none;"><span class="close">×</span>
+<div class="title"></div>
+<div class="content"></div>
+<div class="control"><span class="prv">上一篇</span><span class="next">下一篇</span></div>
+</div>
+
 <div class="for-freetiaokuan">
 <div class="free-content">
 <div class="closee">X</div>

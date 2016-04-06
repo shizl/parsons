@@ -2254,8 +2254,8 @@ border-bottom: solid 1px;
 
 }
 .view-culture .views-field-body,
-.view-culture .views-field-view-node
-{
+.view-culture .views-field-view-node,
+.view-culture .views-field-nid{
 
 display:none;
 }
@@ -2302,7 +2302,7 @@ height:200px;
 
 height:200px;
 }
-.view-culture .views-field-nothing .link{
+.view-culture .views-field-nothing .morelink2{
 
 float:right;
     margin-top: 20px;
@@ -2311,6 +2311,11 @@ float:right;
 
 overflow:hidden;
 margin-bottom: 15px;
+}
+
+.view-culture .views-field-nothing .morelink2{
+
+cursor: pointer;
 }
 .view-culture .view-header{
 
