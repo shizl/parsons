@@ -64,18 +64,31 @@ position: fixed;
     padding: 0px;
 
 }
+
+#block-views-banner-slider-block .view-footer .home-video .video-content iframe,
+#block-views-banner-slider-block .view-footer .home-video .video-content video{
+    width: 860px;
+    height:462px;
+}
+
+
+
 #block-views-banner-slider-block .view-footer .home-video .close{
-height: 30px;
+    height: 30px;
     float: right;
     font-size: 25px;
     margin-right: 10px;
     position: absolute;
-    right: 0px;
-    color: #fff;
+    right: -20px;
+    top: -10px;
+    color: #ccc;
     cursor: pointer;
-width:30px;
-text-align:center;
-z-index:1002;
+    width: 30px;
+    background: #333;
+    border-radius: 30px;
+    text-align: center;
+    z-index: 1002;
+    opacity: 1;
 }
 
 
@@ -120,6 +133,9 @@ margin-left:2%;
 
 .page-bottom-slider .views-field-nothing{
 font-size:16px;
+float: right;
+margin-right: 2%;
+margin-left: 0px;
 }
 .page-bottom-slider .views-field-nothing span{
 cursor: pointer;
@@ -176,12 +192,12 @@ width:140px;
 }
 
 .flex-control-paging li a{
-width:8px;
-height:8px;
+width:12px;
+height:12px;
 background:#ccc;
 }
 .flex-control-paging li a.flex-active{
-background:#208a38;
+background:url(../images/dian.png) no-repeat 0 0;
 }
 
 .flexslider .flex-caption{
@@ -467,7 +483,7 @@ position: absolute;
 }
 #more-link-content .title{
 color:#208a38;
-font-size:16px;
+font-size:20px;
 padding:10px 0px;
 border-bottom:1px solid #ccc;
 }
@@ -520,7 +536,7 @@ text-indent: 20px;
 margin:0px;
 }
 
-#views-exposed-form-about-us-page-3{
+.about-overview .view-filters{
 display:none;
 }
 
@@ -528,8 +544,8 @@ display:none;
 text-align:center;
 }
 .about-overview .view-header .year_filter .dian{
-    width: 8px;
-    height: 8px;
+    width: 12px;
+    height: 12px;
     border-radius: 20px;
     display: inline-block;
     background: #ccc;
@@ -542,16 +558,22 @@ text-align:center;
     display: inline-block;
 }
 
-
-
+.about-overview .view-header .year_filter a:hover,
+.about-overview .view-header .year_filter a.active{
+ background: url(../images/san.png) no-repeat 36px 25px;
+}
 .about-overview .view-header .year_filter a:hover .year,
 .about-overview .view-header .year_filter a.active .year{
  background:#208a38;
 color:#fff;
+
 }
 .about-overview .view-header .year_filter a:hover .dian,
 .about-overview .view-header .year_filter a.active .dian{
-background:#208a38;
+background:url(../images/dian.png) no-repeat 0 0;
+width:12px;
+height:12px;
+border-radius: 0;
 }
 
 .about-overview .view-header .year_filter .year{
@@ -567,7 +589,7 @@ margin-top:40px;
 .about-overview .view-content .views-row{
 overflow: hidden;
     clear: both;
-    height: 296px;
+    margin-bottom: 20px;
 }
 
 .about-overview .view-content .views-row .views-field-field-image{
@@ -605,6 +627,82 @@ margin-top:10px;
 }
 .about-overview .view-footer{
 text-align:center;
+}
+.about-overview .view-footer .more-link{
+background:url(../images/yuan.png) no-repeat 0 0;
+width:50px;
+height:50px;
+display:inline-block;
+text-indent: -9999px;
+cursor: pointer;
+text-align: inherit;
+}
+.view-video {
+position: relative;
+}
+.view-video .view-header,
+.view-video .view-content{
+width:76%;
+float:right;
+}
+.view-video .view-footer{
+width:18%;
+position: absolute;
+margin-left:2%;
+}
+.view-video .view-footer .video_type_list{
+border-top:5px solid #208a38;
+}
+.view-video .view-footer .video_type_list ul{
+
+border-left:1px solid #ccc;
+border-right:1px solid #ccc;
+border-bottom:1px solid #ccc;
+padding-left:30px;
+padding-right:30px;
+}
+
+.view-video .view-footer .video_type_list ul li{
+border-bottom:1px solid #ccc;
+line-height:80px;
+text-align:center;
+}
+.view-video .view-footer .video_type_list ul li:last-child{
+border-bottom:none;
+}
+.view-video .view-footer .video_type_list ul li a{
+ font-size:18px;
+}
+.view-video .view-footer .video_type_list ul li a.active{
+color:#208a38;
+}
+
+
+.view-video .view-header video{
+width: 100%;
+}
+
+.view-video .view-content {
+margin-top:40px;
+overflow:hidden;
+}
+.view-video .view-content .views-row{
+width:332px;
+display:inline-block;
+margin-right:10px;
+background:#f3f4f5;
+margin-bottom:20px;
+}
+
+.view-video .view-content .views-row .views-field-title{
+font-size:18px;
+line-height:40px;
+margin-left:20px;
+}
+
+.view-video .view-content .views-row .views-field-field-video-image img{
+width:332px;
+height:250px;
 }
 
 
@@ -652,15 +750,34 @@ position:initial;
  width: 30%;
 margin-left:3%;
 }
+
+#block-views-banner-slider-block .view-footer .home-video .video-content{
+width:560px;
+height:310px;
+}
+
+#block-views-banner-slider-block .view-footer .home-video .video-content iframe,
+#block-views-banner-slider-block .view-footer .home-video .video-content video{
+width:560px;
+height:310px;
+}
+
 }
 
 @media (max-width:768px){
-
+.page-bottom-slider .views-field-title{
+border-bottom: solid 2px #C7C7C7;
+}
 .region-content-banner{
 margin-bottom: 20px;
 }
 .region-content-bottom{
 margin-top:20px;
+}
+
+.region-content-middle{
+padding-left:10px;
+padding-right:10px;
 }
 
 
@@ -884,6 +1001,7 @@ height:auto !important;
 width:100%;
 }
 
+}
 
 @media (max-width:640px){
 #header div.section,
@@ -913,6 +1031,70 @@ display:block;
 }
 #main-menu{
 display:none;
+}
+
+#block-views-banner-slider-block .view-footer .home-video .video-content{
+width:300px;
+height:166px;
+}
+
+#block-views-banner-slider-block .view-footer .home-video .video-content iframe,
+#block-views-banner-slider-block .view-footer .home-video .video-content video{
+width:300px;
+height:166px;
+}
+
+
+.about-overview .view-header{
+display:none;
+}
+
+.about-overview .view-filters{
+display:block;
+}
+.about-overview{
+padding-left:10px;
+padding-right:10px;
+}
+
+.about-overview .views-exposed-form .form-item{
+width:100%;
+}
+.about-overview .views-exposed-form .views-exposed-widget{
+float:none;
+padding:0px;
+}
+.about-overview .container-inline-date .date-padding{
+float:none;
+}
+
+.about-overview .view-filters select{
+width:100%;
+border:1px solid #208a38;
+background:#fff;
+color:#208a38;
+}
+.about-overview .view-content .views-row .views-field-field-image{
+width:100%;
+float:none;
+margin-right:0px;
+}
+.about-overview .view-content .views-row .views-field-field-image img{
+padding:5px;
+}
+
+
+.about-overview .view-content .views-row .views-field-title, 
+.about-overview .view-content .views-row .views-field-body{
+width:100%;
+float:none;
+margin-right:0px;
+}
+.about-overview .view-content .views-row .views-field-title{
+font-size:18px;
+}
+.about-overview .view-content .views-row .views-field-title .date{
+font-size:30px;
 }
 }
 
