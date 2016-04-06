@@ -44,8 +44,6 @@ jQuery('.region-footer .block-menu-block h2').css('background-image','none');
 
 
 
-jQuery('.region-footer .block-menu-block').each(function(){
-
 var width = jQuery(window).width();
 
 if (parseInt(width)<=640 ){
