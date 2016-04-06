@@ -43,6 +43,36 @@ jQuery('.field-name-field-image .field-items').css('height',h+'px');
 jQuery('.field-name-field-image').css('height',disHeight+'px');
 });
 }
+if(jQuery(document).width()>=640&&jQuery(document).width()<960){
+subWidth=jQuery('.field-name-field-image .field-items .field-item').width();
+disWidth=subWidth*1;
+dnum=jQuery(".field-name-field-image .field-items .field-item").length;
+w=dnum*subWidth;
+jQuery('.field-name-field-image .field-items').css('width',w+'px');
+jQuery('.field-name-field-image').css('width',disWidth+'px');
+alert(disWidth);
+ jQuery(".bt-left").click(function(){
+   left =  c_width /2;
+ if( width<=0 && width > parseInt( '-'+left)){
+width = width-460;
+      jQuery(".field-items").animate({left:width+'px'});
+}
+});
+jQuery(".bt-right").click(function(){
+if(width< 0){
+width = width+460;
+      jQuery(".field-items").animate({left:width+'px'});
+}
+});
+jQuery(window).resize(function(){
+  subWidth=jQuery('.field-name-field-image .field-items .field-item').width();
+  disWidth=subHeight*1;
+  dnum=jQuery(".field-name-field-image .field-items .field-item").length;
+  w=dnum*subWidth;
+  jQuery('.field-name-field-image .field-items').css('width',w+'px');
+  jQuery('.field-name-field-image').css('width',disWidth+'px');
+});
+}
 });
 height = 0;
 function  pre_(){
