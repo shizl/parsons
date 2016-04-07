@@ -40,8 +40,8 @@ color:#333;
 overflow:hidden;
 position:relative;
 }
-.page-node-440 #main-menu-links a{
-padding:0 10px;
+#main-menu-links a{
+padding:0 10px !important;
 }
 /*******English page end******************/
 /*******Traditional Chinese************/
