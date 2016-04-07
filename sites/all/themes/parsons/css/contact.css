@@ -40,7 +40,7 @@ color:#333;
 overflow:hidden;
 position:relative;
 }
-#main-menu-links a{
+.i18n-en #main-menu-links a{
 padding:0 10px !important;
 }
 /*******English page end******************/
