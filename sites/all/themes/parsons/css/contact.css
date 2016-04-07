@@ -1,16 +1,80 @@
-.page-node-89 #block-block-13{
+.page-node-244 #block-block-13{
 display:none;
 }
-.page-node-89 #node-89 .field-item img{
+.page-node-244 #node-244 .field-item img{
 width:100%;
 height:auto;
 }
-.page-node-89 #node-89 .col-sm-12 .page-header{
+.page-node-244 #node-244 .col-sm-12 .page-header{
 display:none;
 }
-.page-node-89 #node-89 .submitted span{
+.page-node-244 #node-244 .submitted span{
 display:none;
 }
+/*******English page********/
+.page-node-440 #block-block-13{
+display:none;
+}
+.page-node-440 #node-440 .field-item img{
+width:100%;
+height:auto;
+}
+.page-node-440 #node-440 .col-sm-12 .page-header{
+display:none;
+}
+.page-node-440 #node-440 .submitted span{
+display:none;
+}
+.page-node-440 #node-440 .company-header{
+border-bottom:1px solid #ccc;
+width:95%;
+}
+.page-node-440 #node-440 .company-header h2{
+font-size:20px;
+margin-bottom:5px;
+}
+#node-440 .company-footer a{
+color:#333;
+}
+.page-node-440 .region-content{
+overflow:hidden;
+position:relative;
+}
+.page-node-440 #main-menu-links a{
+padding:0 10px;
+}
+/*******English page end******************/
+/*******Traditional Chinese************/
+.page-node-439 #block-block-13{
+display:none;
+}
+.page-node-439 #node-439 .field-item img{
+width:100%;
+height:auto;
+}
+.page-node-439 #node-439 .col-sm-12 .page-header{
+display:none;
+}
+.page-node-439 #node-439 .submitted span{
+display:none;
+}
+.page-node-439 #node-439 .company-header{
+border-bottom:1px solid #ccc;
+width:95%;
+}
+.page-node-439 #node-439 .company-header h2{
+font-size:20px;
+margin-bottom:5px;
+}
+#node-439 .company-footer a{
+color:#333;
+}
+.page-node-439 .region-content{
+overflow:hidden;
+position:relative;
+}
+
+/***Traditional end***/
 #block-webform-client-block-105{
 width:48%;
 float:left;
@@ -76,18 +140,18 @@ border:1px solid #ccc;
 width:100%;
 float:left;
 }
-.page-node-89 #node-89 .company-header{
+.page-node-244 #node-244 .company-header{
 border-bottom:1px solid #ccc;
 width:95%;
 }
-.page-node-89 #node-89 .company-header h2{
+.page-node-244 #node-244 .company-header h2{
 font-size:20px;
 margin-bottom:5px;
 }
-#node-89 .company-footer a{
+#node-244 .company-footer a{
 color:#333;
 }
-.page-node-89 .region-content{
+.page-node-244 .region-content{
 overflow:hidden;
 position:relative;
 }
@@ -123,7 +187,7 @@ font-family: sans-serif;
     display:block;
     text-indent: -20cm;
 }
-.page-node-89 #main{
+.page-node-244 #main{
 width:100% !important;
 }
 #webform-client-form-105 input{
