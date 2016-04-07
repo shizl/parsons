@@ -386,9 +386,10 @@ location.href = ur.replace(ur.substr(ur.indexOf("page="),10),"page="+val2);
 clear:both;
 
 overflow:hidden;
-width: 545px;
+width: auto;
 float: right;
 margin-top: 20px;
+margin-right:10px;
 }
  .parsons-pager div{
 
