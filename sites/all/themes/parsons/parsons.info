@@ -12,7 +12,7 @@ stylesheets[all][] = css/bootstrap.css
 stylesheets[all][] = css/layout.css
 stylesheets[all][] = css/style.css
 stylesheets[all][] = css/custom.css
-
+stylesheets[all][] = css/header-link.css
 stylesheets[print][] = css/print.css
 scripts[] = js/menu-new.js
 regions[page-top]     = 'Page top'
