@@ -692,6 +692,16 @@ display:inline-block;
 margin-right:10px;
 background:#f3f4f5;
 margin-bottom:20px;
+position: relative;
+}
+
+.view-video .view-content .views-row .views-field-nothing{
+    position: absolute;
+    left: 50%;
+    margin-left: -33px;
+    top: 50%;
+    margin-top: -65px;
+    cursor: pointer;
 }
 
 .view-video .view-content .views-row .views-field-title{
