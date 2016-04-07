@@ -2288,8 +2288,8 @@ height: 50px;
 
 .view-culture .views-field-title a{
 
-color:#017518;
-font-size:16px;
+color:#024610;
+font-size:20px;
 }
 
 .view-culture .views-field-field-culture-image img{
@@ -2316,6 +2316,7 @@ margin-bottom: 15px;
 .view-culture .views-field-nothing .morelink2{
 
 cursor: pointer;
+color:#024610;
 }
 .view-culture .view-header{
 
@@ -2329,7 +2330,7 @@ border-top:solid 6px #017518;
 
 .view-culture .view-header a{
 
-font-size:16px;
+font-size:17px;
 padding: 10px 20px;
  border-bottom: solid 1px;
 display: block;
@@ -2387,5 +2388,17 @@ display:none;
 width:100%;
 float:none;
 
+}
+.parsons-pager{
+
+width:auto !important;
+float: none !important;
+}
+.parsons-pager .parsons-tiaozhuan{
+
+float:none;
+clear:both;
+padding-top: 15px;
+    margin-left: 0px !important;
 }
 }
