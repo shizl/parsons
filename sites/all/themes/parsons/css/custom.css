@@ -9,6 +9,10 @@ z-index:11;
 display:none;
 }
 
+#block-views-banner-slider-block-1 .content{
+margin-top:0px;
+}
+
 #block-views-banner-slider-block{
 position: relative;
 margin-bottom: 50px;
@@ -495,6 +499,7 @@ border-bottom:1px solid #ccc;
     overflow: auto;
     height: 530px;
     margin-top: 2px;
+overflow-x: hidden;
 }
 #more-link-content .control,
 #more-link-content2 .control{
@@ -748,7 +753,9 @@ height:250px;
 #block-views-banner-slider-block{
 margin-bottom:0px;
 }
-
+.page-bottom-slider .views-field-title{
+border-top:0px;
+}
 #block-views-banner-slider-block .view-header{
 margin-top:20px;
 margin-left:10px;
@@ -761,13 +768,23 @@ height:70px;
 
 #block-views-banner-slider-block .view-footer .home-video .video-button{
 position:initial;
+height:40px;
+padding:0px;
+border-bottom:2px solid #eee;
 }
 #block-views-banner-slider-block .view-footer .home-video .video-button span{
- background-size: 100%;
+ background-size: 95%;
  width: 30%;
 margin-left:3%;
-}
+border-right:2px solid #eee;
+background-position-y: 50%;
+height:40px;
+line-height:40px;
 
+}
+#block-views-banner-slider-block .view-footer .home-video .video-button span:last-child{
+border-right:none;
+}
 #block-views-banner-slider-block .view-footer .home-video .video-content{
 width:560px;
 height:310px;
@@ -804,7 +821,9 @@ padding-right:10px;
 #footer-wrapper div.section {
  width: 100%;
 }
-
+#more-link-content{
+width:90%;
+}
 
 .page-bottom-slider{
 margin-bottom:30px;
