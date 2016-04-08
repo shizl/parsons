@@ -4,13 +4,15 @@ description = A flexible, recolorable theme with many regions.
 package = Core
 version = VERSION
 core = 7.x
+stylesheets[all][] = css/rongyu.css
+stylesheets[all][] = css/zeren.css
 stylesheets[all][] = css/linian.css
 stylesheets[all][] = css/contact.css
 stylesheets[all][] = css/bootstrap.css
 stylesheets[all][] = css/layout.css
 stylesheets[all][] = css/style.css
 stylesheets[all][] = css/custom.css
-
+stylesheets[all][] = css/header-link.css
 stylesheets[print][] = css/print.css
 scripts[] = js/menu-new.js
 regions[page-top]     = 'Page top'
@@ -25,6 +27,7 @@ scripts[] = js/jquery.overlay.min.js
 scripts[] = js/jquery.overlay.js
 scripts[] = js/js.js
 scripts[] = js/cap.js
+
 
 settings[shortcut_module_link] = 0
 

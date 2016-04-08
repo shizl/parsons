@@ -154,9 +154,6 @@ function parsons_field__taxonomy_term_reference($variables) {
 
   return $output;
 }
-
-
-
 function parsons_pager($variables) {
  
 $tags = $variables['tags'];
