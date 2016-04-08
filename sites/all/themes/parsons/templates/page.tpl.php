@@ -55,13 +55,13 @@
         <?php print render($page['content-middle']);?>
       <?php endif; ?>
 
-      <?php if ($page['content-bottom']) : ?>
-        <?php print render($page['content-bottom']);?>
-      <?php endif; ?>
-
       <?php if($page['content']): ?>
       <?php print render($page['content']); ?>
       <?php endif;  ?>
+
+      <?php if ($page['content-bottom']) : ?>
+        <?php print render($page['content-bottom']);?>
+      <?php endif; ?>
 
     </div></div> <!-- /.section, /#content -->
 
