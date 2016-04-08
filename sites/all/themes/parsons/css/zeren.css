@@ -2,6 +2,9 @@
 width:30%;
 float:left;
 }
+.page-social-responsibility .parsons-submit{
+cursor:pointer;
+}
 .page-social-responsibility .views-field-field-image img{
 width:100%;
 height:auto;
@@ -11,7 +14,7 @@ width:68%;
 float:left;
 margin-left:15px;
 }
-.page-social-responsibility .views-field-title a{
+.page-social-responsibility .views-field-title span{
 color:#416148;
 font-weight:bold;
 font-size:16px;
