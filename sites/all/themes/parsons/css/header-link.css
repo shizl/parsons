@@ -7,5 +7,25 @@ float: left;
 }
 #block-block-15{
 overflow:hidden;
-float:right;
+float:left;
+}
+#block-block-15 select{
+background:none;
+background:url("../images/drop.png") no-repeat right center;
+background-size:25px 25px;
+color:#7B7B7B;
+-webkit-appearance:none;
+-moz-appearance:none;
+width: 100px;
+}
+#block-block-15 a.enter{
+    vertical-align:middle;
+    height: 25px;
+    background: #288345;
+    color: white;
+    width: 50px;
+    text-align:center;
+    line-height: 25px;
+    margin-left: 3px;
+ 
 }
