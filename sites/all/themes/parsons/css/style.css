@@ -2290,7 +2290,8 @@ height: 50px;
     overflow: hidden;
 }
 
-.view-culture .views-field-title a{
+.view-culture .views-field-title a,
+.view-culture .views-field-title span{
 
 color:#024610;
 font-size:20px;
@@ -2330,6 +2331,7 @@ border: solid 1px;
 text-align: center;
 padding-bottom: 15px;
 border-top:solid 6px #017518;
+margin-top: 10px;
 }
 
 .view-culture .view-header a{
@@ -2341,6 +2343,12 @@ display: block;
     width: 80%;
     margin: 0 auto;
 }
+.view-culture .view-header .last a{
+
+border-bottom:none;
+
+}
+
 .view-culture .view-header .active{
 
 color: #024610;
