@@ -533,7 +533,8 @@ position: absolute;
     z-index: 11;
 }
 
-.subpage-banner .view-footer{
+.subpage-banner .slides .views-field-title{
+
 background:rgba(0,0,0,0.5);
 position: absolute;
 bottom:0px;
