@@ -193,6 +193,8 @@ position: absolute;
 
 .flex-control-thumbs img:hover{
 width:140px;
+margin-left: -8px;
+margin-top: -5px;
 }
 
 .flex-control-paging li a{
