@@ -456,7 +456,7 @@ jQuery(this).addClass('active');
 
 });
 
-jQuery('.page-news-centre .view-about-us .view-header li a').each(function(){
+jQuery('.view-about-us.view-id-about_us.view-display-id-page_4 .view-header li a').each(function(){
 
 var url = document.URL;
 var href = jQuery(this).attr('href');
