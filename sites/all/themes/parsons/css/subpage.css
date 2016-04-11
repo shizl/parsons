@@ -1,6 +1,7 @@
 .node-type-article .field-name-field-image{
-width:1360px;
+width:100%;
 overflow:hidden;
+max-width:1400px;
 }
 .node-type-article .field-name-field-image .field-items{
 overflow:hidden;
@@ -85,6 +86,13 @@ height:auto;
 .node-type-article .field-name-field-image .field-items .field-item{
 width:303px;
 height:auto;
+}
+#block-block-13{
+width:100%;
+top:49%;
+}
+#block-block-13 .bt-right{
+margin-right: 10px;
 }
 }
 @media only screen and (min-width:960px) and (max-width:1359px){
