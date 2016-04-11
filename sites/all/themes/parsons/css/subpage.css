@@ -78,6 +78,15 @@ height:24px;
 text-indent: -99999px;
 }
 }
+@media only screen and (min-width:640px) and (max-width:959px){
+.node-type-article .field-name-field-image .field-items .field-item img{
+height:auto;
+}
+.node-type-article .field-name-field-image .field-items .field-item{
+width:303px;
+height:auto;
+}
+}
 @media only screen and (min-width:960px) and (max-width:1359px){
 .node-type-article .field-name-field-image{
 width:900px;
