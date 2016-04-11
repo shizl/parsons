@@ -380,6 +380,15 @@ jQuery('#more-link-content').hide();
 
 });
 
+jQuery('.for-freetiaokuan .closee').click(function(){
+
+jQuery("body .overlay").remove();
+jQuery('.for-freetiaokuan').hide();
+ jQuery("body").removeClass("overlay-trigger");
+ jQuery("body").css({"overflow":"inherit"});
+
+});
+
 jQuery('#more-link-content2 .close').click(function(){
 
 jQuery("body .overlay").remove();
@@ -436,6 +445,18 @@ init_views_row = init_views_row+1;
 });
 
 jQuery('.view-culture .view-header li a').each(function(){
+
+var url = document.URL;
+var href = jQuery(this).attr('href');
+
+if(url.indexOf(href)>0){
+
+jQuery(this).addClass('active');
+}
+
+});
+
+jQuery('.page-news-centre .view-about-us .view-header li a').each(function(){
 
 var url = document.URL;
 var href = jQuery(this).attr('href');
