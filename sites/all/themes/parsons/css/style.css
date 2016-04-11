@@ -1573,7 +1573,7 @@ padding-left:0px;
 
 color:#000;
 font-weight:normal;
-font-size:15px;
+font-size:16px;
 text-decoration: none;
 }
 .region-footer .block a{
@@ -1894,8 +1894,8 @@ margin:0 auto;
    margin-top: 0px !important;
 display: block;
    border-bottom: solid 2px #C7C7C7;
-padding-top: 10px;
-    padding-bottom: 10px;
+padding-top: 13px;
+    padding-bottom: 13px;
 background-image:url(../images/2.png);
 background-repeat: no-repeat;
     background-position: right;
@@ -1922,6 +1922,8 @@ padding-left: 4px;
 .region-footer .menu-block-wrapper a{
 
 font-size:14px;
+padding-left: 10px;
+display: block;
 }
 #block-block-1{
 
@@ -1933,6 +1935,7 @@ width:100%;
 
 font-size:16px;
 border: none;
+padding-left:0px;
 }
 #block-block-1 .top{
 
@@ -1953,6 +1956,7 @@ float:left;
 border:none;
 padding-top: 0px;
     padding-bottom: 5px;
+padding-left: 4px;
 }
 #block-block-1 .share{
 
@@ -2254,8 +2258,8 @@ border-bottom: solid 1px;
 
 }
 .view-culture .views-field-body,
-.view-culture .views-field-view-node
-{
+.view-culture .views-field-view-node,
+.view-culture .views-field-nid{
 
 display:none;
 }
@@ -2282,27 +2286,28 @@ margin:0px;
 
 margin-top: 15px;
     margin-bottom: 5px;
-height: 50px;
+height: 60px;
     overflow: hidden;
 }
 
-.view-culture .views-field-title a{
+.view-culture .views-field-title a,
+.view-culture .views-field-title span{
 
-color:#017518;
-font-size:16px;
+color:#024610;
+font-size:20px;
 }
 
 .view-culture .views-field-field-culture-image img{
 
 width:100%;
-height:200px;
+height:auto;
 }
 
 .view-culture .views-field-field-culture-image{
 
-height:200px;
+height:auto;
 }
-.view-culture .views-field-nothing .link{
+.view-culture .views-field-nothing .morelink2{
 
 float:right;
     margin-top: 20px;
@@ -2312,6 +2317,12 @@ float:right;
 overflow:hidden;
 margin-bottom: 15px;
 }
+
+.view-culture .views-field-nothing .morelink2{
+
+cursor: pointer;
+color:#024610;
+}
 .view-culture .view-header{
 
 width:15%;
@@ -2320,21 +2331,29 @@ border: solid 1px;
 text-align: center;
 padding-bottom: 15px;
 border-top:solid 6px #017518;
+margin-top: 10px;
 }
+
 
 .view-culture .view-header a{
 
-font-size:16px;
+font-size:17px;
 padding: 10px 20px;
  border-bottom: solid 1px;
 display: block;
     width: 80%;
     margin: 0 auto;
 }
+.view-culture .view-header .last a{
+
+border-bottom:none;
+
+}
+
 .view-culture .view-header .active{
 
-color: #017518;
-border-bottom:1px solid #017518;
+color: #024610;
+border-bottom:1px solid #024610;
 font-weight:bold;
 }
 .view-culture .view-header li{
@@ -2371,6 +2390,7 @@ width:20%;
 padding-left:0px;
 padding-right:0px;
 border: 1px solid;
+border-bottom: 1px solid !important;
 padding-top: 5px;
     padding-bottom: 5px;
 }
@@ -2382,5 +2402,17 @@ display:none;
 width:100%;
 float:none;
 
+}
+.parsons-pager{
+
+width:auto !important;
+float: none !important;
+}
+.parsons-pager .parsons-tiaozhuan{
+
+float:none;
+clear:both;
+padding-top: 15px;
+    margin-left: 0px !important;
 }
 }

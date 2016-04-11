@@ -1,0 +1,44 @@
+.view-about-us.view-display-id-page_2 .views-field-body ul{
+list-style:none;
+padding:0px;
+}
+.view-about-us.view-display-id-page_2 .views-field-body ul li{
+background:url("../images/disc-small.png") no-repeat left center;
+padding-left: 30px;
+}
+.view-about-us.view-display-id-page_2 .views-row .views-field-field-date{
+font-size:20px;
+font-weight:bold;
+color:#298143;
+background:url("../images/disc-big.png") no-repeat left center;
+padding-left: 30px;
+}
+.view-about-us.view-display-id-page_2 .view-content{
+width:90%;
+margin:0 auto;
+}
+.view-about-us.view-display-id-page_2 .morelink2{
+color:#298143;
+cursor:pointer;
+}
+.view-about-us.view-display-id-page_2 .moresmall{
+font-size:12px;
+}
+.view-about-us.view-display-id-page_2 #more-link-content .control{
+display:none;
+}
+@media only screen and (min-width:320px) and (max-width:960px){
+.view-about-us.view-display-id-page_2 .views-row{
+border-bottom:1px solid #ccc;
+padding-bottom:10px;
+margin-bottom:10px;
+}
+.view-about-us.view-display-id-page_2 #more-link-content{
+width:90%;
+}
+}
+@media only screen and (min-width:320px) and (max-width:580px){
+.view-about-us.view-display-id-page_2 .parsons-pager{
+width:316px;
+}
+}

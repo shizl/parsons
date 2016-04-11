@@ -55,13 +55,13 @@
         <?php print render($page['content-middle']);?>
       <?php endif; ?>
 
-      <?php if ($page['content-bottom']) : ?>
-        <?php print render($page['content-bottom']);?>
-      <?php endif; ?>
-
       <?php if($page['content']): ?>
       <?php print render($page['content']); ?>
       <?php endif;  ?>
+
+      <?php if ($page['content-bottom']) : ?>
+        <?php print render($page['content-bottom']);?>
+      <?php endif; ?>
 
     </div></div> <!-- /.section, /#content -->
 
@@ -82,8 +82,15 @@
 <div id="more-link-content" style="display:none;"><span class="close">×</span>
 <div class="title"></div>
 <div class="content"></div>
-<div class="control"><span class="prv">上一篇</span><span class="next">下一篇</span></div>
+<div class="control"><span class="prv">< 上一篇</span><span class="next">下一篇 ></span></div>
 </div>
+
+<div id="more-link-content2" style="display:none;"><span class="close">×</span>
+<div class="title"></div>
+<div class="content"></div>
+<!--<div class="control"><span class="prv">上一篇</span><span class="next">下一篇</span></div>-->
+</div>
+
 <div class="for-freetiaokuan">
 <div class="free-content">
 <div class="closee">X</div>

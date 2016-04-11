@@ -1,16 +1,80 @@
-.page-node-89 #block-block-13{
+.page-node-244 #block-block-13{
 display:none;
 }
-.page-node-89 #node-89 .field-item img{
+.page-node-244 #node-244 .field-item img{
 width:100%;
 height:auto;
 }
-.page-node-89 #node-89 .col-sm-12 .page-header{
+.page-node-244 #node-244 .col-sm-12 .page-header{
 display:none;
 }
-.page-node-89 #node-89 .submitted span{
+.page-node-244 #node-244 .submitted span{
 display:none;
 }
+/*******English page********/
+.page-node-440 #block-block-13{
+display:none;
+}
+.page-node-440 #node-440 .field-item img{
+width:100%;
+height:auto;
+}
+.page-node-440 #node-440 .col-sm-12 .page-header{
+display:none;
+}
+.page-node-440 #node-440 .submitted span{
+display:none;
+}
+.page-node-440 #node-440 .company-header{
+border-bottom:1px solid #ccc;
+width:95%;
+}
+.page-node-440 #node-440 .company-header h2{
+font-size:20px;
+margin-bottom:5px;
+}
+#node-440 .company-footer a{
+color:#333;
+}
+.page-node-440 .region-content{
+overflow:hidden;
+position:relative;
+}
+.i18n-en #main-menu-links a{
+padding:0 10px !important;
+}
+/*******English page end******************/
+/*******Traditional Chinese************/
+.page-node-439 #block-block-13{
+display:none;
+}
+.page-node-439 #node-439 .field-item img{
+width:100%;
+height:auto;
+}
+.page-node-439 #node-439 .col-sm-12 .page-header{
+display:none;
+}
+.page-node-439 #node-439 .submitted span{
+display:none;
+}
+.page-node-439 #node-439 .company-header{
+border-bottom:1px solid #ccc;
+width:95%;
+}
+.page-node-439 #node-439 .company-header h2{
+font-size:20px;
+margin-bottom:5px;
+}
+#node-439 .company-footer a{
+color:#333;
+}
+.page-node-439 .region-content{
+overflow:hidden;
+position:relative;
+}
+
+/***Traditional end***/
 #block-webform-client-block-105{
 width:48%;
 float:left;
@@ -20,8 +84,18 @@ margin-left:20px;
 width:40%;
 float:left;
 margin-left:20px;
-max-height: 355px;
-overflow: auto;
+}
+#block-block-3 .over{
+max-height:305px;
+overflow:auto;
+}
+#block-block-14{
+clear:both;
+display:none;
+}
+#block-block-14 .follow-us{
+ border: 1px solid #ccc;
+ padding: 13px 25px;
 }
 #block-block-4{
 clear:both;
@@ -47,54 +121,88 @@ background:none;
 height:40px;
 border:1px solid #ccc;
 }
-#edit-submitted-company:focus{
-}
+#webform-client-form-442 input,
+#webform-client-form-442 textarea,
+#webform-client-form-441 input,
+#webform-client-form-441 textarea,
 #webform-client-form-105 input,
 #webform-client-form-105 textarea{
 border-radius:0px;
 }
+#webform-client-form-442 .control-label,
+#webform-client-form-441 .control-label,
 #webform-client-form-105 .control-label{
 display:none;
 }
+#webform-client-form-441 .img-responsive,
 #webform-client-form-105 .img-responsive{
 float:right;
 width:90px;
 margin-right:59%;
 border:1px solid #ccc;
 }
+#webform-client-form-442 #edit-captcha-response,
+#webform-client-form-441 #edit-captcha-response,
 #webform-client-form-105 #edit-captcha-response{
 width:100%;
 float:left;
 }
-.page-node-89 #node-89 .company-header{
+.page-node-244 #node-244 .company-header{
 border-bottom:1px solid #ccc;
 width:95%;
 }
-.page-node-89 #node-89 .company-header h2{
+.page-node-244 #node-244 .company-header h2{
 font-size:20px;
 margin-bottom:5px;
 }
-#node-89 .company-footer a{
+#node-244 .company-footer a{
 color:#333;
 }
-.page-node-89 .region-content{
+.page-node-244 .region-content{
 overflow:hidden;
 position:relative;
 }
+#block-block-3 .company-footer img{
+margin-right:5px;
+}
+#block-block-3 .company-header h2{
+color:#333;
+}
+#new_select{
+color:#333;
+}
+#block-block-11 .company-footer{
+font-family: sans-serif;
+margin-top:10px;
+}
+#block-block-3 .follow-us{
+border:1px solid #ccc;
+padding: 13px 25px;
+margin-top: 30px;
+}
+#block-block-3 .company-footer{
+font-family: sans-serif;
+}
+#webform-client-form-442 .reload-captcha-wrapper,
+#webform-client-form-441 .reload-captcha-wrapper,
 #webform-client-form-105 .reload-captcha-wrapper{
     position: absolute;
     left: 43%;
     top: 26%;
     width: 21px;
  }
+#webform-client-form-442 .reload-captcha,
+#webform-client-form-441 .reload-captcha,
 #webform-client-form-105 .reload-captcha{
    background:url("../images/re.png") no-repeat;
     display:block;
     text-indent: -20cm;
 }
-.page-node-89 #main{
+.page-node-244 #main{
 width:100% !important;
 }
+#webform-client-form-442 input,
+#webform-client-form-441 input,
 #webform-client-form-105 input{
 width:100%;
 height: 40px;
@@ -108,17 +216,28 @@ margin-bottom:5px;
 }
 .company-footer p{
 margin:0px;
+margin-bottom: 3px;
+color: #666;
+}
+.company-footer p a{
+color: #666;
 }
 .company-footer p img{
 vertical-align:middle;
 }
+#webform-client-form-442 .captcha,
+#webform-client-form-441 .captcha,
 #webform-client-form-105 .captcha{
 overflow:hidden;
 position:relative;
 }
+#webform-client-form-442 .form-item-captcha-response,
+#webform-client-form-441 .form-item-captcha-response,
 #webform-client-form-105 .form-item-captcha-response{
 width:25%;
 }
+#webform-client-form-442 .captcha img,
+#webform-client-form-441 .captcha img,
 #webform-client-form-105 .captcha img{
 float:right;
 width:100px;
@@ -127,12 +246,18 @@ border: 1px solid #ccc;
 margin-right: 58%;
 margin-top:4px;
 }
+#webform-client-form-442 .form-item label,
+#webform-client-form-441 .form-item label,
 #webform-client-form-105 .form-item label{
 display:none;
 }
+#webform-client-form-442 .form-item .description,
+#webform-client-form-441 .form-item .description,
 #webform-client-form-105 .form-item .description{
 display:none;
 }
+#webform-client-form-442 .form-actions input,
+#webform-client-form-441 .form-actions input,
 #webform-client-form-105 .form-actions input{
 width: 26.5%;
 border:none;
@@ -142,6 +267,8 @@ height:auto;
 font-size: 20px;
 width:100%;
 }
+#webform-client-form-442 .form-actions,
+#webform-client-form-441 .form-actions,
 #webform-client-form-105 .form-actions{
 padding:0px;
 width: 25%;
@@ -165,12 +292,24 @@ height:34px;
 margin:0px;
 }
 #block-block-11 #info_box{
-margin-top:10px;
+margin-top:20px;
 }
 #block-system-main{
 margin-bottom:20px;
 }
+#lang_dropdown_form_language #edit-captcha{
+display:none;
+}
+#block-block-11 #new_select{
+height:40px;
+font-size:18px;
+}
+#block-block-3 .company-header{
+border-bottom:1px solid #ccc;
+}
 @media only screen and (min-width:320px) and (max-width:479px){
+#webform-client-form-442 .form-item-captcha-response,
+#webform-client-form-441 .form-item-captcha-response,
 #webform-client-form-105 .form-item-captcha-response{
 width:33%;
 }
@@ -179,12 +318,18 @@ width:95%;
 margin:0 auto;
 float:none;
 }
+#webform-client-form-442 .img-responsive,
+#webform-client-form-441 .img-responsive,
 #webform-client-form-105 .img-responsive{
 margin-right:24%;
 }
+#webform-client-form-442 #edit-captcha-response,
+#webform-client-form-441 #edit-captcha-response,
 #webform-client-form-105 #edit-captcha-response{
 width:100%;
 }
+#webform-client-form-442 .form-actions button,
+#webform-client-form-441 .form-actions button,
 #webform-client-form-105 .form-actions button{
 padding: 5px 44px;
 width:43%;
@@ -201,13 +346,19 @@ float:left;
 position:static;
 margin-top: 20px;
 }
+#webform-client-form-442 .form-actions input,
+#webform-client-form-441 .form-actions input,
 #webform-client-form-105 .form-actions input{
 padding:3px;
 width:100%;
 }
+#webform-client-form-442 .captcha img,
+#webform-client-form-441 .captcha img,
 #webform-client-form-105 .captcha img{
 margin-right:32%;
 }
+#webform-client-form-442 .reload-captcha-wrapper,
+#webform-client-form-441 .reload-captcha-wrapper,
 #webform-client-form-105 .reload-captcha-wrapper{
 left: 70%;
 }
@@ -216,11 +367,21 @@ width:95%;
 margin:0 auto;
 float:none;
 }
+#webform-client-form-442 .form-actions,
+#webform-client-form-441 .form-actions,
 #webform-client-form-105 .form-actions{
 width:33%;
+}
+#block-block-14{
+display:block;
+width:95%;
+margin:0 auto;
+margin-top: 20px;
 }
 }
 @media only screen and (min-width:480px) and (max-width:639px){
+#webform-client-form-442 .form-item-captcha-response,
+#webform-client-form-441 .form-item-captcha-response,
 #webform-client-form-105 .form-item-captcha-response{
 width:33%;
 }
@@ -229,12 +390,18 @@ width:95%;
 margin:0 auto;
 float:none;
 }
+#webform-client-form-442 .img-responsive,
+#webform-client-form-441 .img-responsive,
 #webform-client-form-105 .img-responsive{
 margin-right:24%;
 }
+#webform-client-form-442 #edit-captcha-response,
+#webform-client-form-441 #edit-captcha-response,
 #webform-client-form-105 #edit-captcha-response{
 width:100%;
 }
+#webform-client-form-442 .form-actions button,
+#webform-client-form-441 .form-actions button,
 #webform-client-form-105 .form-actions button{
 padding: 5px 44px;
 width:43%;
@@ -251,13 +418,19 @@ float:left;
 position:static;
 margin-top: 20px;
 }
+#webform-client-form-442 .form-actions input,
+#webform-client-form-441 .form-actions input,
 #webform-client-form-105 .form-actions input{
 padding:3px;
 width:100%;
 }
+#webform-client-form-442 .captcha img,
+#webform-client-form-441 .captcha img,
 #webform-client-form-105 .captcha img{
 margin-right:32%;
 }
+#webform-client-form-442 .reload-captcha-wrapper,
+#webform-client-form-441 .reload-captcha-wrapper,
 #webform-client-form-105 .reload-captcha-wrapper{
 left: 70%;
 }
@@ -266,11 +439,20 @@ width:95%;
 margin:0 auto;
 float:none;
 }
+#webform-client-form-442 .form-actions,
+#webform-client-form-441 .form-actions,
 #webform-client-form-105 .form-actions{
 width:33%;
 }
+#block-block-14{
+display:block;
+width:95%;
+margin:0 auto;
+}
 }
 @media only screen and (min-width:640px) and (max-width:960px){
+#webform-client-form-442 .form-item-captcha-response,
+#webform-client-form-441 .form-item-captcha-response,
 #webform-client-form-105 .form-item-captcha-response{
 width:33%;
 }
@@ -279,12 +461,18 @@ width:95%;
 margin:0 auto;
 float:none;
 }
+#webform-client-form-442 .img-responsive,
+#webform-client-form-441 .img-responsive,
 #webform-client-form-105 .img-responsive{
 margin-right:24%;
 }
+#webform-client-form-442 #edit-captcha-response,
+#webform-client-form-441 #edit-captcha-response,
 #webform-client-form-105 #edit-captcha-response{
 width:100%;
 }
+#webform-client-form-442 .form-actions button,
+#webform-client-form-441 .form-actions button,
 #webform-client-form-105 .form-actions button{
 padding: 5px 44px;
 width:43%;
@@ -302,13 +490,19 @@ float:left;
 position:static;
 margin-top: 20px;
 }
+#webform-client-form-442 .form-actions input,
+#webform-client-form-441 .form-actions input,
 #webform-client-form-105 .form-actions input{
 padding:3px;
 width:100%;
 }
+#webform-client-form-442 .captcha img,
+#webform-client-form-441 .captcha img,
 #webform-client-form-105 .captcha img{
 margin-right:49%;
 }
+#webform-client-form-442 .reload-captcha-wrapper,
+#webform-client-form-441 .reload-captcha-wrapper,
 #webform-client-form-105 .reload-captcha-wrapper{
 left: 52%;
 }
@@ -321,33 +515,54 @@ display:block;
 #webform-client-form-105 .form-actions{
 width:33%;
 }
+#block-block-14{
+display:block;
+width:95%;
+margin:0 auto;
+}
 }
 @media only screen and (min-width:961px) and (max-width:1295px){
+#webform-client-form-442 #edit-captcha-response,
+#webform-client-form-441 #edit-captcha-response,
 #webform-client-form-105 #edit-captcha-response{
 width: 100%;
 }
+#webform-client-form-442 .form-item-captcha-response,
+#webform-client-form-441 .form-item-captcha-response,
 #webform-client-form-105 .form-item-captcha-response{
 width:33%;
 }
+#webform-client-form-442 .img-responsive,
+#webform-client-form-441 .img-responsive,
 #webform-client-form-105 .img-responsive{
 margin-right: 37%;
 }
+#webform-client-form-442 .captcha img,
+#webform-client-form-441 .captcha img,
 #webform-client-form-105 .captcha img{
 margin-right: 44%;
 }
+#webform-client-form-442 .reload-captcha-wrapper,
+#webform-client-form-441 .reload-captcha-wrapper,
 #webform-client-form-105 .reload-captcha-wrapper{
 left:58%;
 }
+#webform-client-form-442 .form-actions input,
+#webform-client-form-441 .form-actions input,
 #webform-client-form-105 .form-actions input{
 width:100%;
 }
 #block-block-4{
 bottom: 8%;
 }
+#webform-client-form-442 .form-actions button,
+#webform-client-form-441 .form-actions button,
 #webform-client-form-105 .form-actions button{
 padding: 6px 58px;
 width: 35%;
 }
+#webform-client-form-442 .form-actions,
+#webform-client-form-441 .form-actions,
 #webform-client-form-105 .form-actions{
 width:33%;
 }

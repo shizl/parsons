@@ -154,9 +154,6 @@ function parsons_field__taxonomy_term_reference($variables) {
 
   return $output;
 }
-
-
-
 function parsons_pager($variables) {
  
 $tags = $variables['tags'];
@@ -386,9 +383,10 @@ location.href = ur.replace(ur.substr(ur.indexOf("page="),10),"page="+val2);
 clear:both;
 
 overflow:hidden;
-width: 545px;
+width: auto;
 float: right;
 margin-top: 20px;
+margin-right:10px;
 }
  .parsons-pager div{
 

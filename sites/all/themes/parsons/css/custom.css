@@ -9,6 +9,10 @@ z-index:11;
 display:none;
 }
 
+#block-views-banner-slider-block-1 .content{
+margin-top:0px;
+}
+
 #block-views-banner-slider-block{
 position: relative;
 margin-bottom: 50px;
@@ -189,6 +193,8 @@ position: absolute;
 
 .flex-control-thumbs img:hover{
 width:140px;
+margin-left: -8px;
+margin-top: -5px;
 }
 
 .flex-control-paging li a{
@@ -458,7 +464,8 @@ margin-top:50px;
 overflow: hidden;
 clear: both;
 }
-#more-link-content .close{
+#more-link-content .close,
+#more-link-content2 .close{
 position: absolute;
     top: 0px;
     right:0px;
@@ -467,7 +474,8 @@ position: absolute;
     color: #fff;
     font-size: 22px;
 }
-#more-link-content{
+#more-link-content,
+#more-link-content2{
     position: fixed;
     margin: auto;
     left: 0;
@@ -481,29 +489,35 @@ position: absolute;
     padding: 20px;
 
 }
-#more-link-content .title{
-color:#208a38;
-font-size:16px;
+#more-link-content .title,
+#more-link-content2  .title{
+color:#024610;
+font-size:20px;
 padding:10px 0px;
 border-bottom:1px solid #ccc;
 }
-#more-link-content .content{
+#more-link-content .content,
+#more-link-content2 .content{
     overflow: auto;
     height: 530px;
     margin-top: 2px;
+overflow-x: hidden;
 }
-#more-link-content .control{
+#more-link-content .control,
+#more-link-content2 .control{
 padding-top:10px;
 margin-top:10px;
 overflow:hidden;
 border-top:1px solid #ccc;
 }
-#more-link-content .control .prv{
+#more-link-content .control .prv,
+#more-link-content2 .control .prv{
 float:left;
 display:block;
 margin-left:10px;
 }
-#more-link-content .control .next{
+#more-link-content .control .next,
+#more-link-content2 .control .next{
 float:right;
 display:block;
 margin-right:10px;
@@ -519,7 +533,8 @@ position: absolute;
     z-index: 11;
 }
 
-.subpage-banner .view-footer{
+.subpage-banner .slides .views-field-title{
+
 background:rgba(0,0,0,0.5);
 position: absolute;
 bottom:0px;
@@ -589,6 +604,7 @@ margin-top:40px;
 .about-overview .view-content .views-row{
 overflow: hidden;
     clear: both;
+    margin-bottom: 20px;
 }
 
 .about-overview .view-content .views-row .views-field-field-image{
@@ -636,6 +652,84 @@ text-indent: -9999px;
 cursor: pointer;
 text-align: inherit;
 }
+.view-video {
+position: relative;
+}
+.view-video .view-header,
+.view-video .view-content{
+width:76%;
+float:right;
+}
+.view-video .view-footer{
+width:18%;
+position: absolute;
+margin-left:2%;
+}
+.view-video .view-footer .video_type_list{
+border-top:5px solid #208a38;
+}
+.view-video .view-footer .video_type_list ul{
+
+border-left:1px solid #ccc;
+border-right:1px solid #ccc;
+border-bottom:1px solid #ccc;
+padding-left:30px;
+padding-right:30px;
+}
+
+.view-video .view-footer .video_type_list ul li{
+border-bottom:1px solid #ccc;
+line-height:80px;
+text-align:center;
+}
+.view-video .view-footer .video_type_list ul li:last-child{
+border-bottom:none;
+}
+.view-video .view-footer .video_type_list ul li a{
+ font-size:18px;
+}
+.view-video .view-footer .video_type_list ul li a.active{
+color:#208a38;
+}
+
+
+.view-video .view-header video{
+width: 100%;
+}
+
+.view-video .view-content {
+margin-top:40px;
+overflow:hidden;
+}
+.view-video .view-content .views-row{
+width:332px;
+display:inline-block;
+margin-right:10px;
+background:#f3f4f5;
+margin-bottom:20px;
+position: relative;
+}
+
+.view-video .view-content .views-row .views-field-nothing{
+    position: absolute;
+    left: 50%;
+    margin-left: -33px;
+    top: 50%;
+    margin-top: -65px;
+    cursor: pointer;
+}
+
+.view-video .view-content .views-row .views-field-title{
+font-size:18px;
+line-height:40px;
+margin-left:20px;
+}
+
+.view-video .view-content .views-row .views-field-field-video-image img{
+width:332px;
+height:250px;
+}
+
 
 @media (max-width:1400px){
 }
@@ -662,7 +756,9 @@ text-align: inherit;
 #block-views-banner-slider-block{
 margin-bottom:0px;
 }
-
+.page-bottom-slider .views-field-title{
+border-top:0px;
+}
 #block-views-banner-slider-block .view-header{
 margin-top:20px;
 margin-left:10px;
@@ -675,13 +771,23 @@ height:70px;
 
 #block-views-banner-slider-block .view-footer .home-video .video-button{
 position:initial;
+height:40px;
+padding:0px;
+border-bottom:2px solid #eee;
 }
 #block-views-banner-slider-block .view-footer .home-video .video-button span{
- background-size: 100%;
+ background-size: 95%;
  width: 30%;
 margin-left:3%;
-}
+border-right:2px solid #eee;
+background-position-y: 50%;
+height:40px;
+line-height:40px;
 
+}
+#block-views-banner-slider-block .view-footer .home-video .video-button span:last-child{
+border-right:none;
+}
 #block-views-banner-slider-block .view-footer .home-video .video-content{
 width:560px;
 height:310px;
@@ -696,7 +802,9 @@ height:310px;
 }
 
 @media (max-width:768px){
-
+.page-bottom-slider .views-field-title{
+border-bottom: solid 2px #C7C7C7;
+}
 .region-content-banner{
 margin-bottom: 20px;
 }
@@ -716,7 +824,9 @@ padding-right:10px;
 #footer-wrapper div.section {
  width: 100%;
 }
-
+#more-link-content{
+width:90%;
+}
 
 .page-bottom-slider{
 margin-bottom:30px;
