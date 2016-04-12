@@ -178,44 +178,44 @@ if(isset($_GET['field_culturee_type_value'])){
           if($allpage <=6){
 for($i=1; $i<=$allpage; $i++){
 
-$page .= '<a class="  page-item-'.($i-1).'" href="/'.arg(0).'?field_culturee_type_value='.$_GET['field_culturee_type_value'].'&page='.($i-1).'"> '.$i.'</a>';
+$page .= '<a class="  page-item-'.($i-1).'" href="/'.current_path().'?field_culturee_type_value='.$_GET['field_culturee_type_value'].'&page='.($i-1).'"> '.$i.'</a>';
 }
 }else{
 
  if(isset($_GET['page']) && ($_GET['page'] >2) && ($_GET['page'] < $allpage-3)){
 
-    $page = '<a class=" page-item-0" href="/'.arg(0).'?field_culturee_type_value='.$_GET['field_culturee_type_value'].'&page=0">1</a>
+    $page = '<a class=" page-item-0" href="/'.current_path().'?field_culturee_type_value='.$_GET['field_culturee_type_value'].'&page=0">1</a>
         <p class="omit">....</p>
        
 
-        <a class=" page-item-'.((int)$_GET['page']-1).'" href="/'.arg(0).'?field_culturee_type_value='.$_GET['field_culturee_type_value'].'&page='.((int)$_GET['page']-1).'"> '.$_GET['page'].'</a>
-        <a class=" page-item-'.$_GET['page'].'" href="/'.arg(0).'?field_culturee_type_value='.$_GET['field_culturee_type_value'].'&page='.$_GET['page'].'"> '.((int)$_GET['page']+1).'</a>
-        <a class=" page-item-'.((int)$_GET['page']+1).'" href="/'.arg(0).'?field_culturee_type_value='.$_GET['field_culturee_type_value'].'&page='.((int)$_GET['page']+1).'"> '.((int)$_GET['page']+2).'</a>
+        <a class=" page-item-'.((int)$_GET['page']-1).'" href="/'.current_path().'?field_culturee_type_value='.$_GET['field_culturee_type_value'].'&page='.((int)$_GET['page']-1).'"> '.$_GET['page'].'</a>
+        <a class=" page-item-'.$_GET['page'].'" href="/'.current_path().'?field_culturee_type_value='.$_GET['field_culturee_type_value'].'&page='.$_GET['page'].'"> '.((int)$_GET['page']+1).'</a>
+        <a class=" page-item-'.((int)$_GET['page']+1).'" href="/'.current_path().'?field_culturee_type_value='.$_GET['field_culturee_type_value'].'&page='.((int)$_GET['page']+1).'"> '.((int)$_GET['page']+2).'</a>
         <p class="omit">....</p>
-        <a class=" page-item-'.((int)$allpage-1).'" href="/'.arg(0).'?field_culturee_type_value='.$_GET['field_culturee_type_value'].'&page='.((int)$allpage-1).'"> '.$allpage.'</a>
+        <a class=" page-item-'.((int)$allpage-1).'" href="/'.current_path().'?field_culturee_type_value='.$_GET['field_culturee_type_value'].'&page='.((int)$allpage-1).'"> '.$allpage.'</a>
 ';     
 }
 
     else if(isset($_GET['page']) && ($_GET['page'] >2) && ($_GET['page'] >= $allpage-3)){
 
 
-$page = '<a class=" page-item-0" href="/'.arg(0).'?field_culturee_type_value='.$_GET['field_culturee_type_value'].'&page=0">1</a>
+$page = '<a class=" page-item-0" href="/'.current_path().'?field_culturee_type_value='.$_GET['field_culturee_type_value'].'&page=0">1</a>
         <p class="omit">....</p>
-        <a class=" page-item-'.((int)$allpage-4).'" href="/'.arg(0).'?field_culturee_type_value='.$_GET['field_culturee_type_value'].'&page='.((int)$allpage-4).'"> '.((int)$allpage-3).'</a>
-        <a class=" page-item-'.((int)$allpage-3).'" href="/'.arg(0).'?field_culturee_type_value='.$_GET['field_culturee_type_value'].'&page='.((int)$allpage-3).'"> '.((int)$allpage-2).'</a>
-        <a class=" page-item-'.((int)$allpage-2).'" href="/'.arg(0).'?field_culturee_type_value='.$_GET['field_culturee_type_value'].'&page='.((int)$allpage-2).'"> '.((int)$allpage-1).'</a>
-        <a class=" page-item-'.((int)$allpage-1).'" href="/'.arg(0).'?field_culturee_type_value='.$_GET['field_culturee_type_value'].'&page='.((int)$allpage-1).'"> '.$allpage.'</a>
+        <a class=" page-item-'.((int)$allpage-4).'" href="/'.current_path().'?field_culturee_type_value='.$_GET['field_culturee_type_value'].'&page='.((int)$allpage-4).'"> '.((int)$allpage-3).'</a>
+        <a class=" page-item-'.((int)$allpage-3).'" href="/'.current_path().'?field_culturee_type_value='.$_GET['field_culturee_type_value'].'&page='.((int)$allpage-3).'"> '.((int)$allpage-2).'</a>
+        <a class=" page-item-'.((int)$allpage-2).'" href="/'.current_path().'?field_culturee_type_value='.$_GET['field_culturee_type_value'].'&page='.((int)$allpage-2).'"> '.((int)$allpage-1).'</a>
+        <a class=" page-item-'.((int)$allpage-1).'" href="/'.current_path().'?field_culturee_type_value='.$_GET['field_culturee_type_value'].'&page='.((int)$allpage-1).'"> '.$allpage.'</a>
 ';     
 
 }else{
 
-$page = '<a class=" page-item-0" href="/'.arg(0).'?field_culturee_type_value='.$_GET['field_culturee_type_value'].'&page=0">1</a>
-         <a class=" page-item-1" href="/'.arg(0).'?field_culturee_type_value='.$_GET['field_culturee_type_value'].'&page=1">2</a>
-         <a class=" page-item-2" href="/'.arg(0).'?field_culturee_type_value='.$_GET['field_culturee_type_value'].'&page=2">3</a>
-         <a class=" page-item-3" href="/'.arg(0).'?field_culturee_type_value='.$_GET['field_culturee_type_value'].'&page=3">4</a>
+$page = '<a class=" page-item-0" href="/'.current_path().'?field_culturee_type_value='.$_GET['field_culturee_type_value'].'&page=0">1</a>
+         <a class=" page-item-1" href="/'.current_path().'?field_culturee_type_value='.$_GET['field_culturee_type_value'].'&page=1">2</a>
+         <a class=" page-item-2" href="/'.current_path().'?field_culturee_type_value='.$_GET['field_culturee_type_value'].'&page=2">3</a>
+         <a class=" page-item-3" href="/'.current_path().'?field_culturee_type_value='.$_GET['field_culturee_type_value'].'&page=3">4</a>
         <p class="omit">....</p>
         
-        <a class=" page-item-'.((int)$allpage-1).'" href="/'.arg(0).'?field_culturee_type_value='.$_GET['field_culturee_type_value'].'&page='.((int)$allpage-1).'"> '.$allpage.'</a>
+        <a class=" page-item-'.((int)$allpage-1).'" href="/'.current_path().'?field_culturee_type_value='.$_GET['field_culturee_type_value'].'&page='.((int)$allpage-1).'"> '.$allpage.'</a>
 ';     
 
 
@@ -235,44 +235,44 @@ $page = '<a class=" page-item-0" href="/'.arg(0).'?field_culturee_type_value='.$
           if($allpage <=6){
 for($i=1; $i<=$allpage; $i++){
 
-$page .= '<a class="  page-item-'.($i-1).'" href="/'.arg(0).'?field_new_type_tid='.$_GET['field_new_type_tid'].'&page='.($i-1).'"> '.$i.'</a>';
+$page .= '<a class="  page-item-'.($i-1).'" href="/'.current_path().'?field_new_type_tid='.$_GET['field_new_type_tid'].'&page='.($i-1).'"> '.$i.'</a>';
 }
 }else{
 
  if(isset($_GET['page']) && ($_GET['page'] >2) && ($_GET['page'] < $allpage-3)){
 
-    $page = '<a class=" page-item-0" href="/'.arg(0).'?field_new_type_tid='.$_GET['field_new_type_tid'].'&page=0">1</a>
+    $page = '<a class=" page-item-0" href="/'.current_path().'?field_new_type_tid='.$_GET['field_new_type_tid'].'&page=0">1</a>
         <p class="omit">....</p>
        
 
-        <a class=" page-item-'.((int)$_GET['page']-1).'" href="/'.arg(0).'?field_new_type_tid='.$_GET['field_new_type_tid'].'&page='.((int)$_GET['page']-1).'"> '.$_GET['page'].'</a>
-        <a class=" page-item-'.$_GET['page'].'" href="/'.arg(0).'?field_new_type_tid='.$_GET['field_new_type_tid'].'&page='.$_GET['page'].'"> '.((int)$_GET['page']+1).'</a>
-        <a class=" page-item-'.((int)$_GET['page']+1).'" href="/'.arg(0).'?field_new_type_tid='.$_GET['field_new_type_tid'].'&page='.((int)$_GET['page']+1).'"> '.((int)$_GET['page']+2).'</a>
+        <a class=" page-item-'.((int)$_GET['page']-1).'" href="/'.current_path().'?field_new_type_tid='.$_GET['field_new_type_tid'].'&page='.((int)$_GET['page']-1).'"> '.$_GET['page'].'</a>
+        <a class=" page-item-'.$_GET['page'].'" href="/'.current_path().'?field_new_type_tid='.$_GET['field_new_type_tid'].'&page='.$_GET['page'].'"> '.((int)$_GET['page']+1).'</a>
+        <a class=" page-item-'.((int)$_GET['page']+1).'" href="/'.current_path().'?field_new_type_tid='.$_GET['field_new_type_tid'].'&page='.((int)$_GET['page']+1).'"> '.((int)$_GET['page']+2).'</a>
         <p class="omit">....</p>
-        <a class=" page-item-'.((int)$allpage-1).'" href="/'.arg(0).'?field_new_type_tid='.$_GET['field_new_type_tid'].'&page='.((int)$allpage-1).'"> '.$allpage.'</a>
+        <a class=" page-item-'.((int)$allpage-1).'" href="/'.current_path().'?field_new_type_tid='.$_GET['field_new_type_tid'].'&page='.((int)$allpage-1).'"> '.$allpage.'</a>
 ';     
 }
 
     else if(isset($_GET['page']) && ($_GET['page'] >2) && ($_GET['page'] >= $allpage-3)){
 
 
-$page = '<a class=" page-item-0" href="/'.arg(0).'?field_new_type_tid='.$_GET['field_new_type_tid'].'&page=0">1</a>
+$page = '<a class=" page-item-0" href="/'.current_path().'?field_new_type_tid='.$_GET['field_new_type_tid'].'&page=0">1</a>
         <p class="omit">....</p>
-        <a class=" page-item-'.((int)$allpage-4).'" href="/'.arg(0).'?field_new_type_tid='.$_GET['field_new_type_tid'].'&page='.((int)$allpage-4).'"> '.((int)$allpage-3).'</a>
-        <a class=" page-item-'.((int)$allpage-3).'" href="/'.arg(0).'?field_new_type_tid='.$_GET['field_new_type_tid'].'&page='.((int)$allpage-3).'"> '.((int)$allpage-2).'</a>
-        <a class=" page-item-'.((int)$allpage-2).'" href="/'.arg(0).'?field_new_type_tid='.$_GET['field_new_type_tid'].'&page='.((int)$allpage-2).'"> '.((int)$allpage-1).'</a>
-        <a class=" page-item-'.((int)$allpage-1).'" href="/'.arg(0).'?field_new_type_tid='.$_GET['field_new_type_tid'].'&page='.((int)$allpage-1).'"> '.$allpage.'</a>
+        <a class=" page-item-'.((int)$allpage-4).'" href="/'.current_path().'?field_new_type_tid='.$_GET['field_new_type_tid'].'&page='.((int)$allpage-4).'"> '.((int)$allpage-3).'</a>
+        <a class=" page-item-'.((int)$allpage-3).'" href="/'.current_path().'?field_new_type_tid='.$_GET['field_new_type_tid'].'&page='.((int)$allpage-3).'"> '.((int)$allpage-2).'</a>
+        <a class=" page-item-'.((int)$allpage-2).'" href="/'.current_path().'?field_new_type_tid='.$_GET['field_new_type_tid'].'&page='.((int)$allpage-2).'"> '.((int)$allpage-1).'</a>
+        <a class=" page-item-'.((int)$allpage-1).'" href="/'.current_path().'?field_new_type_tid='.$_GET['field_new_type_tid'].'&page='.((int)$allpage-1).'"> '.$allpage.'</a>
 ';     
 
 }else{
 
-$page = '<a class=" page-item-0" href="/'.arg(0).'?field_new_type_tid='.$_GET['field_new_type_tid'].'&page=0">1</a>
-         <a class=" page-item-1" href="/'.arg(0).'?field_new_type_tid='.$_GET['field_new_type_tid'].'&page=1">2</a>
-         <a class=" page-item-2" href="/'.arg(0).'?field_new_type_tid='.$_GET['field_new_type_tid'].'&page=2">3</a>
-         <a class=" page-item-3" href="/'.arg(0).'?field_new_type_tid='.$_GET['field_new_type_tid'].'&page=3">4</a>
+$page = '<a class=" page-item-0" href="/'.current_path().'?field_new_type_tid='.$_GET['field_new_type_tid'].'&page=0">1</a>
+         <a class=" page-item-1" href="/'.current_path().'?field_new_type_tid='.$_GET['field_new_type_tid'].'&page=1">2</a>
+         <a class=" page-item-2" href="/'.current_path().'?field_new_type_tid='.$_GET['field_new_type_tid'].'&page=2">3</a>
+         <a class=" page-item-3" href="/'.current_path().'?field_new_type_tid='.$_GET['field_new_type_tid'].'&page=3">4</a>
         <p class="omit">....</p>
         
-        <a class=" page-item-'.((int)$allpage-1).'" href="/'.arg(0).'?field_new_type_tid='.$_GET['field_new_type_tid'].'&page='.((int)$allpage-1).'"> '.$allpage.'</a>
+        <a class=" page-item-'.((int)$allpage-1).'" href="/'.current_path().'?field_new_type_tid='.$_GET['field_new_type_tid'].'&page='.((int)$allpage-1).'"> '.$allpage.'</a>
 ';     
 
 
@@ -287,44 +287,57 @@ $page = '<a class=" page-item-0" href="/'.arg(0).'?field_new_type_tid='.$_GET['f
 if($allpage <=6){
 for($i=1; $i<=$allpage; $i++){
 
-$page .= '<a class="  page-item-'.($i-1).'" href="/'.arg(0).'?page='.($i-1).'"> '.$i.'</a>';
+if(!isset($_GET['page']) && $i== 1){
+
+$page .= '<a class="active page-item-'.($i-1).'" > '.$i.'</a>';
+
+}else if(isset($_GET['page']) && ($i-1)== $_GET['page']){
+$page .= '<a class="active page-item-'.($i-1).'" > '.$i.'</a>';
+}else{
+ 
+ if($i==1){
+	$page .= '<a class=" page-item-'.($i-1).'" href="/'.current_path().'"> '.$i.'</a>';
+ }else{
+ 	 $page .= '<a class=" page-item-'.($i-1).'" href="/'.current_path().'?page='.($i-1).'"> '.$i.'</a>';
+ }
+
+}
+
 }
 }else{
 
  if(isset($_GET['page']) && ($_GET['page'] >2) && ($_GET['page'] < $allpage-3)){
 
-    $page = '<a class=" page-item-0" href="/'.arg(0).'?page=0">1</a>
+    $page = '<a class=" page-item-0" href="/'.current_path().'">1</a>
         <p class="omit">....</p>
        
 
-        <a class=" page-item-'.((int)$_GET['page']-1).'" href="/'.arg(0).'?page='.((int)$_GET['page']-1).'"> '.$_GET['page'].'</a>
-        <a class=" page-item-'.$_GET['page'].'" href="/'.arg(0).'?page='.$_GET['page'].'"> '.((int)$_GET['page']+1).'</a>
-        <a class=" page-item-'.((int)$_GET['page']+1).'" href="/'.arg(0).'?page='.((int)$_GET['page']+1).'"> '.((int)$_GET['page']+2).'</a>
+        <a class=" page-item-'.((int)$_GET['page']-1).'" href="/'.current_path().'?page='.((int)$_GET['page']-1).'"> '.$_GET['page'].'</a>
+        <a class=" page-item-'.$_GET['page'].'" href="/'.current_path().'?page='.$_GET['page'].'"> '.((int)$_GET['page']+1).'</a>
+        <a class=" page-item-'.((int)$_GET['page']+1).'" href="/'.current_path().'?page='.((int)$_GET['page']+1).'"> '.((int)$_GET['page']+2).'</a>
         <p class="omit">....</p>
-        <a class=" page-item-'.((int)$allpage-1).'" href="/'.arg(0).'?page='.((int)$allpage-1).'"> '.$allpage.'</a>
+        <a class=" page-item-'.((int)$allpage-1).'" href="/'.current_path().'?page='.((int)$allpage-1).'"> '.$allpage.'</a>
 ';     
-}
-
-    else if(isset($_GET['page']) && ($_GET['page'] >2) && ($_GET['page'] >= $allpage-3)){
+}else if(isset($_GET['page']) && ($_GET['page'] >2) && ($_GET['page'] >= $allpage-3)){
 
 
-$page = '<a class=" page-item-0" href="/'.arg(0).'?page=0">1</a>
+$page = '<a class=" page-item-0" href="/'.current_path().'">1</a>
         <p class="omit">....</p>
-        <a class=" page-item-'.((int)$allpage-4).'" href="/'.arg(0).'?page='.((int)$allpage-4).'"> '.((int)$allpage-3).'</a>
-        <a class=" page-item-'.((int)$allpage-3).'" href="/'.arg(0).'?page='.((int)$allpage-3).'"> '.((int)$allpage-2).'</a>
-        <a class=" page-item-'.((int)$allpage-2).'" href="/'.arg(0).'?page='.((int)$allpage-2).'"> '.((int)$allpage-1).'</a>
-        <a class=" page-item-'.((int)$allpage-1).'" href="/'.arg(0).'?page='.((int)$allpage-1).'"> '.$allpage.'</a>
+        <a class=" page-item-'.((int)$allpage-4).'" href="/'.current_path().'?page='.((int)$allpage-4).'"> '.((int)$allpage-3).'</a>
+        <a class=" page-item-'.((int)$allpage-3).'" href="/'.current_path().'?page='.((int)$allpage-3).'"> '.((int)$allpage-2).'</a>
+        <a class=" page-item-'.((int)$allpage-2).'" href="/'.current_path().'?page='.((int)$allpage-2).'"> '.((int)$allpage-1).'</a>
+        <a class=" page-item-'.((int)$allpage-1).'" href="/'.current_path().'?page='.((int)$allpage-1).'"> '.$allpage.'</a>
 ';     
 
 }else{
 
-$page = '<a class=" page-item-0" href="/'.arg(0).'?page=0">1</a>
-         <a class=" page-item-1" href="/'.arg(0).'?page=1">2</a>
-         <a class=" page-item-2" href="/'.arg(0).'?page=2">3</a>
-         <a class=" page-item-3" href="/'.arg(0).'?page=3">4</a>
+$page = '<a class=" page-item-0" href="/'.current_path().'">1</a>
+         <a class=" page-item-1" href="/'.current_path().'?page=1">2</a>
+         <a class=" page-item-2" href="/'.current_path().'?page=2">3</a>
+         <a class=" page-item-3" href="/'.current_path().'?page=3">4</a>
         <p class="omit">....</p>
         
-        <a class=" page-item-'.((int)$allpage-1).'" href="/'.arg(0).'?page='.((int)$allpage-1).'"> '.$allpage.'</a>
+        <a class=" page-item-'.((int)$allpage-1).'" href="/'.current_path().'?page='.((int)$allpage-1).'"> '.$allpage.'</a>
 ';     
 
 
@@ -354,7 +367,7 @@ $output = '<div class="parsons-pager">
 
 jQuery(document).ready(function(){
 
-
+/*
 jQuery(".parsons-pager .parsons-page a").each(function(){
 
 var href = jQuery(this).attr("href");
@@ -383,8 +396,7 @@ jQuery(this).removeClass("active");
 
 
 });
-
-
+*/
 
 jQuery(".parsons-pager .parsons-tiaozhuan .parsons-submit").click(function(){
 
