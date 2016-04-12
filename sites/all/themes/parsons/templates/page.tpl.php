@@ -130,3 +130,9 @@ Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots 
 ?>
 </div>
 </div>
+
+<div class="wechat">
+<span class="close">×</span>
+<img src="/sites/all/themes/parsons/images/wechat.png"/>
+
+</div>

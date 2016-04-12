@@ -1,4 +1,20 @@
 jQuery(document).ready(function(){
+
+jQuery('#block-block-1 .share .weixin img').click(function(){
+
+
+jQuery('.wechat').show();
+
+});
+
+jQuery('.wechat .close').click(function(){
+
+
+jQuery('.wechat').hide();
+
+});
+
+
 var width = jQuery('.node-product .brands-images .item').width();
 jQuery('.node-product .brands-images .item').css('height',width+'px');
 
@@ -491,4 +507,5 @@ jQuery('.home-video .video-content3').hide();
  jQuery("body").removeClass("overlay-trigger");
  jQuery("body").css({"overflow":"inherit"});
 }
+
 
