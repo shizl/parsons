@@ -1,7 +1,35 @@
 jQuery(document).ready(function(){
 		resizeM();
 	jQuery(window).resize(function(){
-		resizeM();
+			if(jQuery("#main").width()>319 && jQuery("#main").width()<640){
+	subHeight=jQuery('.field-name-field-image .field-items .field-item').height();
+	disHeight=subHeight*3;
+	dnum=jQuery(".field-name-field-image .field-items .field-item").length;
+	h=dnum*subHeight;
+	jQuery('.field-name-field-image .field-items').css('height',h+'px');
+
+	jQuery('.field-name-field-image').css('height',disHeight+'px');
+
+	jQuery(".field-name-field-image").append("<p onclick='pre_()'>1</p>");
+
+	jQuery(".field-name-field-image").append("<p onclick='next_()'>2</p>");
+	}else if(jQuery("#main").width()>=640&&jQuery("#main").width()<960){
+
+
+	var w=jQuery("#main").width()/2;
+var itemcount=jQuery('.field-name-field-image .field-items .field-item:last').index()+1;
+	subWidth=itemcount*(w+10);
+jQuery('.field-name-field-image .field-items').css("width",subWidth);
+	jQuery('.field-name-field-image .field-items .field-item').css('width',(w-10)+'px');
+
+	}else if(jQuery("#main").width()>961){
+	width = 0;
+	 c_width = 0;
+	jQuery('.field-name-field-image .field-items .field-item').each(function(){
+		c_width = c_width +460;
+	});
+	jQuery('.field-name-field-image .field-items ').css({'width':c_width+'px'});
+	}
 	});
 	if(jQuery("#main").width()>319 && jQuery("#main").width()<640){
 	var w=jQuery("#main").width()/2+10;
@@ -60,20 +88,6 @@ jQuery('.field-name-field-image .field-items').css("width",subWidth);
 		c_width = c_width +460;
 	});
 	jQuery('.field-name-field-image .field-items ').css({'width':c_width+'px'});
-/*
-		 jQuery(".bt-left").click(function(){
-		 left =  c_width /2;
-	 if( width<=0 && width > parseInt( '-'+left)){
-	width = width-460;
-				jQuery(".field-items").animate({left:width+'px'});
-	}
-		});
-	jQuery(".bt-right").click(function(){
-	if(width< 0){
-	width = width+460;
-				jQuery(".field-items").animate({left:width+'px'});
-	}
-	});*/
 	}
 }
 height = 0;
