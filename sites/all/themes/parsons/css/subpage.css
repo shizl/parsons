@@ -59,7 +59,7 @@ display:none;
 width:100% !important;
 }
 .node-type-article .field-name-field-image .field-items .field-item{
-width:100%;
+width:100% !important;
 float:none;
 height:auto;
 }
@@ -84,15 +84,12 @@ width:47px;
 height:24px;
 text-indent: -99999px;
 }
+.node-type-article #content{
+width:95% !important;
+margin:0 auto;
+}
 }
 @media only screen and (min-width:640px) and (max-width:959px){
-.node-type-article .field-name-field-image .field-items .field-item img{
-height:auto;
-}
-.node-type-article .field-name-field-image .field-items .field-item{
-width:303px;
-height:auto;
-}
 #block-block-13{
 width:100%;
 top:49%;
