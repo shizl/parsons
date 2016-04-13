@@ -401,8 +401,9 @@ jQuery('#more-link-content2').hide();
 jQuery('.year_filter a').each(function(){
   url = window.location.href;
    url_request = jQuery(this).attr('href');
+   new_request = url_request.substr(url_request.indexOf('?'));
 
-  if(url.indexOf(url_request)>0){
+  if(url.indexOf(new_request)>0){
 	jQuery(this).addClass('active');
    }else{
 	jQuery(this).removeClass('active');
