@@ -29,6 +29,24 @@
   <?php if ($page['page-top']): ?>
     <?php print render($page['page-top']); ?>
     <?php endif; ?>
+
+
+    <?php if ($main_menu): ?>
+      <div id="responsive-main-menu" class="navigation">
+        <?php print theme('links__system_main_menu', array(
+          'links' => $main_menu,
+          'attributes' => array(
+            'id' => 'main-menu-links',
+            'class' => array('links', 'clearfix'),
+          ),
+          'heading' => array(
+            'text' => t('Main menu'),
+            'level' => 'h2',
+            'class' => array('element-invisible'),
+          ),
+        )); ?>
+      </div> <!-- /#responsive-main-menu -->
+    <?php endif; ?>
   </div></div> <!-- /.section, /#header -->
 
 
