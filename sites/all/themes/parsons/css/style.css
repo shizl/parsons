@@ -1539,7 +1539,7 @@ div.admin-panel .description {
 width:85%;
 margin:0 auto;
 
-overflow:hidden;
+
 }
 .region-footer-bottom{
 width:85%;
@@ -2587,16 +2587,17 @@ margin-top:20px;
 #block-block-1 .share a{
 
 margin:-3px;
+cursor: pointer;
 }
 .wechat{
 
 display:none;
-    position: fixed;
-    top: 50%;
+   position: absolute;
+    
     width: 250px;
     height: 250px;
     overflow: hidden;
-    left: 50%;
+    
     background: #fff;
 margin: -200px 0 0 -200px;
 border: 1px solid rgba(0, 0, 0, 0.3);

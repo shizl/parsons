@@ -1,13 +1,13 @@
 jQuery(document).ready(function(){
 
-jQuery('#block-block-1 .share .weixin img').click(function(){
+jQuery('#block-block-1 .share .weixin img').mouseover(function(){
 
 
-jQuery('.wechat').show();
+jQuery('.wechat').fadeIn(500);
 
 });
 
-jQuery('.wechat .close').click(function(){
+jQuery('#block-block-1 .share .weixin img').mouseout(function(){
 
 
 jQuery('.wechat').hide();
