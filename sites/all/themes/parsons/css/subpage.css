@@ -1,7 +1,8 @@
 .node-type-article .field-name-field-image{
 width:100%;
 overflow:hidden;
-max-width:1360px;
+max-width:1400px;
+margin:0 auto;
 }
 .node-type-article .field-name-field-image .field-items{
 overflow:hidden;
@@ -22,7 +23,8 @@ position:relative;
 }
 #block-block-13{
 overflow:hidden;
-width:1360px;
+width:100%;
+max-width:1400px;
 top: 48%;
 position: absolute;
 }
@@ -37,11 +39,13 @@ margin:0  auto;
 float:left;
 margin-left:10px;
 background:url("../images/bt-left.png") no-repeat;
+border: none;
 }
 #block-block-13 .bt-right{
 float:right;
 margin-right:10px;
 background:url("../images/bt-right.png") no-repeat;
+border: none;
 }
 #block-block-13 button{
 width:24px;
