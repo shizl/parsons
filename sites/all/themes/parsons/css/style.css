@@ -2642,12 +2642,14 @@ cursor: pointer;
 display:none;
    position: absolute;
     
-    width: 250px;
-    height: 250px;
+    width: ;
+    height: ;
     overflow: hidden;
-    
+    padding-top:20px;
+    padding-bottom:20px;
+    padding-right:5px;
     background: #fff;
-margin: -200px 0 0 -200px;
+margin: -260px 0 0 -200px;
 border: 1px solid rgba(0, 0, 0, 0.3);
     border-radius: 6px 6px 6px 6px;
     box-shadow: 0 3px 7px rgba(0, 0, 0, 0.3);
@@ -2656,7 +2658,7 @@ border: 1px solid rgba(0, 0, 0, 0.3);
 
 display:block;
 margin:0 auto;
-margin-top:60px;
+
 
 }
 .wechat .close{
