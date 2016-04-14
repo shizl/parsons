@@ -115,7 +115,7 @@
     if ($links):
   ?>
     <div class="link-wrapper">
-      <?php print $links; ?>
+      <?php //print $links; ?>
     </div>
   <?php endif; ?>
 
