@@ -114,9 +114,7 @@
     $links = render($content['links']);
     if ($links):
   ?>
-    <div class="link-wrapper">
-      <?php print $links; ?>
-    </div>
+    
   <?php endif; ?>
 
   <?php print render($content['comments']); ?>
