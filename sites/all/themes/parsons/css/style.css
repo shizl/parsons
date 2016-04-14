@@ -481,8 +481,6 @@ h1#site-name {
   background: #ccc;
   background: rgba(255, 255, 255, 0.7);
   float: left; /* LTR */
-  height: 2.4em;
-  line-height: 2.4em;
   padding: 0 0.8em;
   text-decoration: none;
   text-shadow: 0 1px #eee;
@@ -528,7 +526,6 @@ h1#site-name {
 /* ------------------- Main ------------------- */
 
 #main {
-  margin-top: 20px;
   margin-bottom: 40px;
 }
 
@@ -2127,14 +2124,13 @@ padding: 0px;
 display:none;
 }
 #main-menu{
-width:45.7%;
 float:left;
-margin-top: 25px;
+margin-top: 44px;
 }
 #header .region-page-top{
-width:84px;
-float:left;
-margin-top: 22px;
+float:right;
+margin-top: 30px;
+margin-right:150px;
 }
 #main-menu-links li a{
 font-size:16px;
@@ -2159,44 +2155,53 @@ left: 20px;
 top: 73px;
 display:none;
 }
-@media only screen and (min-width:320px) and (max-width:640px){
-.section{
-width:100% !important;
+
+.menu-responsive{
+display:none;
 }
-#main-menu{
-width:100% !important;
-border-top:1px solid #ccc;
+
+#responsive-main-menu{
+display:none;
 }
-#main-menu li{
-width:100%;
-}
-#block-lang-dropdown-language{
-position:absolute;
-margin: 0px;
-top: 72px;
-right: 15px;
-}
-#header .region-page-top{
-clear:both;
-float:none;
-margin:0px;
-height: auto;
-min-height: 17px;
+
+@media only screen and (min-width: 768px){
+#responsive-main-menu{
+display:none !important;
 }
 }
 
-@media only screen and (min-width:641px) and (max-width:960px){
+@media  (max-width:1150px){
+#header .region-page-top{
+margin-right:20px;
+}
+}
+
+
+@media only screen and (min-width:961px) and (max-width:1030px){
+#logo{
+width:19% !important;
+}
+#main-menu{
+
+margin-top: 30px;
+}
+#header .region-page-top{
+margin-top: 20px;
+}
+}
+
+@media only screen and (min-width:768px) and (max-width:960px){
 #logo{
 width:19%;
 }
 #header .region-page-top{
-margin-top:9px;
+margin-top:16px;
 }
 #lang-dropdown-select-language{
 font-size:12px;
 }
 #main-menu{
-margin-top: 16px;
+margin-top: 30px;
 }
 #main-menu ul li a{
 font-size:12px;
@@ -2206,30 +2211,73 @@ padding: 0px 0.5em;
 padding:0px;
 }
 }
-@media only screen and (min-width:961px) and (max-width:1030px){
+
+@media only screen and (max-width: 768px){
+
 #logo{
-width:19% !important;
+float:none;
 }
-#main-menu{
-width:50%;
-margin-top: 18px;
+#logo img{
+max-width:100%;
+width:auto;
 }
+.section{
+width:100% !important;
+}
+#responsive-main-menu , #main-menu{
+display:none;
+width:100% !important;
+border-top:1px solid #ccc;
+}
+
+#responsive-main-menu {
+margin-top:30px;
+}
+
+#responsive-main-menu li{
+width:100%;
+margin-top: 5px;
+}
+#block-block-15  .menu-responsive{
+display:block;
+float:left;
+margin-right:10px;
+}
+#block-lang-dropdown-language{
+float:right !important;
+margin-right:5px;
+}
+#block-block-15{
+ margin-left:10px;
+}
+#block-block-15 .enter{
+float:right;
+}
+#block-block-15 select{
+float:left;
+}
+#block-block-15 a.enter{
+float:left !important;
+}
+
 #header .region-page-top{
-margin-top: 16px;
+clear:both;
+float:none;
+margin:0px;
+height: auto;
+min-height: 17px;
 }
+
 }
+
+
 
 @media only screen and (max-width: 960px){
 
-
 .node-product .brands-images .item{
-
 width:23%;
 margin-left: 2%;
 }
-
-
-
 }
 
 .view-culture{

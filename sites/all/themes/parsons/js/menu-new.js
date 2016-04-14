@@ -1,5 +1,5 @@
    jQuery(document).ready(function(){
-      jQuery("#block-block-6").click(function(){
-      jQuery("#main-menu").toggle(500);
+      jQuery(".menu-responsive").click(function(){
+      jQuery("#responsive-main-menu").toggle(200);
   });
 });
