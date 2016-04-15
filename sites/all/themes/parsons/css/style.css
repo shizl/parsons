@@ -2246,6 +2246,7 @@ border-bottom:1px solid #ccc;
 
 #responsive-main-menu li.active{
 background:#288345;
+
 }
 
 #responsive-main-menu li a{
@@ -2256,6 +2257,7 @@ background:none;
 }
 #responsive-main-menu li.active a{
 color:#fff;
+text-shadow:none;
 }
 
 #block-block-15  .menu-responsive{
