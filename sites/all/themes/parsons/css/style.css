@@ -844,8 +844,9 @@ width:100%;
 /* --------------- System Tabs  --------------- */
 
 .tabs {
-  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+
   margin-bottom: 20px;
+  margin-top: 20px;
 }
 .tabs ul.primary {
   padding: 0 3px;
@@ -2141,6 +2142,7 @@ background:none;
 -moz-appearance:none;
 background:url("../images/xia.png") no-repeat left center;
 padding-left:15px;
+margin-top: 5px;
 }
 #header .section{
 width:100% !important;
@@ -2232,16 +2234,36 @@ border-top:1px solid #ccc;
 
 #responsive-main-menu {
 margin-top:30px;
+background:#f3f4f5;
 }
-
+#responsive-main-menu ul{
+padding:0px;
+}
 #responsive-main-menu li{
 width:100%;
-margin-top: 5px;
+line-height: 40px;
+border-bottom:1px solid #ccc;
 }
+
+#responsive-main-menu li.active{
+background:#288345;
+}
+
+#responsive-main-menu li a{
+background:none;
+}
+#responsive-main-menu li a:hover{
+background:none;
+}
+#responsive-main-menu li.active a{
+color:#fff;
+}
+
 #block-block-15  .menu-responsive{
 display:block;
 float:left;
 margin-right:10px;
+margin-top: 4px;
 }
 #block-lang-dropdown-language{
 float:right !important;
@@ -2266,6 +2288,9 @@ float:none;
 margin:0px;
 height: auto;
 min-height: 17px;
+background: #f3f4f5;
+padding-bottom: 10px;
+overflow:hidden;
 }
 
 }
