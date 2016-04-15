@@ -30,21 +30,31 @@ position:relative;
 width:24px;
 height:47px;
 left: 1%;
-    top: 40%;
-    position: absolute;
+top: 40%;
+position: absolute;
 z-index:9999;
 background:url("../images/bt-left.png") no-repeat;
 border: none;
+transition:0.5s;
+}
+.field-name-field-image .bt-left:hover{
+background:url("../images/zuo.png") no-repeat;
+transition:0.5s;
 }
 .field-name-field-image  .bt-right{
 width:24px;
 height:47px;
 right: 1%;
-    top: 40%;
-    position: absolute;
+top: 40%;
+position: absolute;
 z-index:9999;
 background:url("../images/bt-right.png") no-repeat;
 border: none;
+transition:0.5s;
+}
+.field-name-field-image  .bt-right:hover{
+background:url("../images/you.png") no-repeat;
+transition:0.5s;
 }
 
 @media only screen and (min-width:320px) and (max-width:639px){

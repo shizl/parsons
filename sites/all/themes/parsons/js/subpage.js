@@ -10,7 +10,10 @@ jQuery('.field-name-field-image').append('<input type="button" style="cursor:poi
 
 	var w=jQuery("#main").width();
 	}else if(jQuery("#main").width()>=640&&jQuery("#main").width()<960){
-
+       if(div_length>=3){
+            jQuery(".field-name-field-image .bt-left").show();
+						jQuery(".field-name-field-image .bt-right").show();
+}
 	var w=jQuery("#main").width()/2+10;
 }else if(jQuery("#main").width()>961){
 	var w=473;
