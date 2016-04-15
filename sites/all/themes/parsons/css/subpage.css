@@ -119,18 +119,15 @@ margin-right: 10px;
 width:100% !important;
 }
 .node-type-article .field-name-field-image{
-width:900px;
+width:100%;
 margin:0 auto;
 }
 .node-type-article .region-content{
-width:900px;
+width:100%;
 margin:0 auto;
 }
-#block-block-13{
-width:900px;
-}
 .node-type-article .field-name-body{
-width:900px;
+width:100%;
 margin:0 auto;
 }
 }
