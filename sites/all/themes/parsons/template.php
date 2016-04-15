@@ -370,13 +370,13 @@ jQuery(".parsons-pager .parsons-page .page-item-0").addClass("active");
 if(decodeURI(url).indexOf(href)>0 && decodeURI(url).indexOf("page=")>0){
 
 jQuery(this).addClass("active");
-
+jQuery(".parsons-pager .parsons-page .page-item-0").removeClass("active");
 }
 
 if(decodeURI(url).indexOf(href)<0 && decodeURI(url).indexOf("page=")>0){
 
 jQuery(this).removeClass("active");
-
+jQuery(".parsons-pager .parsons-page .page-item-0").removeClass("active");
 }
 
 
