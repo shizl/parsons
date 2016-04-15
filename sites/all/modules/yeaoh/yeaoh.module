@@ -437,7 +437,7 @@ location.href = ur.replace(ur.substr(ur.indexOf("pager="),10),"pager=1");
 
 ';
 
-
+print(current_path());exit;
  return $output;
 
 }
