@@ -361,19 +361,19 @@ var href = jQuery(this).attr("href");
 var url = document.URL;
 
 
-
-if(url.indexOf("page=")<0){
+//alert(decodeURI(url));
+if(decodeURI(url).indexOf("page=")<0){
 
 jQuery(".parsons-pager .parsons-page .page-item-0").addClass("active");
 
 }
-if(url.indexOf(href)>0 && url.indexOf("page=")>0){
+if(decodeURI(url).indexOf(href)>0 && decodeURI(url).indexOf("page=")>0){
 
 jQuery(this).addClass("active");
 
 }
 
-if(url.indexOf(href)<0 && url.indexOf("page=")>0){
+if(decodeURI(url).indexOf(href)<0 && decodeURI(url).indexOf("page=")>0){
 
 jQuery(this).removeClass("active");
 

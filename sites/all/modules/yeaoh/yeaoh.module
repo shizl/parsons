@@ -264,6 +264,7 @@ $page = '<a class=" page-item-1" href="/'.current_path().'/?brand=all&pager=1">1
    }
 }
 
+
  if( (isset($_GET['pager']) && $_GET['pager'] == $allpage) || $allpage == 1){
 
       $next = '';
