@@ -83,7 +83,7 @@ if(jQuery(".home-video .video-content1").html()==""){
 	 //preventDefault();
 	  effect: 'fade',
 	  opacity: 0.6,
-	  closeOnClick:true, 
+	  closeOnClick:false, 
 	 onShow: function() {
      	jQuery('.home-video .video-content1').show();
 	 },
@@ -104,7 +104,7 @@ if(jQuery(".home-video .video-content2").html()==""){
 	 //preventDefault();
 	  effect: 'fade',
 	  opacity: 0.6,
-	  closeOnClick:true, 
+	  closeOnClick:false, 
 	 onShow: function() {
      	jQuery('.home-video .video-content2').show();
 	 },
@@ -126,7 +126,7 @@ if(jQuery(".home-video .video-content3").html()==""){
 	 //preventDefault();
 	  effect: 'fade',
 	  opacity: 0.6,
-	  closeOnClick:true, 
+	  closeOnClick:false, 
 	 onShow: function() {
      	jQuery('.home-video .video-content3').show();
 	 },
