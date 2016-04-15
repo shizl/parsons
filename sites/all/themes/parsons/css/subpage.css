@@ -1,3 +1,11 @@
+.page-node-244 .custom-images img{
+width:100%;
+height:auto;
+}
+.page-node-154 .custom-images img{
+width:100%;
+height:auto;
+}
 .link-wrapper{
 display:none;
 }
@@ -107,6 +115,9 @@ margin-right: 10px;
 }
 }
 @media only screen and (min-width:960px) and (max-width:1359px){
+.page-node-244 .region-content{
+width:100% !important;
+}
 .node-type-article .field-name-field-image{
 width:900px;
 margin:0 auto;
