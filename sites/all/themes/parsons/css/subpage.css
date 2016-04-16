@@ -1,0 +1,133 @@
+.page-node-244 .custom-images img{
+width:100%;
+height:auto;
+}
+.page-node-154 .custom-images img{
+width:100%;
+height:auto;
+}
+.link-wrapper{
+display:none;
+}
+.node-type-article .field-name-field-image{
+width:100%;
+overflow:hidden;
+max-width:1400px;
+position:relative;
+margin:0 auto;
+}
+.node-type-article .field-name-field-image .field-items{
+overflow:hidden;
+position:relative;
+}
+.node-type-article .field-name-field-image .field-items .field-item{
+width:453px;
+float:left;
+margin-right:20px;
+height:auto;	
+}
+.node-type-article .field-name-field-image .field-items .field-item img{
+width:100%;
+height:auto;
+}
+.node-type-article .region-content{
+position:relative;
+}
+
+.field-name-field-image .bt-left{
+width:24px;
+height:47px;
+left: 1%;
+top: 40%;
+position: absolute;
+z-index:9999;
+background:url("../images/bt-left.png") no-repeat;
+border: none;
+transition:0.5s;
+}
+.field-name-field-image .bt-left:hover{
+background:url("../images/zuo.png") no-repeat;
+transition:0.5s;
+}
+.field-name-field-image  .bt-right{
+width:24px;
+height:47px;
+right: 1%;
+top: 40%;
+position: absolute;
+z-index:9999;
+background:url("../images/bt-right.png") no-repeat;
+border: none;
+transition:0.5s;
+}
+.field-name-field-image  .bt-right:hover{
+background:url("../images/you.png") no-repeat;
+transition:0.5s;
+}
+
+@media only screen and (min-width:320px) and (max-width:639px){
+.node-type-article .field-name-field-image{
+width:100%;
+position:relative;
+}
+.node-type-article .field-name-field-image .field-items{
+
+}
+.node-type-article .field-name-field-image .field-items .field-item{
+
+height:auto;
+float:left;
+margin-right:0;
+}
+.node-type-article .field-name-field-image .field-items .field-item img{
+height:auto;
+}
+.node-type-article .field-name-field-image>p:nth-child(2n+1){
+position: absolute;
+bottom:5px !important;
+left: 43%;
+background:url("../images/bt-bottom.png") no-repeat;
+width:47px;
+height:24px;
+text-indent: -99999px;
+}
+.node-type-article .field-name-field-image>p:nth-child(2n+2){
+position: absolute;
+top: 5px;
+left: 43%;
+background:url("../images/bt-top.png") no-repeat;
+width:47px;
+height:24px;
+text-indent: -99999px;
+}
+.node-type-article #content{
+width:95% !important;
+margin:0 auto;
+}
+}
+@media only screen and (min-width:640px) and (max-width:959px){
+#block-block-13{
+width:100%;
+top:49%;
+}
+#block-block-13 .bt-right{
+margin-right: 10px;
+}
+}
+@media only screen and (min-width:960px) and (max-width:1359px){
+.page-node-244 .region-content{
+width:100% !important;
+}
+.node-type-article .field-name-field-image{
+width:100%;
+margin:0 auto;
+}
+.node-type-article .region-content{
+width:100%;
+margin:0 auto;
+}
+.node-type-article .field-name-body{
+width:100%;
+margin:0 auto;
+}
+}

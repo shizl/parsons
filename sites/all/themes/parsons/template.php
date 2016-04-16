@@ -284,25 +284,10 @@ $page = '<a class=" page-item-0" href="/'.current_path().'?field_new_type_tid='.
 
 }else{
 
-if($allpage <=6){
+  if($allpage <=6){
 for($i=1; $i<=$allpage; $i++){
 
-if(!isset($_GET['page']) && $i== 1){
-
-$page .= '<a class="active page-item-'.($i-1).'" > '.$i.'</a>';
-
-}else if(isset($_GET['page']) && ($i-1)== $_GET['page']){
-$page .= '<a class="active page-item-'.($i-1).'" > '.$i.'</a>';
-}else{
- 
- if($i==1){
-	$page .= '<a class=" page-item-'.($i-1).'" href="/'.current_path().'"> '.$i.'</a>';
- }else{
- 	 $page .= '<a class=" page-item-'.($i-1).'" href="/'.current_path().'?page='.($i-1).'"> '.$i.'</a>';
- }
-
-}
-
+$page .= '<a class="  page-item-'.($i-1).'" href="/'.current_path().'?page='.($i-1).'"> '.$i.'</a>';
 }
 }else{
 
@@ -367,7 +352,7 @@ $output = '<div class="parsons-pager">
 
 jQuery(document).ready(function(){
 
-/*
+
 jQuery(".parsons-pager .parsons-page a").each(function(){
 
 var href = jQuery(this).attr("href");
@@ -376,27 +361,27 @@ var href = jQuery(this).attr("href");
 var url = document.URL;
 
 
-
-if(url.indexOf("page=")<0){
+//alert(decodeURI(url));
+if(decodeURI(url).indexOf("page=")<0){
 
 jQuery(".parsons-pager .parsons-page .page-item-0").addClass("active");
 
 }
-if(url.indexOf(href)>0 && url.indexOf("page=")>0){
+if(decodeURI(url).indexOf(href)>0 && decodeURI(url).indexOf("page=")>0){
 
 jQuery(this).addClass("active");
-
+jQuery(".parsons-pager .parsons-page .page-item-0").removeClass("active");
 }
 
-if(url.indexOf(href)<0 && url.indexOf("page=")>0){
+if(decodeURI(url).indexOf(href)<0 && decodeURI(url).indexOf("page=")>0){
 
 jQuery(this).removeClass("active");
-
+jQuery(".parsons-pager .parsons-page .page-item-0").removeClass("active");
 }
 
 
 });
-*/
+
 
 jQuery(".parsons-pager .parsons-tiaozhuan .parsons-submit").click(function(){
 
