@@ -745,7 +745,15 @@ width:100%;
 width:94%;
 margin:0 auto;
 }
+.view-sales-network .view-header h2{
+ font-weight:bold;
+font-size:26px !important;
+}
 
+.view-sales-network .view-header h2 span{
+
+color: #288345;
+}
 .view-sales-network .views-exposed-form select{
  background:#fff;
 width:150px;
