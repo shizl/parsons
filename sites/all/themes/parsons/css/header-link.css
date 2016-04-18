@@ -1,6 +1,4 @@
-#header .region-page-top{
-width:35%;
-}
+
 #block-lang-dropdown-language{
 width:84px;
 float: left;
@@ -19,6 +17,7 @@ color:#7B7B7B;
 width: 120px;
 padding-left: 10px;
     height: 25px;
+border: 1px solid #ccc;
 }
 #block-block-15 a.enter{
     vertical-align:middle;

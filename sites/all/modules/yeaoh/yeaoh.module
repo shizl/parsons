@@ -23,6 +23,7 @@ $nid = arg(1);
 $gallery = "";
  $r = 0;
 $node = node_load($nid);
+global $language;
 
  if(isset($_GET['brand'])){
 
@@ -61,20 +62,20 @@ $pre = '';
 $next = '';
 if($allpage <=6){
 for($i=1; $i<=$allpage; $i++){
-$page .= '<a class=" page-item-'.$i.'" href="/'.drupal_get_path_alias('node/' . $node->nid).'/?brand=hongkongbs&pager='.$i.'"> '.$i.'</a>';
+$page .= '<a class=" page-item-'.$i.'" href="/'.$language->prefix.'/'.drupal_get_path_alias(current_path()).'/?brand=hongkongbs&pager='.$i.'"> '.$i.'</a>';
 }
 
 }else{
    if(isset($_GET['pager']) && ($_GET['pager'] >3) && ($_GET['pager'] < $allpage)){
 
-    $page = '<a class=" page-item-1" href="/'.drupal_get_path_alias('node/' . $node->nid).'/?brand=hongkongbs&pager=1">1</a>
+    $page = '<a class=" page-item-1" href="/'.$language->prefix.'/'.drupal_get_path_alias(current_path()).'/?brand=hongkongbs&pager=1">1</a>
          <p class="omit">....</p>
-        <a class=" page-item-'.((int)$_GET['pager']-1).'" href="/'.drupal_get_path_alias('node/' . $node->nid).'/?brand=hongkongbs&pager='.((int)$_GET['pager']-1).'"> '.((int)$_GET['pager']-1).'</a>
+        <a class=" page-item-'.((int)$_GET['pager']-1).'" href="/'.$language->prefix.'/'.drupal_get_path_alias(current_path()).'/?brand=hongkongbs&pager='.((int)$_GET['pager']-1).'"> '.((int)$_GET['pager']-1).'</a>
 
-        <a class=" page-item-'.$_GET['pager'].'" href="/'.drupal_get_path_alias('node/' . $node->nid).'/?brand=hongkongbs&pager='.$_GET['pager'].'"> '.$_GET['pager'].'</a>
-      <a class=" page-item-'.((int)$_GET['pager']+1).'" href="/'.drupal_get_path_alias('node/' . $node->nid).'/?brand=hongkongbs&pager='.((int)$_GET['pager']+1).'"> '.((int)$_GET['pager']+1).'</a>
+        <a class=" page-item-'.$_GET['pager'].'" href="/'.$language->prefix.'/'.drupal_get_path_alias(current_path()).'/?brand=hongkongbs&pager='.$_GET['pager'].'"> '.$_GET['pager'].'</a>
+      <a class=" page-item-'.((int)$_GET['pager']+1).'" href="/'.$language->prefix.'/'.drupal_get_path_alias(current_path()).'/?brand=hongkongbs&pager='.((int)$_GET['pager']+1).'"> '.((int)$_GET['pager']+1).'</a>
          <p class="omit">....</p>
-         <a class=" page-item-'.$allpage.'" href="/'.drupal_get_path_alias('node/' . $node->nid).'/?brand=hongkongbs&pager='.$allpage.'"> '.$allpage.'</a>
+         <a class=" page-item-'.$allpage.'" href="/'.$language->prefix.'/'.drupal_get_path_alias(current_path()).'/?brand=hongkongbs&pager='.$allpage.'"> '.$allpage.'</a>
 ';     
 
 
@@ -82,12 +83,12 @@ $page .= '<a class=" page-item-'.$i.'" href="/'.drupal_get_path_alias('node/' . 
 
 elseif (isset($_GET['pager']) && ($_GET['pager'] >3) && ($_GET['pager'] >= $allpage-2)){
 
-$page = ' <a class=" page-item-1" href="/'.drupal_get_path_alias('node/' . $node->nid).'/?brand=hongkongbs&pager=1">1</a>
+$page = ' <a class=" page-item-1" href="/'.$language->prefix.'/'.drupal_get_path_alias(current_path()).'/?brand=hongkongbs&pager=1">1</a>
           <p class="omit"> ....</p>
-         <a class="  page-item-'.($allpage-3).'" href="/'.drupal_get_path_alias('node/' . $node->nid).'/?brand=hongkongbs&pager='.($allpage-3).'"> '.($allpage-3).'</a>
-         <a class="  page-item-'.($allpage-2).'" href="/'.drupal_get_path_alias('node/' . $node->nid).'/?brand=hongkongbs&pager='.($allpage-2).'"> '.($allpage-2).'</a>
-         <a class="  page-item-'.($allpage-1).'" href="/'.drupal_get_path_alias('node/' . $node->nid).'/?brand=hongkongbs&pager='.($allpage-1).'"> '.($allpage-1).'</a>
-         <a class="  page-item-'.$allpage.'" href="/'.drupal_get_path_alias('node/' . $node->nid).'/?brand=hongkongbs&pager='.$allpage.'"> '.$allpage.'</a>
+         <a class="  page-item-'.($allpage-3).'" href="/'.$language->prefix.'/'.drupal_get_path_alias(current_path()).'/?brand=hongkongbs&pager='.($allpage-3).'"> '.($allpage-3).'</a>
+         <a class="  page-item-'.($allpage-2).'" href="/'.$language->prefix.'/'.drupal_get_path_alias(current_path()).'/?brand=hongkongbs&pager='.($allpage-2).'"> '.($allpage-2).'</a>
+         <a class="  page-item-'.($allpage-1).'" href="/'.$language->prefix.'/'.drupal_get_path_alias(current_path()).'/?brand=hongkongbs&pager='.($allpage-1).'"> '.($allpage-1).'</a>
+         <a class="  page-item-'.$allpage.'" href="/'.$language->prefix.'/'.drupal_get_path_alias(current_path()).'/?brand=hongkongbs&pager='.$allpage.'"> '.$allpage.'</a>
 
 
         ';
@@ -99,11 +100,11 @@ $page = ' <a class=" page-item-1" href="/'.drupal_get_path_alias('node/' . $node
 
 else{
 
-$page = '<a class=" page-item-1" href="/'.drupal_get_path_alias('node/' . $node->nid).'/?brand=hongkongbs&pager=1">1</a>
-         <a class=" page-item-2" href="/'.drupal_get_path_alias('node/' . $node->nid).'/?brand=hongkongbs&pager=2">2</a>
-         <a class=" page-item-3" href="/'.drupal_get_path_alias('node/' . $node->nid).'/?brand=hongkongbs&pager=3">3</a>
+$page = '<a class=" page-item-1" href="/'.$language->prefix.'/'.drupal_get_path_alias(current_path()).'/?brand=hongkongbs&pager=1">1</a>
+         <a class=" page-item-2" href="/'.$language->prefix.'/'.drupal_get_path_alias(current_path()).'/?brand=hongkongbs&pager=2">2</a>
+         <a class=" page-item-3" href="/'.$language->prefix.'/'.drupal_get_path_alias(current_path()).'/?brand=hongkongbs&pager=3">3</a>
          <p class="omit">....</p>
-         <a class="page-item-'.$allpage.'" href="/'.drupal_get_path_alias('node/' . $node->nid).'/?brand=hongkongbs&pager='.$allpage.'"> '.$allpage.'</a>
+         <a class="page-item-'.$allpage.'" href="/'.$language->prefix.'/'.drupal_get_path_alias(current_path()).'/?brand=hongkongbs&pager='.$allpage.'"> '.$allpage.'</a>
 ';
    }
 }
@@ -113,13 +114,13 @@ $page = '<a class=" page-item-1" href="/'.drupal_get_path_alias('node/' . $node-
       $next = '';
  
    }else{
-      $next = '<a class="next" href="/'.drupal_get_path_alias('node/' . $node->nid).'/?brand=hongkongbs&pager='.((isset($_GET['pager'])?intval($_GET['pager']):1)+1).' ">下一页</a>';
+      $next = '<a class="next" href="/'.$language->prefix.'/'.drupal_get_path_alias(current_path()).'/?brand=hongkongbs&pager='.((isset($_GET['pager'])?intval($_GET['pager']):1)+1).' ">'.t('下一页').'</a>';
   }
 
 
 if( isset($_GET['pager']) && ($_GET['pager'] >= 2) ){
 
-      $pre = '<a class="pre" href="/'.drupal_get_path_alias('node/' . $node->nid).'/?brand=hongkongbs&pager='.((isset($_GET['pager'])?intval($_GET['pager']):1)-1).' ">上一页</a>';
+      $pre = '<a class="pre" href="/'.$language->prefix.'/'.drupal_get_path_alias(current_path()).'/?brand=hongkongbs&pager='.((isset($_GET['pager'])?intval($_GET['pager']):1)-1).' ">'.t('上一页').'</a>';
  
    }else{
       $pre = '';
@@ -139,32 +140,32 @@ $pre = '';
 $next = '';
 if($allpage <=6){
 for($i=1; $i<=$allpage; $i++){
-$page .= '<a class=" page-item-'.$i.'" href="/'.drupal_get_path_alias('node/' . $node->nid).'/?brand=chinabs&pager='.$i.'"> '.$i.'</a>';
+$page .= '<a class=" page-item-'.$i.'" href="/'.$language->prefix.'/'.drupal_get_path_alias(current_path()).'/?brand=chinabs&pager='.$i.'"> '.$i.'</a>';
 }
 
 }else{
    if(isset($_GET['pager']) && ($_GET['pager'] >3) && ($_GET['pager'] < $allpage)){
 
-    $page = '<a class=" page-item-1" href="/'.drupal_get_path_alias('node/' . $node->nid).'/?brand=chinabs&pager=1">1</a>
+    $page = '<a class=" page-item-1" href="/'.$language->prefix.'/'.drupal_get_path_alias(current_path()).'/?brand=chinabs&pager=1">1</a>
          <p class="omit">....</p>
-        <a class=" page-item-'.((int)$_GET['pager']-1).'" href="/'.drupal_get_path_alias('node/' . $node->nid).'/?brand=chinabs&pager='.((int)$_GET['pager']-1).'"> '.((int)$_GET['pager']-1).'</a>
+        <a class=" page-item-'.((int)$_GET['pager']-1).'" href="/'.$language->prefix.'/'.drupal_get_path_alias(current_path()).'/?brand=chinabs&pager='.((int)$_GET['pager']-1).'"> '.((int)$_GET['pager']-1).'</a>
 
-        <a class=" page-item-'.$_GET['pager'].'" href="/'.drupal_get_path_alias('node/' . $node->nid).'/?brand=chinabs&pager='.$_GET['pager'].'"> '.$_GET['pager'].'</a>
-       <a class=" page-item-'.((int)$_GET['pager']+1).'" href="/'.drupal_get_path_alias('node/' . $node->nid).'/?brand=chinabs&pager='.((int)$_GET['pager']+1).'"> '.((int)$_GET['pager']+1).'</a>
+        <a class=" page-item-'.$_GET['pager'].'" href="/'.$language->prefix.'/'.drupal_get_path_alias(current_path()).'/?brand=chinabs&pager='.$_GET['pager'].'"> '.$_GET['pager'].'</a>
+       <a class=" page-item-'.((int)$_GET['pager']+1).'" href="/'.$language->prefix.'/'.drupal_get_path_alias(current_path()).'/?brand=chinabs&pager='.((int)$_GET['pager']+1).'"> '.((int)$_GET['pager']+1).'</a>
          <p class="omit">....</p>
-         <a class=" page-item-'.$allpage.'" href="/'.drupal_get_path_alias('node/' . $node->nid).'/?brand=chinabs&pager='.$allpage.'"> '.$allpage.'</a>
+         <a class=" page-item-'.$allpage.'" href="/'.$language->prefix.'/'.drupal_get_path_alias(current_path()).'/?brand=chinabs&pager='.$allpage.'"> '.$allpage.'</a>
 ';     
 
 
 }
  elseif (isset($_GET['pager']) && ($_GET['pager'] >3) && ($_GET['pager'] >= $allpage-2)){
 
-$page = ' <a class=" page-item-1" href="/'.drupal_get_path_alias('node/' . $node->nid).'/?brand=chinabs&pager=1">1</a>
+$page = ' <a class=" page-item-1" href="/'.$language->prefix.'/'.drupal_get_path_alias(current_path()).'/?brand=chinabs&pager=1">1</a>
           <p class="omit"> ....</p>
-         <a class="  page-item-'.($allpage-3).'" href="/'.drupal_get_path_alias('node/' . $node->nid).'/?brand=chinabs&pager='.($allpage-3).'"> '.($allpage-3).'</a>
-         <a class="  page-item-'.($allpage-2).'" href="/'.drupal_get_path_alias('node/' . $node->nid).'/?brand=chinabs&pager='.($allpage-2).'"> '.($allpage-2).'</a>
-         <a class="  page-item-'.($allpage-1).'" href="/'.drupal_get_path_alias('node/' . $node->nid).'/?brand=chinabs&pager='.($allpage-1).'"> '.($allpage-1).'</a>
-         <a class="  page-item-'.$allpage.'" href="/'.drupal_get_path_alias('node/' . $node->nid).'/?brand=chinabs&pager='.$allpage.'"> '.$allpage.'</a>
+         <a class="  page-item-'.($allpage-3).'" href="/'.$language->prefix.'/'.drupal_get_path_alias(current_path()).'/?brand=chinabs&pager='.($allpage-3).'"> '.($allpage-3).'</a>
+         <a class="  page-item-'.($allpage-2).'" href="/'.$language->prefix.'/'.drupal_get_path_alias(current_path()).'/?brand=chinabs&pager='.($allpage-2).'"> '.($allpage-2).'</a>
+         <a class="  page-item-'.($allpage-1).'" href="/'.$language->prefix.'/'.drupal_get_path_alias(current_path()).'/?brand=chinabs&pager='.($allpage-1).'"> '.($allpage-1).'</a>
+         <a class="  page-item-'.$allpage.'" href="/'.$language->prefix.'/'.drupal_get_path_alias(current_path()).'/?brand=chinabs&pager='.$allpage.'"> '.$allpage.'</a>
 
 
         ';
@@ -175,11 +176,11 @@ $page = ' <a class=" page-item-1" href="/'.drupal_get_path_alias('node/' . $node
 
  else{
 
-$page = '<a class=" page-item-1" href="/'.drupal_get_path_alias('node/' . $node->nid).'/?brand=chinabs&pager=1">1</a>
-         <a class=" page-item-2" href="/'.drupal_get_path_alias('node/' . $node->nid).'/?brand=chinabs&pager=2">2</a>
-         <a class=" page-item-3" href="/'.drupal_get_path_alias('node/' . $node->nid).'/?brand=chinabs&pager=3">3</a>
+$page = '<a class=" page-item-1" href="/'.$language->prefix.'/'.drupal_get_path_alias(current_path()).'/?brand=chinabs&pager=1">1</a>
+         <a class=" page-item-2" href="/'.$language->prefix.'/'.drupal_get_path_alias(current_path()).'/?brand=chinabs&pager=2">2</a>
+         <a class=" page-item-3" href="/'.$language->prefix.'/'.drupal_get_path_alias(current_path()).'/?brand=chinabs&pager=3">3</a>
          <p class="omit">....</p>
-         <a class=" page-item-'.$allpage.'" href="/'.drupal_get_path_alias('node/' . $node->nid).'/?brand=chinabs&pager='.$allpage.'"> '.$allpage.'</a>
+         <a class=" page-item-'.$allpage.'/" href="'.$language->prefix.'/'.drupal_get_path_alias(current_path()).'/?brand=chinabs&pager='.$allpage.'"> '.$allpage.'</a>
 ';
    }
 }
@@ -189,14 +190,14 @@ $page = '<a class=" page-item-1" href="/'.drupal_get_path_alias('node/' . $node-
       $next = '';
  
    }else{
-      $next = '<a class="next" href="/'.drupal_get_path_alias('node/' . $node->nid).'/?brand=chinabs&pager='.((isset($_GET['pager'])?intval($_GET['pager']):1)+1).' ">下一页</a>';
+      $next = '<a class="next" href="/'.$language->prefix.'/'.drupal_get_path_alias(current_path()).'/?brand=chinabs&pager='.((isset($_GET['pager'])?intval($_GET['pager']):1)+1).' ">'.t('下一页').'</a>';
   }
 
 
 
 if( isset($_GET['pager']) && ($_GET['pager'] >= 2) ){
 
-     $pre = '<a class="pre" href="/'.drupal_get_path_alias('node/' . $node->nid).'/?brand=chinabs&pager='.((isset($_GET['pager'])?intval($_GET['pager']):1)-1).' ">上一页</a>';
+     $pre = '<a class="pre" href="/'.$language->prefix.'/'.drupal_get_path_alias(current_path()).'/?brand=chinabs&pager='.((isset($_GET['pager'])?intval($_GET['pager']):1)-1).' ">'.t('上一页').'</a>';
  
    }else{
       $pre = '';
@@ -220,21 +221,21 @@ $pre ="";
 
 if($allpage <=6){
 for($i=1; $i<=$allpage; $i++){
-$page .= '<a class="  page-item-'.$i.'" href="/'.drupal_get_path_alias('node/' . $node->nid).'/?brand=all&pager='.$i.'"> '.$i.'</a>';
+$page .= '<a class="  page-item-'.$i.'" href="/'.$language->prefix.'/'.drupal_get_path_alias(current_path()).'/?brand=all&pager='.$i.'"> '.$i.'</a>';
 }
 
 }else{
    if(isset($_GET['pager']) && ($_GET['pager'] >3) && ($_GET['pager'] < $allpage-2)){
 
-    $page = '<a class=" page-item-1" href="/'.drupal_get_path_alias('node/' . $node->nid).'/?brand=all&pager=1">1</a>
+    $page = '<a class=" page-item-1" href="/'.$language->prefix.'/'.drupal_get_path_alias(current_path()).'/?brand=all&pager=1">1</a>
         <p class="omit">....</p>
-        <a class=" page-item-'.((int)$_GET['pager']-1).'" href="/'.drupal_get_path_alias('node/' . $node->nid).'/?brand=all&pager='.((int)$_GET['pager']-1).'"> '.((int)$_GET['pager']-1).'</a>
+        <a class=" page-item-'.((int)$_GET['pager']-1).'" href="/'.$language->prefix.'/'.drupal_get_path_alias(current_path()).'/?brand=all&pager='.((int)$_GET['pager']-1).'"> '.((int)$_GET['pager']-1).'</a>
 
-        <a class=" page-item-'.$_GET['pager'].'" href="/'.drupal_get_path_alias('node/' . $node->nid).'/?brand=all&pager='.$_GET['pager'].'"> '.$_GET['pager'].'</a>
+        <a class=" page-item-'.$_GET['pager'].'" href="/'.$language->prefix.'/'.drupal_get_path_alias(current_path()).'/?brand=all&pager='.$_GET['pager'].'"> '.$_GET['pager'].'</a>
         
-         <a class=" page-item-'.((int)$_GET['pager']-1).'" href="/'.drupal_get_path_alias('node/' . $node->nid).'/?brand=all&pager='.((int)$_GET['pager']+1).'"> '.((int)$_GET['pager']+1).'</a>
+         <a class=" page-item-'.((int)$_GET['pager']-1).'" href="/'.$language->prefix.'/'.drupal_get_path_alias(current_path()).'/?brand=all&pager='.((int)$_GET['pager']+1).'"> '.((int)$_GET['pager']+1).'</a>
          <p class="omit">....</p>
-         <a class=" page-item-'.$allpage.'" href="/'.drupal_get_path_alias('node/' . $node->nid).'/?brand=all&pager='.$allpage.'"> '.$allpage.'</a>
+         <a class=" page-item-'.$allpage.'" href="/'.$language->prefix.'/'.drupal_get_path_alias(current_path()).'/?brand=all&pager='.$allpage.'"> '.$allpage.'</a>
 ';     
 
 
@@ -242,39 +243,40 @@ $page .= '<a class="  page-item-'.$i.'" href="/'.drupal_get_path_alias('node/' .
 
  elseif (isset($_GET['pager']) && ($_GET['pager'] >3) && ($_GET['pager'] >= $allpage-2)){
 
-$page = ' <a class=" page-item-1" href="/'.drupal_get_path_alias('node/' . $node->nid).'/?brand=all&pager=1">1</a>
+$page = ' <a class=" page-item-1" href="/'.$language->prefix.'/'.drupal_get_path_alias(current_path()).'/?brand=all&pager=1">1</a>
           <p class="omit"> ....</p>
-         <a class="  page-item-'.($allpage-3).'" href="/'.drupal_get_path_alias('node/' . $node->nid).'/?brand=all&pager='.($allpage-3).'"> '.($allpage-3).'</a>
-         <a class="  page-item-'.($allpage-2).'" href="/'.drupal_get_path_alias('node/' . $node->nid).'/?brand=all&pager='.($allpage-2).'"> '.($allpage-2).'</a>
-         <a class="  page-item-'.($allpage-1).'" href="/'.drupal_get_path_alias('node/' . $node->nid).'/?brand=all&pager='.($allpage-1).'"> '.($allpage-1).'</a>
-         <a class="  page-item-'.$allpage.'" href="/'.drupal_get_path_alias('node/' . $node->nid).'/?brand=all&pager='.$allpage.'"> '.$allpage.'</a>
+         <a class="  page-item-'.($allpage-3).'" href="/'.$language->prefix.'/'.drupal_get_path_alias(current_path()).'/?brand=all&pager='.($allpage-3).'"> '.($allpage-3).'</a>
+         <a class="  page-item-'.($allpage-2).'" href="/'.$language->prefix.'/'.drupal_get_path_alias(current_path()).'/?brand=all&pager='.($allpage-2).'"> '.($allpage-2).'</a>
+         <a class="  page-item-'.($allpage-1).'" href="/'.$language->prefix.'/'.drupal_get_path_alias(current_path()).'/?brand=all&pager='.($allpage-1).'"> '.($allpage-1).'</a>
+         <a class="  page-item-'.$allpage.'" href="/'.$language->prefix.'/'.drupal_get_path_alias(current_path()).'/?brand=all&pager='.$allpage.'"> '.$allpage.'</a>
 
 
         ';
 
 }else{
 
-$page = '<a class=" page-item-1" href="/'.drupal_get_path_alias('node/' . $node->nid).'/?brand=all&pager=1">1</a>
-         <a class=" page-item-2" href="/'.drupal_get_path_alias('node/' . $node->nid).'/?brand=all&pager=2">2</a>
-         <a class=" page-item-3" href="/'.drupal_get_path_alias('node/' . $node->nid).'/?brand=all&pager=3">3</a>
-         <a class=" page-item-4" href="/'.drupal_get_path_alias('node/' . $node->nid).'/?brand=all&pager=4">4</a>
+$page = '<a class=" page-item-1" href="/'.$language->prefix.'/'.drupal_get_path_alias(current_path()).'/?brand=all&pager=1">1</a>
+         <a class=" page-item-2" href="/'.$language->prefix.'/'.drupal_get_path_alias(current_path()).'/?brand=all&pager=2">2</a>
+         <a class=" page-item-3" href="/'.$language->prefix.'/'.drupal_get_path_alias(current_path()).'/?brand=all&pager=3">3</a>
+         <a class=" page-item-4" href="/'.$language->prefix.'/'.drupal_get_path_alias(current_path()).'/?brand=all&pager=4">4</a>
          <p class="omit"> ....</p>
-         <a class="  page-item-'.$allpage.'" href="/'.drupal_get_path_alias('node/' . $node->nid).'/?brand=all&pager='.$allpage.'"> '.$allpage.'</a>
+         <a class="  page-item-'.$allpage.'" href="/'.$language->prefix.'/'.drupal_get_path_alias(current_path()).'/?brand=all&pager='.$allpage.'"> '.$allpage.'</a>
 ';
    }
 }
+
 
  if( (isset($_GET['pager']) && $_GET['pager'] == $allpage) || $allpage == 1){
 
       $next = '';
  
    }else{
-      $next = '<a class="next" href="/'.drupal_get_path_alias('node/' . $node->nid).'/?brand=all&pager='.((isset($_GET['pager'])?intval($_GET['pager']):1)+1).' ">下一页</a>';
+      $next = '<a class="next" href="/'.$language->prefix.'/'.drupal_get_path_alias(current_path()).'/?brand=all&pager='.((isset($_GET['pager'])?intval($_GET['pager']):1)+1).' ">'.t('下一页').'</a>';
   }
 
  if( isset($_GET['pager']) && ($_GET['pager'] >= 2) ){
 
-       $pre = '<a class="pre" href="/'.drupal_get_path_alias('node/' . $node->nid).'/?brand=all&pager='.((isset($_GET['pager'])?intval($_GET['pager']):1)-1).' ">上一页</a>';
+       $pre = '<a class="pre" href="/'.$language->prefix.'/'.drupal_get_path_alias(current_path()).'/?brand=all&pager='.((isset($_GET['pager'])?intval($_GET['pager']):1)-1).' ">'.t('上一页').'</a>';
  
    }else{
       $pre ='';
@@ -299,9 +301,9 @@ $page = '<a class=" page-item-1" href="/'.drupal_get_path_alias('node/' . $node-
 
  $output = '
 <div class="brands-filter">
-<a class="all active" href="/'.drupal_get_path_alias('node/' . $node->nid).'/?brand=all">'.t('所有品牌').'</a>
-<a class="hongkongbs" href="/'.drupal_get_path_alias('node/' . $node->nid).'/?brand=hongkongbs">'.t('香港品牌').'</a>
-<a class="chinabs" href="/'.drupal_get_path_alias('node/' . $node->nid) .'/?brand=chinabs">'.t('大陆品牌').'</a>
+<a class="all active" href="/'.$language->prefix.'/'.drupal_get_path_alias(current_path()).'/?brand=all">'.t('所有品牌').'</a>
+<a class="hongkongbs" href="/'.$language->prefix.'/'.drupal_get_path_alias(current_path()).'/?brand=hongkongbs">'.t('香港品牌').'</a>
+<a class="chinabs" href="/'.$language->prefix.'/'.drupal_get_path_alias(current_path()).'/?brand=chinabs">'.t('大陆品牌').'</a>
 </div>
 
 <div class="brands-images">
@@ -313,10 +315,10 @@ $page = '<a class=" page-item-1" href="/'.drupal_get_path_alias('node/' . $node-
 <div class="pre-page">'.$pre.'</div>
 <div class="page">'.$page.'</div>
 <div class="next-page">'.$next.'</div>
-<div class="all-page">共<span id="total">'.$allpage.'</span>页</div>
+<div class="all-page">'.t('共').'<span id="total">'.$allpage.'</span>'.t('页').'</div>
 <div class="tiaozhuan">
-<p>到第&nbsp;<input type="text" 　name="ye" />&nbsp;页</p>
-<a class="submit">确定</a>
+<p>'.t('到第').'&nbsp;<input type="text" 　name="ye" />&nbsp;'.t('页').'</p>
+<a class="submit">'.t('确定').'</a>
 
 </div>
 </div>
@@ -435,8 +437,6 @@ location.href = ur.replace(ur.substr(ur.indexOf("pager="),10),"pager=1");
 
 
 ';
-
-
  return $output;
 
 }
