@@ -42,10 +42,18 @@ if(old_item_length>1){
 						subWidth=jQuery('.field-name-field-image .field-items').width();
 					w=parseInt(jQuery('.field-name-field-image .field-items .field-item').css('width'))+parseInt(jQuery('.field-name-field-image .field-items .field-item').css('margin-right'));
 					var  leftwidth =parseInt(jQuery('.field-name-field-image .field-items') .css("margin-left"));
-					 if( leftwidth<  jQuery("#main").width()-subWidth+w ){
-							jQuery('.field-name-field-image .field-items') .css("margin-left",0);
-							leftwidth =0;
-					}	   
+				if(old_item_length>2){
+								if( leftwidth<= jQuery("#main").width()-subWidth+w ){
+											jQuery('.field-name-field-image .field-items') .css("margin-left",0);
+											leftwidth =0;
+									}
+				}else{
+					if(leftwidth==-w){
+											jQuery('.field-name-field-image .field-items') .css("margin-left",w);
+											leftwidth =w;
+					}
+										
+			}
 					jQuery(".field-name-field-image .field-items").animate({"margin-left":(leftwidth-w)+'px'});
 				setTimeout('jQuery(".bt-left").attr("disabled",false);',1000);
 	});
@@ -54,11 +62,17 @@ if(old_item_length>1){
 				subWidth=jQuery('.field-name-field-image .field-items').width();
 				w=parseInt(jQuery('.field-name-field-image .field-items .field-item').css('width'))+parseInt(jQuery('.field-name-field-image .field-items .field-item').css('margin-right'));
 				var  leftwidth =parseInt(jQuery('.field-name-field-image .field-items') .css("margin-left"));
-
-					 if( leftwidth>-w){
-						jQuery('.field-name-field-image .field-items') .css("margin-left",-subWidth+w*3);
-						leftwidth =-subWidth+w*3;
+			if(old_item_length>2){
+					 if( leftwidth>-w){					
+										jQuery('.field-name-field-image .field-items') .css("margin-left",-subWidth+w*3);
+										leftwidth =-subWidth+w*3;
 					}
+			}else{
+						if(leftwidth==0){
+											jQuery('.field-name-field-image .field-items') .css("margin-left",-w*2);
+											leftwidth =-w*2;
+					}
+			}
 				 
 				jQuery(".field-name-field-image .field-items").animate({"margin-left":(leftwidth+w)+'px'});
 				setTimeout('jQuery(".bt-right").attr("disabled",false);',1000);
@@ -81,8 +95,9 @@ var itemcount=jQuery('.field-name-field-image .field-items .field-item:last').in
 	subWidth=itemcount*w;
 jQuery('.field-name-field-image .field-items').css("width",subWidth);
 	jQuery('.field-name-field-image .field-items .field-item').css('width',w+'px');
-jQuery('.field-name-field-image .field-items') .css("margin-left",-w*3);
-if(old_item_length>1){
+	jQuery('.field-name-field-image .field-items') .css("margin-left",0);
+		if(old_item_length>1){
+						
             jQuery(".field-name-field-image .bt-left").show();
 						jQuery(".field-name-field-image .bt-right").show();
 			}else{
@@ -104,14 +119,12 @@ var itemcount=jQuery('.field-name-field-image .field-items .field-item:last').in
 jQuery('.field-name-field-image .field-items').css("width",subWidth);
 	jQuery('.field-name-field-image .field-items .field-item').css('width',(w-10)+'px');
 var lastid=parseInt(jQuery(".field-name-field-image .field-items .field-item:last").index())+1;
-
-				if(lastid>3){
-					jQuery('.field-name-field-image .field-items') .css("margin-left",-(w+10)*3);
-				}
 if(old_item_length>2){
+						jQuery('.field-name-field-image .field-items') .css("margin-left",-(w+10)*3);
             jQuery(".field-name-field-image .bt-left").show();
 						jQuery(".field-name-field-image .bt-right").show();
 			}else{
+					jQuery('.field-name-field-image .field-items') .css("margin-left",0);
 					jQuery(".field-name-field-image .bt-left").hide();
 						jQuery(".field-name-field-image .bt-right").hide();
 			}
@@ -132,13 +145,12 @@ if(old_item_length>2){
 					jQuery('.field-name-field-image .field-items .field-item').css('width',(w-10)+'px');
 				var lastid=parseInt(jQuery(".field-name-field-image .field-items .field-item:last").index())+1;
 
-								if(lastid>3){
-									jQuery('.field-name-field-image .field-items') .css("margin-left",-(w+10)*3);
-								}
 			if(old_item_length>3){
+						jQuery('.field-name-field-image .field-items') .css("margin-left",-(w+10)*3);
             jQuery(".field-name-field-image .bt-left").show();
 						jQuery(".field-name-field-image .bt-right").show();
 			}else{
+					jQuery('.field-name-field-image .field-items') .css("margin-left",0);
 					jQuery(".field-name-field-image .bt-left").hide();
 						jQuery(".field-name-field-image .bt-right").hide();
 			}
