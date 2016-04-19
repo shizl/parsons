@@ -84,7 +84,7 @@ color: #fff;
 
 }
 .showCities .line:hover{
-    background: #bbb;
+    background: #eee;
 }
 .line-direct,.line-outlets{
     display: none;
@@ -102,23 +102,34 @@ display: none;
 .area_title{color: #007D19;
     font-weight: bold;}
 .result-line{
+    padding: 5px;
     clear: both;
+    border-bottom: 1px solid #ccc;
+}
+.result-line:hover{
+ background: #eee;
+ cursor: pointer;
 }
 .result-line .shop-name{
     float: left;
 }
-.result-line .shop-body{padding-left:8px;margin-bottom: 5px; width: 100%;}
+.result-line.active{
+    background: #eee; 
+}
+.result-line .shop-body{padding-left:8px;margin-bottom: 5px; width: 100%;    display: inline-block;}
 .result-line .shop-body .left-content{
-    width: 340px;
+    width: 280px;
     float: left;
+    margin-bottom: 5px;
 }
 .result-line .shop-body .shop-map{
     float: left;
-    width: 30px;
+    width: 80px;
     min-height:30px; 
 }
 .result-line .shop-image{display: none;}
+.img-direct{background: url(direct.png) no-repeat; width: 80px;height:30px;}
+.img-outlets{background: url(outlets.png) center 0 no-repeat; width: 80px;height:30px;}
 .result-line .shop-phone{
-    background: url("call25.png") no-repeat;
-    padding-left: 30px;
+   
 }

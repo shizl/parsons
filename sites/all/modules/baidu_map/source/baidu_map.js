@@ -5,7 +5,7 @@
 
 	// 百度地图API功能
 		var map = new BMap.Map("allmap");    // 创建Map实例
-		map.centerAndZoom(new BMap.Point(116.404, 39.915), 13);  // 初始化地图,设置中心点坐标和地图级别
+		map.centerAndZoom(new BMap.Point(116.404, 39.915), 11);  // 初始化地图,设置中心点坐标和地图级别
 		map.addControl(new BMap.MapTypeControl());   //添加地图类型控件
 		map.setCurrentCity("北京");          // 设置地图显示的城市 此项是必须设置的
 		map.enableScrollWheelZoom(true);     //开启鼠标滚轮缩放
@@ -37,6 +37,33 @@
 				$(".line-outlets").show();
 				$(".line-direct").hide();
 			}
+
+			var addressData=$('#sole-input').val();
+			var contents="";
+			if($('.line-outlets').html()==undefined || $('.line-outlets').is(":hidden")){
+				$('.line-direct .shop-address').each(function(){
+					addressData+=(addressData!=""? ",":"")+$(this).html();
+					contents+=(addressData!=""? "|":"")+'<div style="width:300px;min-height:100px;overflow-y:auto;">'+$(this).parent("div").html()+'</div>';
+				});
+				var myIcon = new BMap.Icon('/sites/all/modules/baidu_map/source/direct.png', new BMap.Size(80,30));
+				
+				$('.line-direct .img-direct').click(function(){
+					leftopenInfo('<div style="width:300px;min-height:100px;overflow-y:auto;">'+$(this).prev("div").html()+'</div>',$(this).attr("data").split(','),map);
+				});
+			}else{
+				$('.line-outlets .shop-address').each(function(){
+					addressData+=(addressData!=""? ",":"")+$(this).html();
+					contents+=(addressData!=""? "|":"")+'<div style="width:300px;min-height:100px;overflow-y:auto;">'+$(this).parent("div").html()+'</div>';
+				});
+				var myIcon = new BMap.Icon('/sites/all/modules/baidu_map/source/outlets.png', new BMap.Size(30,30));
+				$('.line-outlets .img-outlets').click(function(){
+					leftopenInfo('<div style="width:300px;min-height:100px;overflow-y:auto;">'+$(this).prev("div").html()+'</div>',$(this).attr("data").split(','),map);
+				});
+			}
+
+			var adds = addressData;	
+		
+			bdGEO(keyword,adds,contents,0,myIcon);
 		});
 		$('.showCities .line').click(function () {
 			$('#sole-input').val($(this).attr("data"));
@@ -81,17 +108,28 @@
 								if($('.line-outlets').html()==undefined || $('.line-outlets').is(":hidden")){
 									$('.line-direct .shop-address').each(function(){
 										addressData+=(addressData!=""? ",":"")+$(this).html();
-										contents+=(addressData!=""? "|":"")+"";
+										contents+=(addressData!=""? "|":"")+'<div style="width:300px;min-height:100px;overflow-y:auto;">'+$(this).parent("div").html()+'</div>';
+									});
+									var myIcon = new BMap.Icon('/sites/all/modules/baidu_map/source/direct.png', new BMap.Size(80,30));
+									
+									$('.line-direct .img-direct').click(function(){
+										leftopenInfo('<div style="width:300px;min-height:100px;overflow-y:auto;">'+$(this).prev("div").html()+'</div>',$(this).attr("data").split(','),map);
 									});
 								}else{
 									$('.line-outlets .shop-address').each(function(){
 										addressData+=(addressData!=""? ",":"")+$(this).html();
+										contents+=(addressData!=""? "|":"")+'<div style="width:300px;min-height:100px;overflow-y:auto;">'+$(this).parent("div").html()+'</div>';
+									});
+									var myIcon = new BMap.Icon('/sites/all/modules/baidu_map/source/outlets.png', new BMap.Size(30,30));
+									$('.line-outlets .img-outlets').click(function(){
+										leftopenInfo('<div style="width:300px;min-height:100px;overflow-y:auto;">'+$(this).prev("div").html()+'</div>',$(this).attr("data").split(','),map);
 									});
 								}
 	
 								var adds = addressData;	
 							
-								bdGEO(keyword,adds,contents,0);
+								bdGEO(keyword,adds,contents,0,myIcon);
+								
 								$('.no-content').hide();
 							}else{
 								$('.no-content').show();
@@ -104,24 +142,29 @@
 			}
 		});
 	
-		function bdGEO(keyword,adds,content,index){
-			
+		function bdGEO(keyword,adds,contents,index,myIcon){
+			map.clearOverlays(); 
 			var addsArray=adds.split(",");
-			
+			var contentArray=contents.split("|");
 			//var add = addsArray[index];
 			for(var i=0;i<addsArray.length;i++){
-				geocodeSearch(addsArray[i],adds,content,keyword,i);
+				geocodeSearch(addsArray[i],adds,contentArray[i],keyword,i,myIcon);
 			}
 		}
-		function geocodeSearch(add,adds,content,keyword,index){
+		function geocodeSearch(add,adds,content,keyword,index,myIcon){
 			
 			myGeo.getPoint(add, function(point){
 				if (point) {
 					if(add==keyword){
-						map.centerAndZoom(keyword, 13); 
-						map.setCurrentCity(keyword);  
+						map.centerAndZoom(keyword, 11);  
 					}else{
-						var marker = new BMap.Marker(new BMap.Point(point.lng,point.lat));  // 创建标注
+						if($('.line-outlets').html()==undefined || $('.line-outlets').is(":hidden")){
+							$('.line-direct .shop-map:eq('+(index-1)+')').attr("data",point.lng+','+point.lat);	
+						}else{
+							$('.line-outlets .shop-map:eq('+(index-1)+')').attr("data",point.lng+','+point.lat);
+						}
+						
+						var marker = new BMap.Marker(new BMap.Point(point.lng,point.lat),{icon:myIcon});  // 创建标注
 						map.addOverlay(marker); // 将标注添加到地图中
 						addClickHandler(content,marker,map);
 					}
@@ -136,15 +179,21 @@
 		}
 		function openInfo(content,e,map){
 			var opts = {
-						width : 250,     // 信息窗口宽度
-						height: 80,     // 信息窗口高度
+						width : 300,     // 信息窗口宽度
+						height: 100,     // 信息窗口高度
 						title : "" , // 信息窗口标题
 						enableMessage:true//设置允许信息窗发送短息
 					   };
 			var p = e.target;
 			
 			var point = new BMap.Point(p.getPosition().lng, p.getPosition().lat);
-			var infoWindow = new BMap.InfoWindow(content,opts);  // 创建信息窗口对象 
+			var infoWindow = new BMap.InfoWindow(content);  // 创建信息窗口对象 
+			map.openInfoWindow(infoWindow,point); //开启信息窗口
+		}
+		function leftopenInfo(content,p,map){
+			
+			var point = new BMap.Point(p[0], p[1]);
+			var infoWindow = new BMap.InfoWindow(content);  // 创建信息窗口对象 
 			map.openInfoWindow(infoWindow,point); //开启信息窗口
 		}
 
