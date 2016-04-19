@@ -62,6 +62,7 @@ if(old_item_length>1){
 				subWidth=jQuery('.field-name-field-image .field-items').width();
 				w=parseInt(jQuery('.field-name-field-image .field-items .field-item').css('width'))+parseInt(jQuery('.field-name-field-image .field-items .field-item').css('margin-right'));
 				var  leftwidth =parseInt(jQuery('.field-name-field-image .field-items') .css("margin-left"));
+
 			if(old_item_length>2){
 					 if( leftwidth>-w){					
 										jQuery('.field-name-field-image .field-items') .css("margin-left",-subWidth+w*3);
