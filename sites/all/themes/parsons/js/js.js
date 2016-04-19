@@ -485,6 +485,20 @@ jQuery(this).addClass('active');
 
 });
 
+jQuery('.view-sales-network .view-grouping .view-grouping-content .view-grouping-header').click(function(){
+
+ jQuery(this).parent().find('.view-grouping-content').toggle();
+ if( jQuery(this).parent().find('.view-grouping-content').is(':visible')){
+	 jQuery(this).parent().css({'background':'url(/sites/all/themes/parsons/images/gang.png) no-repeat right 19px'});
+  }else{
+	 jQuery(this).parent().css({'background':'url(/sites/all/themes/parsons/images/shizhi.png) no-repeat right 10px'});
+ }
+
+
+
+});
+
+
 });
 
 function video_close1(){
