@@ -1,0 +1,171 @@
+﻿<?php
+
+/**
+ * @file
+ * Provides display of geographic and location data through the Baidu Map API.
+ */
+
+/**
+ * Declare a constant regular expression used for the API Key validation.
+ */
+define('BAIDU_MAP_API_KEY_VALIDATE_REGEX', '/(^([a-zA-Z0-9]){24}$)|(^([a-fA-F0-9]){32}$)/');
+
+/**
+ * Implements hook_help().
+ */
+function baidu_map_help($path, $arg) {
+  $output = '';
+  switch ($path) {
+    case 'admin/config/services/baidu_map':
+      $output .= t('The Baidu Map module provides integration with the <a href="@bmapi_link">Baidu Map API</a> to allow display of geographic and location information on maps.<br/>Please configure module\'s settings by filling the form below:', array('@bmapi_link' => 'http://lbsyun.baidu.com/apiconsole/key'));
+      break;
+
+    default:
+      break;
+  }
+
+  return $output;
+}
+
+/**
+ * Implements hook_permission().
+ */
+function baidu_map_permission() {
+  return array(
+    'administer baidu map' => array(
+      'title' => t('Administer Baidu Map'),
+      'description' => t('Perform maintenance tasks for Baidu Map.'),
+    ),
+  );
+}
+
+/**
+ * Implements hook_menu().
+ */
+function baidu_map_menu() {
+  // Callback for the Baidu Map API Key configuration form.
+  $items['admin/config/services/baidu_map'] = array(
+    'title' => 'Baidu Map',
+    'description' => 'Enables display Baidu Map API.',
+    'page callback' => 'drupal_get_form',
+    'page arguments' => array('baidu_map_settings'),
+    'access arguments' => array('administer baidu map'),
+  );
+   // Callback for the Baidu Map API Key configuration form.
+  $items['baidu_map/search'] = array(
+    'title' => 'Baidu Map search',
+    'description' => 'Baidu Map search',
+    'page callback' => 'baidu_map_search',
+    'access callback' =>true,
+  );
+
+  return $items;
+}
+
+/**
+ * Menu callback: Baidu Map Settings form.
+ */
+function baidu_map_search(){
+  //search all node type
+  $keyword=$_REQUEST['keyword'];
+  $nodeids=db_query("SELECT `entity_id` FROM `field_data_field_city` WHERE bundle='sales_shop' and `field_city_value`='".$keyword."'")->fetchAll();
+  $ids=array();
+  foreach ($nodeids as $nid) {
+   $ids[]=$nid->entity_id;
+  }
+  $showHtml="";
+  $nodeData=node_load_multiple($ids);
+  foreach ($nodeData as $node) {
+ 
+   $showHtml.='<div class="result-line line-'.($node->field_category['und'][0]['value']==1 ? 'direct':'outlets').'"><div class="area_title">'.$node->title.($node->field_category['und'][0]['value']==1 ? "":t('经销商')).'</div>';
+    $fid=array();
+    foreach ($node->field_map_location['und'] as $entity_id) {
+     $fid[]=$entity_id['value'];
+    }
+     $map_location = entity_load('field_collection_item', $fid);
+    foreach ($map_location as $loction) {
+      $showHtml.='<div class="shop-body"><div class="left-content"><div class="shop-image">'. ($loction->field_image['und'][0]['uri']!="" ? file_create_url($loction->field_image['und'][0]['uri']):"").'</div><div class="shop-name">'.$loction->field_title['und'][0]['value'].' :</div>
+      <div class="shop-address">'.$loction->field_address['und'][0]['value'].'</div><div class="shop-description">'.$loction->field_description['und'][0]['value'].'</div><div class="shop-phone">'.$loction->field_phone['und'][0]['value'].'</div></div><div class="shop-map '.($node->field_category['und'][0]['value']==1 ? 'direct':'outlets').'"></div></div>';
+    }
+    $showHtml.='</div>';
+
+  }
+echo $showHtml;
+}
+
+function baidu_map_allow_cities(){
+
+$fieldData=db_query("SELECT `data` FROM `field_config` WHERE type='list_text' and `field_name`='field_city'")->fetchField();
+    $fieldDataArray=unserialize($fieldData);
+    return implode(',',$fieldDataArray['settings']['allowed_values']);
+}
+/**
+ * Menu callback: Baidu Map Settings form.
+ */
+function baidu_map_settings($form, &$form_state) {
+
+  // A Baidu Map API Key has exactly 24 or 32 alphanumeric characters.
+  $form['baidu_map_api_key'] = array(
+    '#type' => 'textfield',
+    '#title' => t('Baidu Map API Key'),
+    '#size' => 32,
+    '#maxlength' => 32,
+    '#required' => TRUE,
+    '#description' => t('Configure the <em>Baidu Map API Key</em>'),
+    '#default_value' => variable_get('baidu_map_api_key'),
+  );
+
+  return system_settings_form($form);
+}
+
+
+/**
+* Implements hook_block_info().
+*/
+function baidu_map_block_info() {
+  $blocks['baidu_map_box'] = array(
+    'info' => t('Baidu map block'),
+    'status' => TRUE,
+    'region' => 'sidebar_first',
+    
+  );
+  return $blocks;
+}
+ /**
+* Implements hook_block_view().
+*/
+function baidu_map_block_view($delta = '') {
+  global $user;
+  $block = array();
+  switch ($delta) {
+    case 'baidu_map_box':
+    drupal_add_css(drupal_get_path('module', "baidu_map") . "/source/baidu_map.css");
+    drupal_add_js(drupal_get_path('module', "baidu_map") . "/source/baidu_map.js");
+    drupal_add_js(drupal_get_path('module', "baidu_map") . "/source/divscroll.js");
+     
+      $block['title'] = "Baidu map";
+    
+        $block['content'] = '
+        <div class="baidu-map-box">
+        <script type="text/javascript" src="http://api.map.baidu.com/api?v=2.0&ak='.variable_get('baidu_map_api_key').'"></script>
+        <div id="allmap"></div>
+        <div class="filter-box">
+        <div class="filter-title">
+        <input type="hidden" id="allow_cities" value="'.baidu_map_allow_cities().'">
+        <input id="sole-input" class="searchbox-content-common" type="text" name="word"  maxlength="256" placeholder="'.t("请输入区域").'" value="">
+        <button id="search-button" data-title="'.t('搜索').'" data-tooltip="2"></button>
+        <div class="showCities"></div>
+        </div>
+        <div class="filter-result">
+        <div class="shop-type"><div class="type-line type-direct selected">'.t('直营店').'</div><div class="type-line type-outlets ">'.t('经销商').'</div></div>
+        <div class="no-content">'.t('没有相关店铺').'</div>
+        <div class="result-content"></div>
+        </div>
+        </div>
+      
+        </div>';
+
+      break;
+  }
+  return $block;
+}

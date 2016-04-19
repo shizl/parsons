@@ -1,0 +1,124 @@
+.baidu-map-box{
+	color: #666;
+	width: 100%;
+	height: 400px;
+	position: relative;
+}
+#allmap{
+	width: 100%;
+	height: 100%
+}
+.filter-box{
+	width: 400px;
+	display: inline-block;
+	left: 20px;
+	top:10px;
+	padding: 10px;
+	background: #fff;
+	position: absolute;
+}
+.filter-title{width: 100%; }
+.filter-title .error{
+    border: 1px solid #ff0000 !important;
+}
+#sole-input{
+	    box-sizing: border-box;
+    border: 0;
+    padding: 9px 0;
+    border-left: 10px solid transparent;
+    border-right: 27px solid transparent;
+    line-height: 20px;
+    font-size: 16px;
+    height: 30px;
+    border: 1px solid #999;
+        border-right: 0;
+    color: #333;
+    border-radius: 2px 0 0 2px;
+    width: 350px;
+    float: left;   
+    margin-top: 0px;
+}
+
+#search-button{
+	pointer-events: auto;
+     background: url(searchbox_f175577.png) no-repeat -15px -80px #666;
+    width: 30px;
+    height: 30px;
+    float: left;
+    border: 0;
+    padding: 0;
+    cursor: pointer;
+    border-radius: 0 2px 2px 0;
+    box-shadow: 1px 2px 1px rgba(0,0,0,.15);
+}
+.shop-type{width: 100%;   
+ border: 1px solid #ccc;
+ display: inline-block; 
+ font-weight: bold;margin: 5px 0;}
+.type-line{width: 50%;float: left;
+	cursor: pointer;
+	text-align: center;
+    padding: 5px; }
+.shop-type .selected{
+background: #007D19;
+color: #fff;
+}
+.filter-result{
+	width: 100%;
+	color: 12px;
+	display: none;
+	border: 1px solid #fff;
+	
+}
+.showCities{
+    display: none;
+    width: 100%;
+    border: 1px solid #ccc;
+  clear: both;
+}
+.showCities .line{
+    width: 100%;
+    padding:5px 0;
+    text-align: center;
+    cursor: pointer;
+
+}
+.showCities .line:hover{
+    background: #bbb;
+}
+.line-direct,.line-outlets{
+    display: none;
+}
+.result-content{
+    height: 290px;
+    overflow-y:auto; 
+}
+.result-line{
+
+}
+.no-content{
+display: none;
+}
+.area_title{color: #007D19;
+    font-weight: bold;}
+.result-line{
+    clear: both;
+}
+.result-line .shop-name{
+    float: left;
+}
+.result-line .shop-body{padding-left:8px;margin-bottom: 5px; width: 100%;}
+.result-line .shop-body .left-content{
+    width: 340px;
+    float: left;
+}
+.result-line .shop-body .shop-map{
+    float: left;
+    width: 30px;
+    min-height:30px; 
+}
+.result-line .shop-image{display: none;}
+.result-line .shop-phone{
+    background: url("call25.png") no-repeat;
+    padding-left: 30px;
+}
