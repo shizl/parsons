@@ -161,6 +161,7 @@ $tags = $variables['tags'];
   $parameters = $variables['parameters'];
   $quantity = $variables['quantity'];
   global $pager_page_array, $pager_total;
+global $language;
 
  $pre = theme('pager_previous', array('text' => (isset($tags[1]) ? $tags[1] : t('‹ previous')), 'element' => $element, 'interval' => 1, 'parameters' => $parameters));
 
@@ -178,44 +179,44 @@ if(isset($_GET['field_culturee_type_value'])){
           if($allpage <=6){
 for($i=1; $i<=$allpage; $i++){
 
-$page .= '<a class="  page-item-'.($i-1).'" href="/'.current_path().'?field_culturee_type_value='.$_GET['field_culturee_type_value'].'&page='.($i-1).'"> '.$i.'</a>';
+$page .= '<a class="  page-item-'.($i-1).'" href="/'.$language->prefix.'/'.drupal_get_path_alias(current_path()).'?field_culturee_type_value='.$_GET['field_culturee_type_value'].'&page='.($i-1).'"> '.$i.'</a>';
 }
 }else{
 
  if(isset($_GET['page']) && ($_GET['page'] >2) && ($_GET['page'] < $allpage-3)){
 
-    $page = '<a class=" page-item-0" href="/'.current_path().'?field_culturee_type_value='.$_GET['field_culturee_type_value'].'&page=0">1</a>
+    $page = '<a class=" page-item-0" href="/'.$language->prefix.'/'.drupal_get_path_alias(current_path()).'?field_culturee_type_value='.$_GET['field_culturee_type_value'].'&page=0">1</a>
         <p class="omit">....</p>
        
 
-        <a class=" page-item-'.((int)$_GET['page']-1).'" href="/'.current_path().'?field_culturee_type_value='.$_GET['field_culturee_type_value'].'&page='.((int)$_GET['page']-1).'"> '.$_GET['page'].'</a>
-        <a class=" page-item-'.$_GET['page'].'" href="/'.current_path().'?field_culturee_type_value='.$_GET['field_culturee_type_value'].'&page='.$_GET['page'].'"> '.((int)$_GET['page']+1).'</a>
-        <a class=" page-item-'.((int)$_GET['page']+1).'" href="/'.current_path().'?field_culturee_type_value='.$_GET['field_culturee_type_value'].'&page='.((int)$_GET['page']+1).'"> '.((int)$_GET['page']+2).'</a>
+        <a class=" page-item-'.((int)$_GET['page']-1).'" href="/'.$language->prefix.'/'.drupal_get_path_alias(current_path()).'?field_culturee_type_value='.$_GET['field_culturee_type_value'].'&page='.((int)$_GET['page']-1).'"> '.$_GET['page'].'</a>
+        <a class=" page-item-'.$_GET['page'].'" href="/'.$language->prefix.'/'.drupal_get_path_alias(current_path()).'?field_culturee_type_value='.$_GET['field_culturee_type_value'].'&page='.$_GET['page'].'"> '.((int)$_GET['page']+1).'</a>
+        <a class=" page-item-'.((int)$_GET['page']+1).'" href="/'.$language->prefix.'/'.drupal_get_path_alias(current_path()).'?field_culturee_type_value='.$_GET['field_culturee_type_value'].'&page='.((int)$_GET['page']+1).'"> '.((int)$_GET['page']+2).'</a>
         <p class="omit">....</p>
-        <a class=" page-item-'.((int)$allpage-1).'" href="/'.current_path().'?field_culturee_type_value='.$_GET['field_culturee_type_value'].'&page='.((int)$allpage-1).'"> '.$allpage.'</a>
+        <a class=" page-item-'.((int)$allpage-1).'" href="/'.$language->prefix.'/'.drupal_get_path_alias(current_path()).'?field_culturee_type_value='.$_GET['field_culturee_type_value'].'&page='.((int)$allpage-1).'"> '.$allpage.'</a>
 ';     
 }
 
     else if(isset($_GET['page']) && ($_GET['page'] >2) && ($_GET['page'] >= $allpage-3)){
 
 
-$page = '<a class=" page-item-0" href="/'.current_path().'?field_culturee_type_value='.$_GET['field_culturee_type_value'].'&page=0">1</a>
+$page = '<a class=" page-item-0" href="/'.$language->prefix.'/'.drupal_get_path_alias(current_path()).'?field_culturee_type_value='.$_GET['field_culturee_type_value'].'&page=0">1</a>
         <p class="omit">....</p>
-        <a class=" page-item-'.((int)$allpage-4).'" href="/'.current_path().'?field_culturee_type_value='.$_GET['field_culturee_type_value'].'&page='.((int)$allpage-4).'"> '.((int)$allpage-3).'</a>
-        <a class=" page-item-'.((int)$allpage-3).'" href="/'.current_path().'?field_culturee_type_value='.$_GET['field_culturee_type_value'].'&page='.((int)$allpage-3).'"> '.((int)$allpage-2).'</a>
-        <a class=" page-item-'.((int)$allpage-2).'" href="/'.current_path().'?field_culturee_type_value='.$_GET['field_culturee_type_value'].'&page='.((int)$allpage-2).'"> '.((int)$allpage-1).'</a>
-        <a class=" page-item-'.((int)$allpage-1).'" href="/'.current_path().'?field_culturee_type_value='.$_GET['field_culturee_type_value'].'&page='.((int)$allpage-1).'"> '.$allpage.'</a>
+        <a class=" page-item-'.((int)$allpage-4).'" href="/'.$language->prefix.'/'.drupal_get_path_alias(current_path()).'?field_culturee_type_value='.$_GET['field_culturee_type_value'].'&page='.((int)$allpage-4).'"> '.((int)$allpage-3).'</a>
+        <a class=" page-item-'.((int)$allpage-3).'" href="/'.$language->prefix.'/'.drupal_get_path_alias(current_path()).'?field_culturee_type_value='.$_GET['field_culturee_type_value'].'&page='.((int)$allpage-3).'"> '.((int)$allpage-2).'</a>
+        <a class=" page-item-'.((int)$allpage-2).'" href="/'.$language->prefix.'/'.drupal_get_path_alias(current_path()).'?field_culturee_type_value='.$_GET['field_culturee_type_value'].'&page='.((int)$allpage-2).'"> '.((int)$allpage-1).'</a>
+        <a class=" page-item-'.((int)$allpage-1).'" href="/'.$language->prefix.'/'.drupal_get_path_alias(current_path()).'?field_culturee_type_value='.$_GET['field_culturee_type_value'].'&page='.((int)$allpage-1).'"> '.$allpage.'</a>
 ';     
 
 }else{
 
-$page = '<a class=" page-item-0" href="/'.current_path().'?field_culturee_type_value='.$_GET['field_culturee_type_value'].'&page=0">1</a>
-         <a class=" page-item-1" href="/'.current_path().'?field_culturee_type_value='.$_GET['field_culturee_type_value'].'&page=1">2</a>
-         <a class=" page-item-2" href="/'.current_path().'?field_culturee_type_value='.$_GET['field_culturee_type_value'].'&page=2">3</a>
-         <a class=" page-item-3" href="/'.current_path().'?field_culturee_type_value='.$_GET['field_culturee_type_value'].'&page=3">4</a>
+$page = '<a class=" page-item-0" href="/'.$language->prefix.'/'.drupal_get_path_alias(current_path()).'?field_culturee_type_value='.$_GET['field_culturee_type_value'].'&page=0">1</a>
+         <a class=" page-item-1" href="/'.$language->prefix.'/'.drupal_get_path_alias(current_path()).'?field_culturee_type_value='.$_GET['field_culturee_type_value'].'&page=1">2</a>
+         <a class=" page-item-2" href="/'.$language->prefix.'/'.drupal_get_path_alias(current_path()).'?field_culturee_type_value='.$_GET['field_culturee_type_value'].'&page=2">3</a>
+         <a class=" page-item-3" href="/'.$language->prefix.'/'.drupal_get_path_alias(current_path()).'?field_culturee_type_value='.$_GET['field_culturee_type_value'].'&page=3">4</a>
         <p class="omit">....</p>
         
-        <a class=" page-item-'.((int)$allpage-1).'" href="/'.current_path().'?field_culturee_type_value='.$_GET['field_culturee_type_value'].'&page='.((int)$allpage-1).'"> '.$allpage.'</a>
+        <a class=" page-item-'.((int)$allpage-1).'" href="/'.$language->prefix.'/'.drupal_get_path_alias(current_path()).'?field_culturee_type_value='.$_GET['field_culturee_type_value'].'&page='.((int)$allpage-1).'"> '.$allpage.'</a>
 ';     
 
 
@@ -235,44 +236,44 @@ $page = '<a class=" page-item-0" href="/'.current_path().'?field_culturee_type_v
           if($allpage <=6){
 for($i=1; $i<=$allpage; $i++){
 
-$page .= '<a class="  page-item-'.($i-1).'" href="/'.current_path().'?field_new_type_tid='.$_GET['field_new_type_tid'].'&page='.($i-1).'"> '.$i.'</a>';
+$page .= '<a class="  page-item-'.($i-1).'" href="/'.$language->prefix.'/'.drupal_get_path_alias(current_path()).'?field_new_type_tid='.$_GET['field_new_type_tid'].'&page='.($i-1).'"> '.$i.'</a>';
 }
 }else{
 
  if(isset($_GET['page']) && ($_GET['page'] >2) && ($_GET['page'] < $allpage-3)){
 
-    $page = '<a class=" page-item-0" href="/'.current_path().'?field_new_type_tid='.$_GET['field_new_type_tid'].'&page=0">1</a>
+    $page = '<a class=" page-item-0" href="/'.$language->prefix.'/'.drupal_get_path_alias(current_path()).'?field_new_type_tid='.$_GET['field_new_type_tid'].'&page=0">1</a>
         <p class="omit">....</p>
        
 
-        <a class=" page-item-'.((int)$_GET['page']-1).'" href="/'.current_path().'?field_new_type_tid='.$_GET['field_new_type_tid'].'&page='.((int)$_GET['page']-1).'"> '.$_GET['page'].'</a>
-        <a class=" page-item-'.$_GET['page'].'" href="/'.current_path().'?field_new_type_tid='.$_GET['field_new_type_tid'].'&page='.$_GET['page'].'"> '.((int)$_GET['page']+1).'</a>
-        <a class=" page-item-'.((int)$_GET['page']+1).'" href="/'.current_path().'?field_new_type_tid='.$_GET['field_new_type_tid'].'&page='.((int)$_GET['page']+1).'"> '.((int)$_GET['page']+2).'</a>
+        <a class=" page-item-'.((int)$_GET['page']-1).'" href="/'.$language->prefix.'/'.drupal_get_path_alias(current_path()).'?field_new_type_tid='.$_GET['field_new_type_tid'].'&page='.((int)$_GET['page']-1).'"> '.$_GET['page'].'</a>
+        <a class=" page-item-'.$_GET['page'].'" href="/'.$language->prefix.'/'.drupal_get_path_alias(current_path()).'?field_new_type_tid='.$_GET['field_new_type_tid'].'&page='.$_GET['page'].'"> '.((int)$_GET['page']+1).'</a>
+        <a class=" page-item-'.((int)$_GET['page']+1).'" href="/'.$language->prefix.'/'.drupal_get_path_alias(current_path()).'?field_new_type_tid='.$_GET['field_new_type_tid'].'&page='.((int)$_GET['page']+1).'"> '.((int)$_GET['page']+2).'</a>
         <p class="omit">....</p>
-        <a class=" page-item-'.((int)$allpage-1).'" href="/'.current_path().'?field_new_type_tid='.$_GET['field_new_type_tid'].'&page='.((int)$allpage-1).'"> '.$allpage.'</a>
+        <a class=" page-item-'.((int)$allpage-1).'" href="/'.$language->prefix.'/'.drupal_get_path_alias(current_path()).'?field_new_type_tid='.$_GET['field_new_type_tid'].'&page='.((int)$allpage-1).'"> '.$allpage.'</a>
 ';     
 }
 
     else if(isset($_GET['page']) && ($_GET['page'] >2) && ($_GET['page'] >= $allpage-3)){
 
 
-$page = '<a class=" page-item-0" href="/'.current_path().'?field_new_type_tid='.$_GET['field_new_type_tid'].'&page=0">1</a>
+$page = '<a class=" page-item-0" href="/'.$language->prefix.'/'.drupal_get_path_alias(current_path()).'?field_new_type_tid='.$_GET['field_new_type_tid'].'&page=0">1</a>
         <p class="omit">....</p>
-        <a class=" page-item-'.((int)$allpage-4).'" href="/'.current_path().'?field_new_type_tid='.$_GET['field_new_type_tid'].'&page='.((int)$allpage-4).'"> '.((int)$allpage-3).'</a>
-        <a class=" page-item-'.((int)$allpage-3).'" href="/'.current_path().'?field_new_type_tid='.$_GET['field_new_type_tid'].'&page='.((int)$allpage-3).'"> '.((int)$allpage-2).'</a>
-        <a class=" page-item-'.((int)$allpage-2).'" href="/'.current_path().'?field_new_type_tid='.$_GET['field_new_type_tid'].'&page='.((int)$allpage-2).'"> '.((int)$allpage-1).'</a>
-        <a class=" page-item-'.((int)$allpage-1).'" href="/'.current_path().'?field_new_type_tid='.$_GET['field_new_type_tid'].'&page='.((int)$allpage-1).'"> '.$allpage.'</a>
+        <a class=" page-item-'.((int)$allpage-4).'" href="/'.$language->prefix.'/'.drupal_get_path_alias(current_path()).'?field_new_type_tid='.$_GET['field_new_type_tid'].'&page='.((int)$allpage-4).'"> '.((int)$allpage-3).'</a>
+        <a class=" page-item-'.((int)$allpage-3).'" href="/'.$language->prefix.'/'.drupal_get_path_alias(current_path()).'?field_new_type_tid='.$_GET['field_new_type_tid'].'&page='.((int)$allpage-3).'"> '.((int)$allpage-2).'</a>
+        <a class=" page-item-'.((int)$allpage-2).'" href="/'.$language->prefix.'/'.drupal_get_path_alias(current_path()).'?field_new_type_tid='.$_GET['field_new_type_tid'].'&page='.((int)$allpage-2).'"> '.((int)$allpage-1).'</a>
+        <a class=" page-item-'.((int)$allpage-1).'" href="/'.$language->prefix.'/'.drupal_get_path_alias(current_path()).'?field_new_type_tid='.$_GET['field_new_type_tid'].'&page='.((int)$allpage-1).'"> '.$allpage.'</a>
 ';     
 
 }else{
 
-$page = '<a class=" page-item-0" href="/'.current_path().'?field_new_type_tid='.$_GET['field_new_type_tid'].'&page=0">1</a>
-         <a class=" page-item-1" href="/'.current_path().'?field_new_type_tid='.$_GET['field_new_type_tid'].'&page=1">2</a>
-         <a class=" page-item-2" href="/'.current_path().'?field_new_type_tid='.$_GET['field_new_type_tid'].'&page=2">3</a>
-         <a class=" page-item-3" href="/'.current_path().'?field_new_type_tid='.$_GET['field_new_type_tid'].'&page=3">4</a>
+$page = '<a class=" page-item-0" href="/'.$language->prefix.'/'.drupal_get_path_alias(current_path()).'?field_new_type_tid='.$_GET['field_new_type_tid'].'&page=0">1</a>
+         <a class=" page-item-1" href="/'.$language->prefix.'/'.drupal_get_path_alias(current_path()).'?field_new_type_tid='.$_GET['field_new_type_tid'].'&page=1">2</a>
+         <a class=" page-item-2" href="/'.$language->prefix.'/'.drupal_get_path_alias(current_path()).'?field_new_type_tid='.$_GET['field_new_type_tid'].'&page=2">3</a>
+         <a class=" page-item-3" href="/'.$language->prefix.'/'.drupal_get_path_alias(current_path()).'?field_new_type_tid='.$_GET['field_new_type_tid'].'&page=3">4</a>
         <p class="omit">....</p>
         
-        <a class=" page-item-'.((int)$allpage-1).'" href="/'.current_path().'?field_new_type_tid='.$_GET['field_new_type_tid'].'&page='.((int)$allpage-1).'"> '.$allpage.'</a>
+        <a class=" page-item-'.((int)$allpage-1).'" href="/'.$language->prefix.'/'.drupal_get_path_alias(current_path()).'?field_new_type_tid='.$_GET['field_new_type_tid'].'&page='.((int)$allpage-1).'"> '.$allpage.'</a>
 ';     
 
 
@@ -287,42 +288,42 @@ $page = '<a class=" page-item-0" href="/'.current_path().'?field_new_type_tid='.
   if($allpage <=6){
 for($i=1; $i<=$allpage; $i++){
 
-$page .= '<a class="  page-item-'.($i-1).'" href="/'.current_path().'?page='.($i-1).'"> '.$i.'</a>';
+$page .= '<a class="  page-item-'.($i-1).'" href="/'.$language->prefix.'/'.drupal_get_path_alias(current_path()).'?page='.($i-1).'"> '.$i.'</a>';
 }
 }else{
 
  if(isset($_GET['page']) && ($_GET['page'] >2) && ($_GET['page'] < $allpage-3)){
 
-    $page = '<a class=" page-item-0" href="/'.current_path().'">1</a>
+    $page = '<a class=" page-item-0" href="/'.$language->prefix.'/'.drupal_get_path_alias(current_path()).'">1</a>
         <p class="omit">....</p>
        
 
-        <a class=" page-item-'.((int)$_GET['page']-1).'" href="/'.current_path().'?page='.((int)$_GET['page']-1).'"> '.$_GET['page'].'</a>
-        <a class=" page-item-'.$_GET['page'].'" href="/'.current_path().'?page='.$_GET['page'].'"> '.((int)$_GET['page']+1).'</a>
-        <a class=" page-item-'.((int)$_GET['page']+1).'" href="/'.current_path().'?page='.((int)$_GET['page']+1).'"> '.((int)$_GET['page']+2).'</a>
+        <a class=" page-item-'.((int)$_GET['page']-1).'" href="/'.$language->prefix.'/'.drupal_get_path_alias(current_path()).'?page='.((int)$_GET['page']-1).'"> '.$_GET['page'].'</a>
+        <a class=" page-item-'.$_GET['page'].'" href="/'.$language->prefix.'/'.drupal_get_path_alias(current_path()).'?page='.$_GET['page'].'"> '.((int)$_GET['page']+1).'</a>
+        <a class=" page-item-'.((int)$_GET['page']+1).'" href="/'.$language->prefix.'/'.drupal_get_path_alias(current_path()).'?page='.((int)$_GET['page']+1).'"> '.((int)$_GET['page']+2).'</a>
         <p class="omit">....</p>
-        <a class=" page-item-'.((int)$allpage-1).'" href="/'.current_path().'?page='.((int)$allpage-1).'"> '.$allpage.'</a>
+        <a class=" page-item-'.((int)$allpage-1).'" href="/'.$language->prefix.'/'.drupal_get_path_alias(current_path()).'?page='.((int)$allpage-1).'"> '.$allpage.'</a>
 ';     
 }else if(isset($_GET['page']) && ($_GET['page'] >2) && ($_GET['page'] >= $allpage-3)){
 
 
-$page = '<a class=" page-item-0" href="/'.current_path().'">1</a>
+$page = '<a class=" page-item-0" href="/'.$language->prefix.'/'.drupal_get_path_alias(current_path()).'">1</a>
         <p class="omit">....</p>
-        <a class=" page-item-'.((int)$allpage-4).'" href="/'.current_path().'?page='.((int)$allpage-4).'"> '.((int)$allpage-3).'</a>
-        <a class=" page-item-'.((int)$allpage-3).'" href="/'.current_path().'?page='.((int)$allpage-3).'"> '.((int)$allpage-2).'</a>
-        <a class=" page-item-'.((int)$allpage-2).'" href="/'.current_path().'?page='.((int)$allpage-2).'"> '.((int)$allpage-1).'</a>
-        <a class=" page-item-'.((int)$allpage-1).'" href="/'.current_path().'?page='.((int)$allpage-1).'"> '.$allpage.'</a>
+        <a class=" page-item-'.((int)$allpage-4).'" href="/'.$language->prefix.'/'.drupal_get_path_alias(current_path()).'?page='.((int)$allpage-4).'"> '.((int)$allpage-3).'</a>
+        <a class=" page-item-'.((int)$allpage-3).'" href="/'.$language->prefix.'/'.drupal_get_path_alias(current_path()).'?page='.((int)$allpage-3).'"> '.((int)$allpage-2).'</a>
+        <a class=" page-item-'.((int)$allpage-2).'" href="/'.$language->prefix.'/'.drupal_get_path_alias(current_path()).'?page='.((int)$allpage-2).'"> '.((int)$allpage-1).'</a>
+        <a class=" page-item-'.((int)$allpage-1).'" href="/'.$language->prefix.'/'.drupal_get_path_alias(current_path()).'?page='.((int)$allpage-1).'"> '.$allpage.'</a>
 ';     
 
 }else{
 
-$page = '<a class=" page-item-0" href="/'.current_path().'">1</a>
-         <a class=" page-item-1" href="/'.current_path().'?page=1">2</a>
-         <a class=" page-item-2" href="/'.current_path().'?page=2">3</a>
-         <a class=" page-item-3" href="/'.current_path().'?page=3">4</a>
+$page = '<a class=" page-item-0" href="/'.$language->prefix.'/'.drupal_get_path_alias(current_path()).'">1</a>
+         <a class=" page-item-1" href="/'.$language->prefix.'/'.drupal_get_path_alias(current_path()).'?page=1">2</a>
+         <a class=" page-item-2" href="/'.$language->prefix.'/'.drupal_get_path_alias(current_path()).'?page=2">3</a>
+         <a class=" page-item-3" href="/'.$language->prefix.'/'.drupal_get_path_alias(current_path()).'?page=3">4</a>
         <p class="omit">....</p>
         
-        <a class=" page-item-'.((int)$allpage-1).'" href="/'.current_path().'?page='.((int)$allpage-1).'"> '.$allpage.'</a>
+        <a class=" page-item-'.((int)$allpage-1).'" href="/'.$language->prefix.'/'.drupal_get_path_alias(current_path()).'?page='.((int)$allpage-1).'"> '.$allpage.'</a>
 ';     
 
 
