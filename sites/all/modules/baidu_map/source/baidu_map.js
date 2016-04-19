@@ -17,6 +17,7 @@
 		for(var i=0;i<allow_cities.length;i++){
 			showCities+='<div class="line" data="'+allow_cities[i]+'">'+allow_cities[i]+'</div>';
 		}
+		
 		$(".showCities").html(showCities);
 		$('#sole-input').keyup(function(){
 			var key=$(this).val();
