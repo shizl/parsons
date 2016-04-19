@@ -44,6 +44,7 @@ z-index:9999;
 background:url("../images/bt-left.png") no-repeat;
 border: none;
 transition:0.5s;
+z-index:0;
 }
 .field-name-field-image .bt-left:hover{
 background:url("../images/zuo.png") no-repeat;
@@ -59,6 +60,7 @@ z-index:9999;
 background:url("../images/bt-right.png") no-repeat;
 border: none;
 transition:0.5s;
+z-index:0;
 }
 .field-name-field-image  .bt-right:hover{
 background:url("../images/you.png") no-repeat;
