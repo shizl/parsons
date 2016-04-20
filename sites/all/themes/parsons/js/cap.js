@@ -9,4 +9,10 @@ if(jQuery("body").hasClass("i18n-zh-hant")){
 if(jQuery("body").hasClass("i18n-zh-hant")){
       jQuery("#block-webform-client-block-105 .webform-submit").attr("value","提交");
 }
+		jQuery(".wechat-con").mouseenter(function(){
+         jQuery(".wechat2").show(1000);
+    jQuery(".wechat-con").mouseleave(function(){
+          jQuery(".wechat2").hide(1000);
+});
+});
 });
