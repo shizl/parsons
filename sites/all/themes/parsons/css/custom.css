@@ -779,7 +779,7 @@ margin-top:0px;
 margin-bottom:20px;
 }
 .view-sales-network .view-grouping .view-grouping-content{
-    height: 500px;
+    height: 490px;
     overflow: auto;
     padding-right: 30px;
     margin-top: 30px;
@@ -791,15 +791,25 @@ height:auto;
 padding-right:inherit;
 margin-top:inherit;
 overflow:inherit;
+position: relative;
 }
 .view-sales-network .view-grouping .view-grouping-content .view-grouping{
 background:url(../images/shizhi.png) no-repeat right 10px;
 
 }
 
-
 .view-sales-network .view-grouping .view-grouping-content h3{
 display:none;
+}
+.view-sales-network .view-grouping .view-grouping-content .views-field-nothing .toggle{
+background:url(../images/toggle2.png) no-repeat 0 0 ;
+width: 90px;
+height: 29px;
+cursor: pointer;
+position: absolute;
+top: 0px;
+right: 0px;
+z-index: 1;
 }
 
 
@@ -816,7 +826,6 @@ margin-top:15px;
 .view-sales-network .view-grouping .view-grouping-content .views-row-last{
 border-bottom:none;
 }
-
 .view-sales-network .view-grouping .view-grouping-content .views-field-field-map-location{
 padding-left:20px;
 }
@@ -840,6 +849,47 @@ background:url(../images/miaohao.png) no-repeat right 7px;
 padding-right:3px;
 }
 
+.view-sales-network .view-grouping .view-grouping-content  .views-field-nothing{
+display:none;
+}
+
+.view-sales-network .view-grouping .view-grouping-content .views-row-1 .views-field-nothing {
+padding:50px 20px 20px 20px;
+position: absolute;
+width: 350px;
+right:0px;
+top:-20px;
+display:block;
+}
+.view-sales-network .view-grouping .view-grouping-content .views-row-1 .views-field-nothing .info{
+display:none;
+}
+.view-sales-network .view-grouping .view-grouping-content .views-row-1 .views-field-nothing .info img{
+ width:100%;
+ margin-bottom:15px;
+}
+.view-sales-network .view-grouping .view-grouping-content .views-field-field-map-location{
+padding-left:20px;
+}
+.view-sales-network .view-grouping .view-grouping-content .views-field-field-map-location .field-content .content{
+margin-top:0px;
+}
+.view-sales-network .view-grouping .view-grouping-content .views-field-field-map-location{
+overflow:hidden;
+}
+.view-sales-network .view-grouping .view-grouping-content .views-field-field-map-location ul li{
+width:30.3333%;
+float:left;
+margin-bottom:10px;
+margin-right:3%;
+}
+
+.view-sales-network .view-grouping .view-grouping-content .views-field-field-map-location ul li .field-name-field-title{
+float:left;
+margin-right:5px;
+background:url(../images/miaohao.png) no-repeat right 7px;
+padding-right:3px;
+}
 .view-sales-network .view-grouping .view-grouping-content .views-field-field-map-location ul li .field-name-field-address{
 float:left;
 }
