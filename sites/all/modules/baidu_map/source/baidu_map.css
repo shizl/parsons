@@ -4,6 +4,7 @@
 	height: 400px;
 	position: relative;
     font-size: 12px;
+    display: inline-block;
 }
 .block-baidu-map h2{display: none}
 #allmap{
@@ -12,6 +13,7 @@
 }
 .filter-box{
 	    width: 402px;
+        min-width: 402px;
     display: inline-block;
     left: 20px;
     top: 10px;
@@ -100,7 +102,7 @@ color: #fff;
     display: none;
 }
 .result-content{
-    height: 290px;
+    max-height: 290px;
     overflow-y:auto; 
 }
 .result-line{
@@ -125,12 +127,12 @@ display: none;
 }
 .result-line .shop-body{padding-left:8px; width: 100%; display: inline-block;}
 .result-line .shop-body .left-content{
-    width: 280px;
+    width: 75%;
     float: left; 
 }
 .result-line .shop-body .shop-map{
     float: left;
-    width: 80px;
+    width: 25%;
     margin-top: 30px;
     min-height:30px; 
      cursor: pointer;

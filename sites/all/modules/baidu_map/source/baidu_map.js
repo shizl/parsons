@@ -1,9 +1,9 @@
 ﻿(function($){
 	function map_show(){
-		if($(document).width()>650){
-			$(".filter-box").css('position','absolute');
+		if($(document).width()>640){
+			$(".filter-box").css({'position':'absolute','width':"402px","left":"20px","top":"10px"});
 		}else{
-			$(".filter-box").css('position','relative');
+			$(".filter-box").css({'position':'relative','width':"95.5%","left":"2%","top":"2%"});
 		}
 	}
 	$(document).ready(function(){
