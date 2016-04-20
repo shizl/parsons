@@ -51,21 +51,21 @@
 			if($('.line-outlets').html()==undefined || $('.line-outlets').is(":hidden")){
 				$('.line-direct .shop-address').each(function(){
 					addressData+=(addressData!=""? ",":"")+$(this).html();
-					contents+=(addressData!=""? "|":"")+'<div style="width:240px;max-height:240px;overflow-y:auto;font-size:12px;">'+$(this).parent("div").html()+'</div>';
+					contents+=(addressData!=""? "|":"")+'<div style="width:250px;max-height:290px;overflow-y:auto;font-size:12px;">'+$(this).parent("div").html()+'</div>';
 				});
 				var myIcon = new BMap.Icon('/sites/all/modules/baidu_map/source/direct.png', new BMap.Size(80,30));
 				
 				$('.line-direct .img-direct').click(function(){
-					leftopenInfo('<div style="width:240px;max-height:240px;overflow-y:auto;">'+$(this).prev("div").html()+'</div>',$(this).attr("data").split(','),map);
+					leftopenInfo('<div style="width:250px;max-height:290px;overflow-y:auto;">'+$(this).prev("div").html()+'</div>',$(this).attr("data").split(','),map);
 				});
 			}else{
 				$('.line-outlets .shop-address').each(function(){
 					addressData+=(addressData!=""? ",":"")+$(this).html();
-					contents+=(addressData!=""? "|":"")+'<div style="width:240px;max-height:240px;overflow-y:auto;font-size:12px;">'+$(this).parent("div").html()+'</div>';
+					contents+=(addressData!=""? "|":"")+'<div style="width:250px;max-height:290px;overflow-y:auto;font-size:12px;">'+$(this).parent("div").html()+'</div>';
 				});
 				var myIcon = new BMap.Icon('/sites/all/modules/baidu_map/source/outlets.png', new BMap.Size(30,30));
 				$('.line-outlets .img-outlets').click(function(){
-					leftopenInfo('<div style="width:240px;max-height:240px;overflow-y:auto;">'+$(this).prev("div").html()+'</div>',$(this).attr("data").split(','),map);
+					leftopenInfo('<div style="width:250px;max-height:290px;overflow-y:auto;">'+$(this).prev("div").html()+'</div>',$(this).attr("data").split(','),map);
 				});
 			}
 			$('.result-content').attr("tabindex",parseInt($('.result-content').attr("tabindex"))+1);
@@ -116,21 +116,21 @@
 								if($('.line-outlets').html()==undefined || $('.line-outlets').is(":hidden")){
 									$('.line-direct .shop-address').each(function(){
 										addressData+=(addressData!=""? ",":"")+$(this).html();
-										contents+=(addressData!=""? "|":"")+'<div style="width:240px;max-height:240px;overflow-y:auto;font-size:12px;">'+$(this).parent("div").html()+'</div>';
+										contents+=(addressData!=""? "|":"")+'<div style="width:250px;max-height:290px;overflow-y:auto;font-size:12px;">'+$(this).parent("div").html()+'</div>';
 									});
 									var myIcon = new BMap.Icon('/sites/all/modules/baidu_map/source/direct.png', new BMap.Size(80,30));
 									
 									$('.line-direct .img-direct').click(function(){
-										leftopenInfo('<div style="width:240px;max-height:240px;overflow-y:auto;font-size:12px;">'+$(this).prev("div").html()+'</div>',$(this).attr("data").split(','),map);
+										leftopenInfo('<div style="width:250px;max-height:290px;overflow-y:auto;font-size:12px;">'+$(this).prev("div").html()+'</div>',$(this).attr("data").split(','),map);
 									});
 								}else{
 									$('.line-outlets .shop-address').each(function(){
 										addressData+=(addressData!=""? ",":"")+$(this).html();
-										contents+=(addressData!=""? "|":"")+'<div style="width:240px;max-height:240px;overflow-y:auto;font-size:12px;">'+$(this).parent("div").html()+'</div>';
+										contents+=(addressData!=""? "|":"")+'<div style="width:250px;max-height:290px;overflow-y:auto;font-size:12px;">'+$(this).parent("div").html()+'</div>';
 									});
 									var myIcon = new BMap.Icon('/sites/all/modules/baidu_map/source/outlets.png', new BMap.Size(30,30));
 									$('.line-outlets .img-outlets').click(function(){
-										leftopenInfo('<div style="width:240px;max-height:240px;overflow-y:auto;font-size:12px;">'+$(this).prev("div").html()+'</div>',$(this).attr("data").split(','),map);
+										leftopenInfo('<div style="width:250px;max-height:290px;overflow-y:auto;font-size:12px;">'+$(this).prev("div").html()+'</div>',$(this).attr("data").split(','),map);
 									});
 								}
 	
