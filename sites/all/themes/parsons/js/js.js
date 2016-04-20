@@ -494,9 +494,28 @@ jQuery('.view-sales-network .view-grouping .view-grouping-content .view-grouping
 	 jQuery(this).parent().css({'background':'url(/sites/all/themes/parsons/images/shizhi.png) no-repeat right 10px'});
  }
 
+});
 
+jQuery('.view-sales-network .view-grouping .view-grouping-content .view-grouping-content .views-row-1 .views-field-nothing .toggle').click(function(){
+
+  jQuery(this).parent().find('.info').toggle();
+
+   if(jQuery(this).parent().find('.info').is(':visible')){
+
+	 jQuery(this).parent().parent().css({'background':'#f3f4f5'});
+	 jQuery(this).css({'background':'url(/sites/all/themes/parsons/images/toggle1.png) no-repeat 0 0'});
+	 jQuery('.view-sales-network .view-grouping .view-grouping-content .view-grouping-content .views-row-1 .views-field-nothing').hide(); 
+	 jQuery(this).parent().parent().show();
+
+  }else{
+	  jQuery(this).parent().parent().css({'background':'#fff'});
+	 jQuery(this).css({'background':'url(/sites/all/themes/parsons/images/toggle2.png) no-repeat 0 0'});
+	 jQuery('.view-sales-network .view-grouping .view-grouping-content .view-grouping-content .views-row-1 .views-field-nothing').show(); 
+ }
 
 });
+
+
 
 
 });
