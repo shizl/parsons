@@ -4,6 +4,7 @@
 	height: 400px;
 	position: relative;
 }
+.block-baidu-map h2{display: none}
 #allmap{
 	width: 100%;
 	height: 100%
