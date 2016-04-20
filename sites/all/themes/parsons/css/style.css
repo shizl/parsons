@@ -493,8 +493,7 @@ h1#site-name {
   border-top-left-radius: 8px;
   border-top-right-radius: 8px;
 }
-#main-menu-links a:hover,
-#main-menu-links a:focus {
+#main-menu-links a:hover{
   background: #f6f6f2;
   background: rgba(255, 255, 255, 0.95);
 }
@@ -2142,7 +2141,7 @@ background:none;
 -moz-appearance:none;
 background:url("../images/xia.png") no-repeat left center;
 padding-left:15px;
-margin-top: 5px;
+margin-top: 3px;
 }
 #header .section{
 width:100% !important;
@@ -2233,7 +2232,7 @@ border-top:1px solid #ccc;
 }
 
 #responsive-main-menu {
-margin-top:30px;
+margin-top:10px;
 background:#f3f4f5;
 }
 #responsive-main-menu ul{
@@ -2247,6 +2246,7 @@ border-bottom:1px solid #ccc;
 
 #responsive-main-menu li.active{
 background:#288345;
+
 }
 
 #responsive-main-menu li a{
@@ -2257,13 +2257,14 @@ background:none;
 }
 #responsive-main-menu li.active a{
 color:#fff;
+text-shadow:none;
 }
 
 #block-block-15  .menu-responsive{
 display:block;
 float:left;
 margin-right:10px;
-margin-top: 4px;
+margin-top: 2px;
 }
 #block-lang-dropdown-language{
 float:right !important;
@@ -2690,4 +2691,7 @@ margin:0 auto;
 
 margin-top:5px;
 margin-right:15px;
+}
+#lang-dropdown-select-language option{
+padding-left: 15px;
 }

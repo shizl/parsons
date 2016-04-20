@@ -99,7 +99,7 @@ if(jQuery(".home-video .video-content1").html()==""){
 	 //preventDefault();
 	  effect: 'fade',
 	  opacity: 0.6,
-	  closeOnClick:true, 
+	  closeOnClick:false, 
 	 onShow: function() {
      	jQuery('.home-video .video-content1').show();
 	 },
@@ -120,7 +120,7 @@ if(jQuery(".home-video .video-content2").html()==""){
 	 //preventDefault();
 	  effect: 'fade',
 	  opacity: 0.6,
-	  closeOnClick:true, 
+	  closeOnClick:false, 
 	 onShow: function() {
      	jQuery('.home-video .video-content2').show();
 	 },
@@ -142,7 +142,7 @@ if(jQuery(".home-video .video-content3").html()==""){
 	 //preventDefault();
 	  effect: 'fade',
 	  opacity: 0.6,
-	  closeOnClick:true, 
+	  closeOnClick:false, 
 	 onShow: function() {
      	jQuery('.home-video .video-content3').show();
 	 },
@@ -484,6 +484,37 @@ jQuery(this).addClass('active');
 }
 
 });
+
+jQuery('.view-sales-network .view-grouping .view-grouping-content .view-grouping-header').click(function(){
+
+ jQuery(this).parent().find('.view-grouping-content').toggle();
+ if( jQuery(this).parent().find('.view-grouping-content').is(':visible')){
+	 jQuery(this).parent().css({'background':'url(/sites/all/themes/parsons/images/gang.png) no-repeat right 19px'});
+  }else{
+	 jQuery(this).parent().css({'background':'url(/sites/all/themes/parsons/images/shizhi.png) no-repeat right 10px'});
+ }
+
+});
+
+jQuery('.view-sales-network .view-grouping .view-grouping-content .view-grouping-content .views-row-1 .views-field-nothing .toggle').click(function(){
+
+  jQuery(this).parent().find('.info').toggle();
+
+   if(jQuery(this).parent().find('.info').is(':visible')){
+
+	 jQuery(this).parent().parent().css({'background':'#f3f4f5'});
+	 jQuery(this).css({'background':'url(/sites/all/themes/parsons/images/toggle1.png) no-repeat 0 0'});
+	 jQuery('.view-sales-network .view-grouping .view-grouping-content .view-grouping-content .views-row-1 .views-field-nothing').hide(); 
+	 jQuery(this).parent().parent().show();
+
+  }else{
+	  jQuery(this).parent().parent().css({'background':'#fff'});
+	 jQuery(this).css({'background':'url(/sites/all/themes/parsons/images/toggle2.png) no-repeat 0 0'});
+	 jQuery('.view-sales-network .view-grouping .view-grouping-content .view-grouping-content .views-row-1 .views-field-nothing').show(); 
+ }
+
+});
+
 
 });
 
