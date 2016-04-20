@@ -22,12 +22,18 @@
 		$('#sole-input').keyup(function(){
 			var key=$(this).val();
 			$(".showCities").show();
-			$(".showCities .line").hide();
-			$(".showCities .line").each(function(){
-				if($(this).attr("data").indexOf(key)!=-1){
-					$(this).show();
-				}
-			});
+			if(key!=""){
+				$(".showCities .line").each(function(){
+					if($(this).attr("data").indexOf(key)==-1){
+						$(this).hide();
+					}
+				});
+			}else{
+				$(".showCities .line").show();
+			}
+		$('.showCities').attr("tabindex",parseInt($('.showCities').attr("tabindex"))+1);
+			
+		
 		});
 		$('.type-line').click(function(){
 			$('.type-line').removeClass("selected");
@@ -45,26 +51,26 @@
 			if($('.line-outlets').html()==undefined || $('.line-outlets').is(":hidden")){
 				$('.line-direct .shop-address').each(function(){
 					addressData+=(addressData!=""? ",":"")+$(this).html();
-					contents+=(addressData!=""? "|":"")+'<div style="width:200px;height:200px;overflow-y:auto;font-size:12px;">'+$(this).parent("div").html()+'</div>';
+					contents+=(addressData!=""? "|":"")+'<div style="width:220px;max-height:240px;overflow-y:auto;font-size:12px;">'+$(this).parent("div").html()+'</div>';
 				});
 				var myIcon = new BMap.Icon('/sites/all/modules/baidu_map/source/direct.png', new BMap.Size(80,30));
 				
 				$('.line-direct .img-direct').click(function(){
-					leftopenInfo('<div style="width:200px;height:200px;overflow-y:auto;">'+$(this).prev("div").html()+'</div>',$(this).attr("data").split(','),map);
+					leftopenInfo('<div style="width:220px;max-height:240px;overflow-y:auto;">'+$(this).prev("div").html()+'</div>',$(this).attr("data").split(','),map);
 				});
 			}else{
 				$('.line-outlets .shop-address').each(function(){
 					addressData+=(addressData!=""? ",":"")+$(this).html();
-					contents+=(addressData!=""? "|":"")+'<div style="width:200px;height:200px;overflow-y:auto;font-size:12px;">'+$(this).parent("div").html()+'</div>';
+					contents+=(addressData!=""? "|":"")+'<div style="width:220px;max-height:240px;overflow-y:auto;font-size:12px;">'+$(this).parent("div").html()+'</div>';
 				});
 				var myIcon = new BMap.Icon('/sites/all/modules/baidu_map/source/outlets.png', new BMap.Size(30,30));
 				$('.line-outlets .img-outlets').click(function(){
-					leftopenInfo('<div style="width:200px;height:200px;overflow-y:auto;">'+$(this).prev("div").html()+'</div>',$(this).attr("data").split(','),map);
+					leftopenInfo('<div style="width:220px;max-height:240px;overflow-y:auto;">'+$(this).prev("div").html()+'</div>',$(this).attr("data").split(','),map);
 				});
 			}
-
+			$('.result-content').attr("tabindex",parseInt($('.result-content').attr("tabindex"))+1);
 			var adds = addressData;	
-		
+			
 			bdGEO(keyword,adds,contents,0,myIcon);
 		});
 		$('.showCities .line').click(function () {
@@ -110,28 +116,28 @@
 								if($('.line-outlets').html()==undefined || $('.line-outlets').is(":hidden")){
 									$('.line-direct .shop-address').each(function(){
 										addressData+=(addressData!=""? ",":"")+$(this).html();
-										contents+=(addressData!=""? "|":"")+'<div style="width:200px;height:200px;overflow-y:auto;font-size:12px;">'+$(this).parent("div").html()+'</div>';
+										contents+=(addressData!=""? "|":"")+'<div style="width:220px;max-height:240px;overflow-y:auto;font-size:12px;">'+$(this).parent("div").html()+'</div>';
 									});
 									var myIcon = new BMap.Icon('/sites/all/modules/baidu_map/source/direct.png', new BMap.Size(80,30));
 									
 									$('.line-direct .img-direct').click(function(){
-										leftopenInfo('<div style="width:200px;height:200px;overflow-y:auto;font-size:12px;">'+$(this).prev("div").html()+'</div>',$(this).attr("data").split(','),map);
+										leftopenInfo('<div style="width:220px;max-height:240px;overflow-y:auto;font-size:12px;">'+$(this).prev("div").html()+'</div>',$(this).attr("data").split(','),map);
 									});
 								}else{
 									$('.line-outlets .shop-address').each(function(){
 										addressData+=(addressData!=""? ",":"")+$(this).html();
-										contents+=(addressData!=""? "|":"")+'<div style="width:200px;height:200px;overflow-y:auto;font-size:12px;">'+$(this).parent("div").html()+'</div>';
+										contents+=(addressData!=""? "|":"")+'<div style="width:220px;max-height:240px;overflow-y:auto;font-size:12px;">'+$(this).parent("div").html()+'</div>';
 									});
 									var myIcon = new BMap.Icon('/sites/all/modules/baidu_map/source/outlets.png', new BMap.Size(30,30));
 									$('.line-outlets .img-outlets').click(function(){
-										leftopenInfo('<div style="width:200px;height:200px;overflow-y:auto;font-size:12px;">'+$(this).prev("div").html()+'</div>',$(this).attr("data").split(','),map);
+										leftopenInfo('<div style="width:220px;max-height:240px;overflow-y:auto;font-size:12px;">'+$(this).prev("div").html()+'</div>',$(this).attr("data").split(','),map);
 									});
 								}
 	
 								var adds = addressData;	
 							
 								bdGEO(keyword,adds,contents,0,myIcon);
-
+								$('.result-content').attr("tabindex",parseInt($('.result-content').attr("tabindex"))+1);
 								$('.no-content').hide();
 							}else{
 								$('.no-content').show();

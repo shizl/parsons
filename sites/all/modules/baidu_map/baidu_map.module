@@ -85,8 +85,8 @@ function baidu_map_search(){
      $map_location = entity_load('field_collection_item', $fid);
     foreach ($map_location as $loction) {
 
-      $showHtml.='<div class="shop-body"><div class="left-content"><div class="shop-image">'. ($loction->field_images['und'][0]['uri']!="" ? '<img src="'.file_create_url($loction->field_images['und'][0]['uri']).'" with="200" height="100" />':"").'</div><div class="shop-name" style="font-weight:bold;">'.$loction->field_title['und'][0]['value'].' :</div>
-      <div class="shop-address">'.$loction->field_address['und'][0]['value'].'</div><div class="shop-description">'.$loction->field_description['und'][0]['value'].'</div><div class="shop-phone"><img src="/'.(drupal_get_path('module', "baidu_map") . "/source/call25.png").'" >'.$loction->field_phone['und'][0]['value'].'</div></div><div class="shop-map img-'.($node->field_category['und'][0]['value']==1 ? 'direct':'outlets').'"></div></div>';
+      $showHtml.='<div class="shop-body"><div class="left-content"><div class="shop-image">'. ($loction->field_images['und'][0]['uri']!="" ? '<img src="'.file_create_url($loction->field_images['und'][0]['uri']).'" with="200" height="100" />':"").'</div><div class="shop-name" style="font-weight:bold;float:left;">'.$loction->field_title['und'][0]['value'].' :</div>
+      <div class="shop-address">'.$loction->field_address['und'][0]['value'].'</div><div class="shop-description" style="max-height:57px;overflow:hidden">'.$loction->field_description['und'][0]['value'].'</div>'.($loction->field_phone['und'][0]['value']!="" ? '<div class="shop-phone"><img src="/'.(drupal_get_path('module', "baidu_map") . "/source/call25.png").'" >'.$loction->field_phone['und'][0]['value'].'</div>':'').'</div><div class="shop-map img-'.($node->field_category['und'][0]['value']==1 ? 'direct':'outlets').'"></div></div>';
     }
     $showHtml.='</div>';
 
