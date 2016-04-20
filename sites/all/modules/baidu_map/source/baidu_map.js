@@ -1,6 +1,6 @@
 ﻿(function($){
 	function map_show(){
-		if($(document).width()>800){
+		if($(document).width()>650){
 			$(".filter-box").css('position','absolute');
 		}else{
 			$(".filter-box").css('position','relative');
