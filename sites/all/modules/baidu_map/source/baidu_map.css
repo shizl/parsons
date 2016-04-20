@@ -11,13 +11,16 @@
 	height: 100%
 }
 .filter-box{
-	width: 400px;
-	display: inline-block;
-	left: 20px;
-	top:10px;
-	padding: 10px;
-	background: #fff;
-	position: absolute;
+	    width: 402px;
+    display: inline-block;
+    left: 20px;
+    top: 10px;
+    padding: 10px;
+    margin-bottom: 15px;
+    background: #fff;
+    position: absolute;
+    z-index: 9;
+    border: 1px solid #eee;
 }
 .filter-title{width: 100%; position: relative;}
 .filter-title .error{
@@ -106,8 +109,6 @@ color: #fff;
 .no-content{
 display: none;
 }
-.area_title{color: #007D19;
-    font-weight: bold;}
 .result-line{
     padding: 5px;
     clear: both;
@@ -118,7 +119,6 @@ display: none;
 
 }
 .result-line .shop-name{
-    float: left;
 }
 .result-line.active{
     background: #eee; 
@@ -131,6 +131,7 @@ display: none;
 .result-line .shop-body .shop-map{
     float: left;
     width: 80px;
+    margin-top: 30px;
     min-height:30px; 
      cursor: pointer;
 }

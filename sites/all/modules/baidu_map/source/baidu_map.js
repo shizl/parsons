@@ -1,6 +1,16 @@
 ﻿(function($){
-
+	function map_show(){
+		if($(document).width()>800){
+			$(".filter-box").css('position','absolute');
+		}else{
+			$(".filter-box").css('position','relative');
+		}
+	}
 	$(document).ready(function(){
+		map_show();
+	$(window).resize(function(){
+		map_show();
+	});
 		$('.result-content').perfectScrollbar();
 		$('.showCities').perfectScrollbar();
 
@@ -22,10 +32,11 @@
 		$('#sole-input').keyup(function(){
 			var key=$(this).val();
 			$(".showCities").show();
+			$(".showCities .line").hide();
 			if(key!=""){
 				$(".showCities .line").each(function(){
-					if($(this).attr("data").indexOf(key)==-1){
-						$(this).hide();
+					if($(this).attr("data").indexOf(key)!=-1){
+						$(this).show();
 					}
 				});
 			}else{
@@ -70,7 +81,7 @@
 			}
 			$('.result-content').attr("tabindex",parseInt($('.result-content').attr("tabindex"))+1);
 			var adds = addressData;	
-			
+			var keyword=$('#sole-input').val();
 			bdGEO(keyword,adds,contents,0,myIcon);
 		});
 		$('.showCities .line').click(function () {
@@ -83,7 +94,7 @@
 			keyword=keyword.replace(/(^\s*)|(\s*$)/g, "");
 			if(keyword.length>0 && allow_cities.indexOf(keyword)!=-1){
 				$('#sole-input').removeClass("error");
-				$.post("/baidu_map/search",{keyword:keyword},function(data){
+				$.post("/"+$("#lang-dropdown-select-language").val()+"/baidu_map/search",{keyword:keyword},function(data){
 							$('.result-content').html(data);
 							$('.filter-result').show();
 							if(data!=""){
