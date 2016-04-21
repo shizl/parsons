@@ -2,15 +2,18 @@
 	function map_show(){
 		if($(document).width()>640){
 			$(".filter-box").css({'position':'absolute','width':"402px","left":"20px","top":"10px"});
+
 		}else{
 			$(".filter-box").css({'position':'relative','width':"95.5%","left":"2%","top":"2%"});
+			
 		}
+		$("#sole-input").css("width",$(".filter-box").width()-32);
 	}
 	$(document).ready(function(){
 		map_show();
-	$(window).resize(function(){
-		map_show();
-	});
+		$(window).resize(function(){
+			map_show();
+		});
 		$('.result-content').perfectScrollbar();
 		$('.showCities').perfectScrollbar();
 

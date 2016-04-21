@@ -1,3 +1,4 @@
+#ascrail2000,#ascrail2001{display: none !important;}
 .baidu-map-box{
 	color: #666;
 	width: 100%;
@@ -13,7 +14,7 @@
 }
 .filter-box{
 	    width: 402px;
-        min-width: 402px;
+        min-width: 300px;
     display: inline-block;
     left: 20px;
     top: 10px;
@@ -31,7 +32,7 @@
 #sole-input{
 	    box-sizing: border-box;
     border: 0;
-    padding: 9px 5px;
+    padding:5px;
     border-left: 10px solid transparent;
     border-right: 27px solid transparent;
     line-height: 20px;
@@ -127,19 +128,19 @@ display: none;
 }
 .result-line .shop-body{padding-left:8px; width: 100%; display: inline-block;}
 .result-line .shop-body .left-content{
-    width: 75%;
+    width: 70%;
     float: left; 
 }
 .result-line .shop-body .shop-map{
     float: left;
-    width: 25%;
+    width: 30%;
     margin-top: 30px;
     min-height:30px; 
      cursor: pointer;
 }
 .result-line .shop-image{display: none;}
-.img-direct{background: url(direct.png) no-repeat; width: 80px;height:30px;}
-.img-outlets{background: url(outlets.png) center 0 no-repeat; width: 80px;height:30px;}
+.img-direct{background: url(direct.png) center center no-repeat; width: 80px;height:30px;}
+.img-outlets{background: url(outlets.png) center center no-repeat; width: 80px;height:30px;}
 .result-line .shop-phone{
    
 }
