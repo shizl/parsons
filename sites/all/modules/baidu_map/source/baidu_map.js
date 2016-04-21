@@ -62,7 +62,7 @@
 
 			var addressData=$('#sole-input').val();
 			var contents="";
-			if($('.line-outlets').html()==undefined || $('.line-outlets').is(":hidden")){
+			if($('.type-direct').hasClass("selected")){
 				$('.line-direct .shop-address').each(function(){
 					addressData+=(addressData!=""? ",":"")+$(this).html();
 					contents+=(addressData!=""? "|":"")+'<div style="width:250px;max-height:290px;overflow-y:auto;font-size:12px;">'+$(this).parent("div").html()+'</div>';
@@ -127,7 +127,7 @@
 								}
 								var addressData=keyword;
 								var contents="";
-								if($('.line-outlets').html()==undefined || $('.line-outlets').is(":hidden")){
+								if($('.type-direct').hasClass("selected")){
 									$('.line-direct .shop-address').each(function(){
 										addressData+=(addressData!=""? ",":"")+$(this).html();
 										contents+=(addressData!=""? "|":"")+'<div style="width:250px;max-height:290px;overflow-y:auto;font-size:12px;">'+$(this).parent("div").html()+'</div>';
@@ -180,7 +180,7 @@
 					if(add==keyword){
 						map.centerAndZoom(keyword, 11);  
 					}else{
-						if($('.line-outlets').html()==undefined || $('.line-outlets').is(":hidden")){
+						if($('.type-direct').hasClass("selected")){
 							$('.line-direct .shop-map:eq('+(index-1)+')').attr("data",point.lng+','+point.lat);	
 						}else{
 							$('.line-outlets .shop-map:eq('+(index-1)+')').attr("data",point.lng+','+point.lat);
