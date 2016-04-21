@@ -2694,3 +2694,8 @@ margin-right:15px;
 #lang-dropdown-select-language option{
 padding-left: 15px;
 }
+@media only screen and (max-width: 640px){
+.wechat{
+margin: -260px 0 0 40px;
+}
+}
