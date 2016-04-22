@@ -12,7 +12,6 @@ if(jQuery("body").hasClass("i18n-zh-hant")){
 jQuery(".facebook-con").click(function(){
      jQuery(".facebook-list").css("display","block");
      jQuery(".wechat-list").css("display","none");
-     jQuery(".add-faceicon").css({"background":"url('/sites/all/themes/parsons/images/zhishi.png') no-repeat bottom center","background-size":"10px 10px"});
 });
 jQuery(".wechat-con").click(function(){
      jQuery(".wechat-list").css("display","block");
