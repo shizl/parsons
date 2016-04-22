@@ -2745,10 +2745,10 @@ margin-bottom:20px;
 #experience .view-header a {
     background: #ccc;
     color: #fff;
-    padding: 8px 16px;
+    padding: 8px 30px;
     position: absolute;
     top: 30px;
-    right: 0px;
+    right: 30px;
 }
 
 #experience .view-header .news-label span {
@@ -2761,7 +2761,12 @@ margin-bottom:20px;
 
 position:relative;
 }
-
+@media only screen and (min-width:640px) and (max-width:720px){
+#experience .view-header .news-label{
+    font-size: 24px;
+    width: 300px;
+}
+}
 @media only screen and (max-width: 640px){
 
 #experience .shanghai,
@@ -2775,16 +2780,16 @@ margin:0 auto;
 margin-bottom:20px;
 
 }
-
-#experience .view-header{
-
-text-align:left;
-}
 #experience .view-header .news-label{
-
-font-size:18px;
+font-size: 18px;
 padding-top: 25px;
-width: auto;
+width: 180px;
+float: left;
+margin-left: 3%;
+line-height: 2.5em;
+}
+#experience .view-header a {
+    right: 3%;
 }
 }
 #block-block-17 #experience .view-header{
