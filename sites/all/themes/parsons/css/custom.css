@@ -609,7 +609,7 @@ margin-top:40px;
 .about-overview .view-content .views-row{
 overflow: hidden;
     clear: both;
-    margin-bottom: 20px;
+    margin-bottom: 30px;
 }
 
 .about-overview .view-content .views-row .views-field-field-image{
@@ -666,7 +666,7 @@ width:76%;
 float:right;
 }
 .view-video .view-footer{
-width:18%;
+width:16%;
 position: absolute;
 margin-left:2%;
 }
