@@ -74,21 +74,21 @@ function baidu_map_search(){
    $ids[]=$nid->entity_id;
   }
   $showHtml="";
-  $nodeData=node_load_multiple($ids);
+  $nodeData=node_load_multiple($ids,array("language"=>$GLOBALS['language']->prefix));
   foreach ($nodeData as $node) {
- 
-   $showHtml.='<div class="result-line line-'.($node->field_category['und'][0]['value']==1 ? 'direct':'outlets').'"><div class="area_title">'.$node->title.($node->field_category['und'][0]['value']==1 ? "":t('经销商')).'</div>';
+
+   //$showHtml.='<div class="result-line line-'.($node->field_category['und'][0]['value']==1 ? 'direct':'outlets').'"><div class="area_title">'.$node->title.($node->field_category['und'][0]['value']==1 ? "":t('经销商')).'</div>';
     $fid=array();
     foreach ($node->field_map_location['und'] as $entity_id) {
      $fid[]=$entity_id['value'];
     }
      $map_location = entity_load('field_collection_item', $fid);
     foreach ($map_location as $loction) {
-
-      $showHtml.='<div class="shop-body"><div class="left-content"><div class="shop-image">'. ($loction->field_images['und'][0]['uri']!="" ? '<img src="'.file_create_url($loction->field_images['und'][0]['uri']).'" with="225" height="150" />':"").'</div><div class="shop-name" style="font-weight:bold;float:left;">'.$loction->field_title['und'][0]['value'].' :</div>
-      <div class="shop-address">'.$loction->field_address['und'][0]['value'].'</div><div class="shop-description" style="max-height:57px;overflow:hidden">'.$loction->field_description['und'][0]['value'].'</div>'.($loction->field_phone['und'][0]['value']!="" ? '<div class="shop-phone"><img src="/'.(drupal_get_path('module', "baidu_map") . "/source/call25.png").'" >'.$loction->field_phone['und'][0]['value'].'</div>':'').'</div><div class="shop-map img-'.($node->field_category['und'][0]['value']==1 ? 'direct':'outlets').'"></div></div>';
+      $showHtml.='<div class="result-line line-'.($node->field_category['und'][0]['value']==1 ? 'direct':'outlets').'"><div class="shop-body"><div class="left-content"><div class="shop-image">'. ($loction->field_images['und'][0]['uri']!="" ? '<img src="'.file_create_url($loction->field_images['und'][0]['uri']).'" with="225" height="150" />':"").'</div><div class="shop-name" style="color: #007D19;
+    font-weight: bold;">'.$loction->field_title['und'][0]['value'].' :</div>
+      <div class="shop-address">'.$loction->field_address['und'][0]['value'].'</div><div class="shop-description" style="max-height:57px;overflow:hidden">'.$loction->field_description['und'][0]['value'].'</div>'.($loction->field_phone['und'][0]['value']!="" ? '<div class="shop-phone"><img src="/'.(drupal_get_path('module', "baidu_map") . "/source/call25.png").'" >'.$loction->field_phone['und'][0]['value'].'</div>':'').'</div><div class="shop-map img-'.($node->field_category['und'][0]['value']==1 ? 'direct':'outlets').'"></div></div></div>';
     }
-    $showHtml.='</div>';
+    //$showHtml.='</div>';
 
   }
 echo $showHtml;
@@ -149,21 +149,20 @@ function baidu_map_block_view($delta = '') {
         $block['content'] = '
         <div class="baidu-map-box">
         <script type="text/javascript" src="http://api.map.baidu.com/api?v=2.0&ak='.variable_get('baidu_map_api_key').'"></script>
-        <div id="allmap"></div>
         <div class="filter-box">
-        <div class="filter-title">
-        <input type="hidden" id="allow_cities" value="'.baidu_map_allow_cities().'">
-        <input id="sole-input" class="searchbox-content-common" type="text" name="word"  maxlength="256" placeholder="'.t("请输入区域").'" value="">
-        <button id="search-button" data-title="'.t('搜索').'" data-tooltip="2"></button>
-        <div class="showCities"></div>
+            <div class="filter-title">
+            <input type="hidden" id="allow_cities" value="'.baidu_map_allow_cities().'">
+            <input id="sole-input" class="searchbox-content-common" type="text" name="word"  maxlength="256" placeholder="'.t("请输入区域").'" value="">
+            <button id="search-button" data-title="'.t('搜索').'" data-tooltip="2"></button>
+            <div class="showCities"></div>
+            </div>
+            <div class="filter-result">
+              <div class="shop-type"><div class="type-line type-direct selected">'.t('直营店').'</div><div class="type-line type-outlets ">'.t('经销商').'</div></div>
+              <div class="no-content">'.t('没有相关店铺').'</div>
+                <div class="result-content"></div>
+            </div>
         </div>
-        <div class="filter-result">
-        <div class="shop-type"><div class="type-line type-direct selected">'.t('直营店').'</div><div class="type-line type-outlets ">'.t('经销商').'</div></div>
-        <div class="no-content">'.t('没有相关店铺').'</div>
-        <div class="result-content"></div>
-        </div>
-        </div>
-      
+        <div id="allmap"></div>
         </div>';
 
       break;

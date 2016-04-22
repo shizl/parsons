@@ -1,6 +1,19 @@
 ﻿(function($){
+	function map_show(){
+		if($(document).width()>640){
+			$(".filter-box").css({'position':'absolute','width':"402px","left":"20px","top":"10px"});
 
+		}else{
+			$(".filter-box").css({'position':'relative','width':"95.5%","left":"2%","top":"2%"});
+			
+		}
+		$("#sole-input").css("width",$(".filter-box").width()-32);
+	}
 	$(document).ready(function(){
+		map_show();
+		$(window).resize(function(){
+			map_show();
+		});
 		$('.result-content').perfectScrollbar();
 		$('.showCities').perfectScrollbar();
 
@@ -22,10 +35,11 @@
 		$('#sole-input').keyup(function(){
 			var key=$(this).val();
 			$(".showCities").show();
+			$(".showCities .line").hide();
 			if(key!=""){
 				$(".showCities .line").each(function(){
-					if($(this).attr("data").indexOf(key)==-1){
-						$(this).hide();
+					if($(this).attr("data").indexOf(key)!=-1){
+						$(this).show();
 					}
 				});
 			}else{
@@ -48,7 +62,7 @@
 
 			var addressData=$('#sole-input').val();
 			var contents="";
-			if($('.line-outlets').html()==undefined || $('.line-outlets').is(":hidden")){
+			if($('.type-direct').hasClass("selected")){
 				$('.line-direct .shop-address').each(function(){
 					addressData+=(addressData!=""? ",":"")+$(this).html();
 					contents+=(addressData!=""? "|":"")+'<div style="width:250px;max-height:290px;overflow-y:auto;font-size:12px;">'+$(this).parent("div").html()+'</div>';
@@ -70,7 +84,7 @@
 			}
 			$('.result-content').attr("tabindex",parseInt($('.result-content').attr("tabindex"))+1);
 			var adds = addressData;	
-			
+			var keyword=$('#sole-input').val();
 			bdGEO(keyword,adds,contents,0,myIcon);
 		});
 		$('.showCities .line').click(function () {
@@ -83,7 +97,7 @@
 			keyword=keyword.replace(/(^\s*)|(\s*$)/g, "");
 			if(keyword.length>0 && allow_cities.indexOf(keyword)!=-1){
 				$('#sole-input').removeClass("error");
-				$.post("/baidu_map/search",{keyword:keyword},function(data){
+				$.post("/"+$("#lang-dropdown-select-language").val()+"/baidu_map/search",{keyword:keyword},function(data){
 							$('.result-content').html(data);
 							$('.filter-result').show();
 							if(data!=""){
@@ -113,7 +127,7 @@
 								}
 								var addressData=keyword;
 								var contents="";
-								if($('.line-outlets').html()==undefined || $('.line-outlets').is(":hidden")){
+								if($('.type-direct').hasClass("selected")){
 									$('.line-direct .shop-address').each(function(){
 										addressData+=(addressData!=""? ",":"")+$(this).html();
 										contents+=(addressData!=""? "|":"")+'<div style="width:250px;max-height:290px;overflow-y:auto;font-size:12px;">'+$(this).parent("div").html()+'</div>';
@@ -166,7 +180,7 @@
 					if(add==keyword){
 						map.centerAndZoom(keyword, 11);  
 					}else{
-						if($('.line-outlets').html()==undefined || $('.line-outlets').is(":hidden")){
+						if($('.type-direct').hasClass("selected")){
 							$('.line-direct .shop-map:eq('+(index-1)+')').attr("data",point.lng+','+point.lat);	
 						}else{
 							$('.line-outlets .shop-map:eq('+(index-1)+')').attr("data",point.lng+','+point.lat);

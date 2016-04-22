@@ -504,7 +504,9 @@ jQuery('.view-sales-network .view-grouping .view-grouping-content .view-grouping
 
   jQuery(this).parent().find('.info').toggle();
 
+
    if(jQuery(this).parent().find('.info').is(':visible')){
+
 
 	 jQuery(this).parent().parent().css({'background':'#f3f4f5'});
 	 jQuery(this).css({'background':'url(/sites/all/themes/parsons/images/toggle1.png) no-repeat 0 0'});
