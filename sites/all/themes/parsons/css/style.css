@@ -2724,6 +2724,7 @@ height:auto;
 #experience{
 
 overflow:hidden;
+margin-bottom:20px;
 }
 
 #experience .view-header {
@@ -2756,6 +2757,11 @@ overflow:hidden;
     padding-right: 10px;
 }
 
+#block-views-banner-slider-block-1{
+
+position:relative;
+}
+
 @media only screen and (max-width: 640px){
 
 #experience .shanghai,
@@ -2764,10 +2770,20 @@ overflow:hidden;
 
 
 float:none;
-width:100%;
+width:95%;
+margin:0 auto;
 margin-bottom:20px;
 
 }
 
+#experience .view-header{
 
+text-align:left;
+}
+#experience .view-header .news-label{
+
+font-size:18px;
+padding-top: 25px;
+width: 200px;
+}
 }
