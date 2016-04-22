@@ -779,7 +779,7 @@ margin-top:0px;
 margin-bottom:20px;
 }
 .view-sales-network .view-grouping .view-grouping-content{
-    height: 490px;
+    max-height: 490px;
     overflow: auto;
     padding-right: 30px;
     margin-top: 30px;
@@ -861,6 +861,10 @@ right:0px;
 top:-20px;
 display:block;
 }
+
+
+
+
 .view-sales-network .view-grouping .view-grouping-content .views-row-1 .views-field-nothing .info{
 display:none;
 }
@@ -1353,6 +1357,11 @@ font-size:18px;
 .about-overview .view-content .views-row .views-field-title .date{
 font-size:30px;
 }
+
+.view-sales-network .view-grouping .view-grouping-content .views-row-1 .views-field-nothing {
+width:280px;
+}
+
 }
 
 @media (max-width:480px){
