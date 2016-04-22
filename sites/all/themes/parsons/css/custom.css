@@ -116,7 +116,7 @@ position: relative;
 }
 
 .page-bottom-slider .view-header .news-label{
-width:250px;
+width:300px;
 display:inline-block;
 line-height:2.5em;
 font-size:30px;
@@ -666,7 +666,7 @@ width:76%;
 float:right;
 }
 .view-video .view-footer{
-width:16%;
+width:15%;
 position: absolute;
 margin-left:2%;
 }
@@ -726,7 +726,7 @@ float:left;
 
 .view-video .view-content .views-row .views-field-title{
 font-size:18px;
-line-height:40px;
+line-height:60px;
 margin-left:20px;
 }
 
@@ -1273,6 +1273,21 @@ display:none;
 }
 #block-block-11{
 display:block;
+}
+.page-bottom-slider .view-header .news-label span{
+
+font-size:20px;
+
+}
+.page-bottom-slider .view-header .news-label{
+background:url(../images/xian.png) repeat-x 0px 50px;
+}
+.page-bottom-slider .views-field-title{
+font-size:20px;
+
+}
+.page-bottom-slider .view-header .news-label{
+width:200px;
 }
 
 #block-views-banner-slider-block .view-header{
