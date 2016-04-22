@@ -2787,3 +2787,22 @@ padding-top: 25px;
 width: auto;
 }
 }
+#block-block-17 #experience .view-header{
+
+text-align:left;
+}
+#block-block-17 #experience .view-header .news-label{
+
+width:auto;
+}
+#block-block-17 #experience .view-header .news-label span{
+
+color:#017518;
+font-size: 1.429em;
+background: #f0f0f0;
+
+}
+#block-block-17{
+
+background: #f0f0f0;
+}
