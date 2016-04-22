@@ -298,7 +298,140 @@ $page = '<a class=" page-item-1" href="/'.$language->prefix.'/'.drupal_get_path_
           
 		$r++;
 	}
+if($allpage<=1){
 
+
+$output = '
+
+
+<div class="brands-filter">
+<a class="all active" href="/'.$language->prefix.'/'.drupal_get_path_alias(current_path()).'/?brand=all">'.t('所有品牌').'</a>
+<a class="hongkongbs" href="/'.$language->prefix.'/'.drupal_get_path_alias(current_path()).'/?brand=hongkongbs">'.t('香港品牌').'</a>
+<a class="chinabs" href="/'.$language->prefix.'/'.drupal_get_path_alias(current_path()).'/?brand=chinabs">'.t('大陆品牌').'</a>
+</div>
+
+<div class="brands-images">
+'.$gallery.'
+
+</div>
+
+<script type="text/javascript">
+
+jQuery(document).ready(function(){
+
+var url = document.URL;
+var hongkong = new RegExp("hongkongbs");
+var china = new RegExp("chinabs");
+var all = new RegExp("all");
+if (hongkong.test(url)){
+
+jQuery(".brands-filter .hongkongbs ").addClass("active");
+jQuery(".brands-filter .all ").removeClass("active");
+jQuery(".brands-filter .chinabs ").removeClass("active");
+}
+if (china.test(url)){
+
+jQuery(".brands-filter .chinabs ").addClass("active");
+jQuery(".brands-filter .all ").removeClass("active");
+jQuery(".brands-filter .hongkongbs ").removeClass("active");
+
+}if(all.test(url)){
+
+jQuery(".brands-filter .all ").addClass("active");
+jQuery(".brands-filter .chinabs ").removeClass("active");
+jQuery(".brands-filter .hongkongbs ").removeClass("active");
+
+}
+
+
+
+
+jQuery(".pager .page a").each(function(){
+
+var href = jQuery(this).attr("href");
+href2 = href.substr(href.length-7,7);
+href3 = href.substr(href.length-7,5);
+var url7 = url.substr(url.length-7,7);
+
+if(href.indexOf(url7)>0 && url.indexOf(href3)>0){
+
+ jQuery(this).addClass("active");
+}
+
+if(url.indexOf(href2)<0 && url.indexOf(href3)>0){
+
+jQuery(this).removeClass("active");
+}
+
+if(url.indexOf(href3)<0){
+
+jQuery(".pager .page .page-item-1").addClass("active");
+
+}
+
+
+});
+
+jQuery(".pager .tiaozhuan .submit").click(function(){
+
+var val = jQuery(".pager .tiaozhuan input").val();
+var r = /^[0-9]*[1-9][0-9]*$/;
+
+var total = parseInt(jQuery(".pager .all-page #total").text());
+
+var ur = window.location.href;
+if(r.test(val) == false){
+
+jQuery(".pager .tiaozhuan input").val("");
+}
+
+if( r.test(val) == true && val <= total && ur.indexOf("?brand") <0){
+
+location.href = ur+"/?brand=all&pager="+val;
+
+}
+
+if( r.test(val) == true && val > total && ur.indexOf("?brand") <0){
+
+location.href = ur+"/?brand=all&pager=1";
+
+}
+
+if( r.test(val) == true && val <= total && ur.indexOf("?brand") >0 && ur.indexOf("pager")<0){
+
+location.href = ur+"&pager="+val;
+
+}
+
+if( r.test(val) == true && val > total && ur.indexOf("?brand") >0 && ur.indexOf("pager")<0){
+
+location.href = ur+"&pager=1";
+
+}
+
+if( r.test(val) == true && val <= total && ur.indexOf("?brand") >0 && ur.indexOf("pager")>0){
+
+location.href = ur.replace(ur.substr(ur.indexOf("pager="),10),"pager="+val);
+
+}
+
+if( r.test(val) == true && val > total && ur.indexOf("?brand") >0 && ur.indexOf("pager")>0){
+
+location.href = ur.replace(ur.substr(ur.indexOf("pager="),10),"pager=1");
+
+}
+
+});
+
+});
+
+</script>
+
+
+
+';
+
+}else{
  $output = '
 <div class="brands-filter">
 <a class="all active" href="/'.$language->prefix.'/'.drupal_get_path_alias(current_path()).'/?brand=all">'.t('所有品牌').'</a>
@@ -437,6 +570,8 @@ location.href = ur.replace(ur.substr(ur.indexOf("pager="),10),"pager=1");
 
 
 ';
+
+}
  return $output;
 
 }
