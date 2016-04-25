@@ -802,7 +802,7 @@ background:url(../images/shizhi.png) no-repeat right 10px;
 display:none;
 }
 .view-sales-network .view-grouping .view-grouping-content .views-field-nothing .toggle{
-background:url(../images/toggle2.png) no-repeat 0 0 ;
+background:#666;
 width: 90px;
 height: 29px;
 cursor: pointer;
@@ -810,6 +810,10 @@ position: absolute;
 top: 0px;
 right: 0px;
 z-index: 1;
+color:#fff;
+font-size:16px;
+line-height:29px;
+text-align:center;
 }
 
 
