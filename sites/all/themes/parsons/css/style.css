@@ -2801,11 +2801,10 @@ text-align:left;
 width:auto;
 }
 #block-block-17 #experience .view-header .news-label span{
-
-color:#017518;
-font-size: 1.429em;
-background: #f0f0f0;
-
+    background: #f3f4f5;
+    font-size: 22px;
+    color: #064800;
+    padding-left: 45px;
 }
 #block-block-17{
 
