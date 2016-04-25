@@ -489,6 +489,13 @@ jQuery(this).addClass('active');
 
 });
 
+	 if(jQuery('body').hasClass("i18n-zh-hant")){
+		 jQuery(this).html('展開介紹');
+	 }else{
+	 	jQuery(this).html('展开介绍');
+	 }
+
+
 jQuery('.view-sales-network .view-grouping .view-grouping-content .view-grouping-header').click(function(){
 
  jQuery(this).parent().find('.view-grouping-content').toggle();
@@ -504,7 +511,6 @@ jQuery('.view-sales-network .view-grouping .view-grouping-content .view-grouping
 
   jQuery(this).parent().find('.info').toggle();
 
-
    if(jQuery(this).parent().find('.info').is(':visible')){
 
 
@@ -519,6 +525,7 @@ jQuery('.view-sales-network .view-grouping .view-grouping-content .view-grouping
 	 jQuery(this).parent().parent().show();
 
   }else{
+
 	  jQuery(this).parent().parent().css({'background':'#fff'});
 
 	 if(jQuery('body').hasClass("i18n-zh-hant")){
