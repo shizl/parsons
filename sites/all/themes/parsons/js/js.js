@@ -1,7 +1,7 @@
 jQuery(document).ready(function(){
 
-jQuery('.views-exposed-form #edit-field-category-value-wrapper select option:first').text('全部');
-jQuery('.views-exposed-form #edit-field-city-value-wrapper select option:first').text('全部');
+jQuery('.views-exposed-form #edit-field-category-value-i18n-wrapper select option:first').text('全部');
+jQuery('.views-exposed-form #edit-field-city-value-i18n-wrapper select option:first').text('全部');
 
 
 jQuery('#block-block-1 .share .weixin img').mouseover(function(){
