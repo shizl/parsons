@@ -1,4 +1,25 @@
- .follow-us>a{
+.arrow-facebook{
+width:17px;
+height:7px;
+position: absolute;
+top: 27%;
+left: 20%;
+display:none;
+}
+.arrow-wechat{
+width:17px;
+height:7px;
+position: absolute;
+top: 28%;
+left: 28%;
+display:none;
+}
+.arrow-wechat img,
+.arrow-facebook img{
+width:100% !important;
+height:auto !important;
+}
+.follow-us>a{
 display:inline-block;
 width:36px;
 height:36px;
@@ -6,6 +27,14 @@ height:36px;
 .add-faceicon,
 .add-chaticon{
 display:inline-block;
+width:36px;
+height:36px;
+margin-right:5px;
+padding-bottom:5px;
+}
+.add-faceicon a,
+.add-chaticon a{
+margin-right:0px;
 }
 .add-faceicon a,
 .add-chaticon a{
@@ -24,6 +53,7 @@ height:auto;
 position:absolute;
 bottom: 33%;
 display:none;
+border:1px solid rgba(0, 0, 0, 0.3);
 }
 .img-fj img,
 .img-gd img,
@@ -297,6 +327,7 @@ margin-top:10px;
 border:1px solid #ccc;
 padding: 13px 25px;
 margin-top: 30px;
+position:relative;
 }
 #block-block-3 .company-footer{
 font-family: sans-serif;

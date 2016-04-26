@@ -12,10 +12,14 @@ if(jQuery("body").hasClass("i18n-zh-hant")){
 jQuery(".facebook-con").click(function(){
      jQuery(".facebook-list").fadeToggle(100);
      jQuery(".wechat-list").css("display","none");
+     jQuery(".arrow-facebook").fadeToggle(100);
+     jQuery(".arrow-wechat").css("display","none");
 });
 jQuery(".wechat-con").click(function(){
      jQuery(".wechat-list").fadeToggle(100);
      jQuery(".facebook-list").css("display","none");
+     jQuery(".arrow-wechat").fadeToggle(100);
+     jQuery(".arrow-facebook").css("display","none");
 });
 jQuery(".wechat-sh").mouseenter(function(){
      jQuery(".img-sh").fadeIn(500);
