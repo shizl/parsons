@@ -613,18 +613,21 @@ overflow: hidden;
 }
 
 .about-overview .view-content .views-row .views-field-field-image{
-width:43%;
+width:45%;
 float:left;
 margin-right:2%;
 }
-
+.views-field-field-image .field-content{
+    border: 1px solid #ccc;
+    padding: 2%;
+}
 .about-overview .view-content .views-row .views-field-field-image img{
 width:100%;
 }
 
 .about-overview .view-content .views-row .views-field-title ,
 .about-overview .view-content .views-row .views-field-body{
-width:55%;
+width:53%;
 float:left;
 } 
 .about-overview .view-content .views-row .views-field-title {
