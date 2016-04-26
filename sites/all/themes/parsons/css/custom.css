@@ -116,7 +116,7 @@ position: relative;
 }
 
 .page-bottom-slider .view-header .news-label{
-width:250px;
+width:300px;
 display:inline-block;
 line-height:2.5em;
 font-size:30px;
@@ -609,7 +609,7 @@ margin-top:40px;
 .about-overview .view-content .views-row{
 overflow: hidden;
     clear: both;
-    margin-bottom: 20px;
+    margin-bottom: 30px;
 }
 
 .about-overview .view-content .views-row .views-field-field-image{
@@ -666,7 +666,7 @@ width:76%;
 float:right;
 }
 .view-video .view-footer{
-width:18%;
+width:15%;
 position: absolute;
 margin-left:2%;
 }
@@ -726,7 +726,7 @@ float:left;
 
 .view-video .view-content .views-row .views-field-title{
 font-size:18px;
-line-height:40px;
+line-height:60px;
 margin-left:20px;
 }
 
@@ -779,7 +779,7 @@ margin-top:0px;
 margin-bottom:20px;
 }
 .view-sales-network .view-grouping .view-grouping-content{
-    height: 490px;
+    max-height: 490px;
     overflow: auto;
     padding-right: 30px;
     margin-top: 30px;
@@ -802,7 +802,7 @@ background:url(../images/shizhi.png) no-repeat right 10px;
 display:none;
 }
 .view-sales-network .view-grouping .view-grouping-content .views-field-nothing .toggle{
-background:url(../images/toggle2.png) no-repeat 0 0 ;
+background:#666;
 width: 90px;
 height: 29px;
 cursor: pointer;
@@ -810,6 +810,11 @@ position: absolute;
 top: 0px;
 right: 0px;
 z-index: 1;
+color:#fff;
+font-size:16px;
+line-height:29px;
+text-align:center;
+display:block;
 }
 
 
@@ -860,7 +865,9 @@ width: 350px;
 right:0px;
 top:-20px;
 display:block;
+z-index:1;
 }
+
 .view-sales-network .view-grouping .view-grouping-content .views-row-1 .views-field-nothing .info{
 display:none;
 }
@@ -1273,6 +1280,21 @@ display:none;
 #block-block-11{
 display:block;
 }
+.page-bottom-slider .view-header .news-label span{
+
+font-size:20px;
+
+}
+.page-bottom-slider .view-header .news-label{
+background:url(../images/xian.png) repeat-x 0px 50px;
+}
+.page-bottom-slider .views-field-title{
+font-size:20px;
+
+}
+.page-bottom-slider .view-header .news-label{
+width:200px;
+}
 
 #block-views-banner-slider-block .view-header{
 display:none;
@@ -1353,6 +1375,11 @@ font-size:18px;
 .about-overview .view-content .views-row .views-field-title .date{
 font-size:30px;
 }
+
+.view-sales-network .view-grouping .view-grouping-content .views-row-1 .views-field-nothing {
+width:280px;
+}
+
 }
 
 @media (max-width:480px){

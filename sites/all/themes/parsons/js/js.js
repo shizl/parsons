@@ -1,5 +1,9 @@
 jQuery(document).ready(function(){
 
+jQuery('.views-exposed-form #edit-field-category-value-wrapper select option:first').text('全部');
+jQuery('.views-exposed-form #edit-field-city-value-wrapper select option:first').text('全部');
+
+
 jQuery('#block-block-1 .share .weixin img').mouseover(function(){
 
 
@@ -485,6 +489,13 @@ jQuery(this).addClass('active');
 
 });
 
+	 if(jQuery('body').hasClass("i18n-zh-hant")){
+		 jQuery(this).html('展開介紹');
+	 }else{
+	 	jQuery(this).html('展开介绍');
+	 }
+
+
 jQuery('.view-sales-network .view-grouping .view-grouping-content .view-grouping-header').click(function(){
 
  jQuery(this).parent().find('.view-grouping-content').toggle();
@@ -502,14 +513,26 @@ jQuery('.view-sales-network .view-grouping .view-grouping-content .view-grouping
 
    if(jQuery(this).parent().find('.info').is(':visible')){
 
+
 	 jQuery(this).parent().parent().css({'background':'#f3f4f5'});
-	 jQuery(this).css({'background':'url(/sites/all/themes/parsons/images/toggle1.png) no-repeat 0 0'});
+   	  if(jQuery('body').hasClass("i18n-zh-hant")){
+	    jQuery(this).html('隱藏介紹');		
+	  }else{
+	    jQuery(this).html('隐藏介绍');
+          }
+
 	 jQuery('.view-sales-network .view-grouping .view-grouping-content .view-grouping-content .views-row-1 .views-field-nothing').hide(); 
 	 jQuery(this).parent().parent().show();
 
   }else{
+
 	  jQuery(this).parent().parent().css({'background':'#fff'});
-	 jQuery(this).css({'background':'url(/sites/all/themes/parsons/images/toggle2.png) no-repeat 0 0'});
+
+	 if(jQuery('body').hasClass("i18n-zh-hant")){
+		 jQuery(this).html('展開介紹');
+	 }else{
+	 	jQuery(this).html('展开介绍');
+	 }
 	 jQuery('.view-sales-network .view-grouping .view-grouping-content .view-grouping-content .views-row-1 .views-field-nothing').show(); 
  }
 
