@@ -2,16 +2,16 @@
 width:17px;
 height:7px;
 position: absolute;
-top: 27%;
-left: 20%;
+bottom: -8px;
+left: 11px;
 display:none;
 }
 .arrow-wechat{
 width:17px;
 height:7px;
 position: absolute;
-top: 28%;
-left: 28%;
+bottom: -8px;
+left: 10px;
 display:none;
 }
 .arrow-wechat img,
@@ -30,7 +30,7 @@ display:inline-block;
 width:36px;
 height:36px;
 margin-right:5px;
-padding-bottom:5px;
+position:relative;
 }
 .add-faceicon a,
 .add-chaticon a{
