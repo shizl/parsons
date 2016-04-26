@@ -10,11 +10,11 @@ if(jQuery("body").hasClass("i18n-zh-hant")){
       jQuery("#block-webform-client-block-105 .webform-submit").attr("value","提交");
 }
 jQuery(".facebook-con").click(function(){
-     jQuery(".facebook-list").css("display","block");
+     jQuery(".facebook-list").fadeToggle(100);
      jQuery(".wechat-list").css("display","none");
 });
 jQuery(".wechat-con").click(function(){
-     jQuery(".wechat-list").css("display","block");
+     jQuery(".wechat-list").fadeToggle(100);
      jQuery(".facebook-list").css("display","none");
 });
 jQuery(".wechat-sh").mouseenter(function(){
