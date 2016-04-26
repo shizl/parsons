@@ -865,6 +865,7 @@ width: 350px;
 right:0px;
 top:-20px;
 display:block;
+z-index:1;
 }
 
 .view-sales-network .view-grouping .view-grouping-content .views-row-1 .views-field-nothing .info{
