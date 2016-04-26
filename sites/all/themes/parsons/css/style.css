@@ -2699,3 +2699,91 @@ padding-left: 15px;
 margin: -260px 0 0 40px;
 }
 }
+
+#experience .shanghai,
+#experience .hk,
+#experience .bj{
+
+
+float:left;
+width:32%;
+}
+#experience .bj{
+
+float:right;
+}
+#experience .hk{
+
+margin-left:2%;
+}
+#experience img{
+
+width:100%;
+height:auto;
+}
+#experience{
+
+overflow:hidden;
+margin-bottom:20px;
+}
+
+#experience .view-header {
+    text-align: center;
+    margin-bottom: 20px;
+    position: relative;
+}
+#experience .view-header .news-label {
+    width: 365px;
+    display: inline-block;
+    line-height: 2.5em;
+    font-size: 30px;
+    color: #000;
+    background: url(../images/xian.png) repeat-x 0px 47px;
+    padding-top: 10px;
+}
+
+#experience .view-header a {
+    background: #ccc;
+    color: #fff;
+    padding: 8px 16px;
+    position: absolute;
+    top: 30px;
+    right: 0px;
+}
+
+#experience .view-header .news-label span {
+    background: #fff;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+#block-views-banner-slider-block-1{
+
+position:relative;
+}
+
+@media only screen and (max-width: 640px){
+
+#experience .shanghai,
+#experience .hk,
+#experience .bj{
+
+
+float:none;
+width:95%;
+margin:0 auto;
+margin-bottom:20px;
+
+}
+
+#experience .view-header{
+
+text-align:left;
+}
+#experience .view-header .news-label{
+
+font-size:18px;
+padding-top: 25px;
+width: auto;
+}
+}

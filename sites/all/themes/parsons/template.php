@@ -335,7 +335,10 @@ $page = '<a class=" page-item-0" href="/'.$language->prefix.'/'.drupal_get_path_
 
 //echo '<pre>';
 //print_r(arg(0));exit;
+if($allpage<=1){
 
+$output='';
+}else{
 $output = '<div class="parsons-pager">
 
 <div class="parsons-pre-page">'.$pre.'</div>
@@ -502,6 +505,7 @@ padding: 0px;
 </style>
 ';
 
-
+}
 return $output;
+
 }
