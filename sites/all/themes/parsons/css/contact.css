@@ -56,6 +56,14 @@ display:none;
 border:1px solid rgba(0, 0, 0, 0.3);
 z-index:1;
 }
+#block-block-14 .img-fj,
+#block-block-14 .img-gd,
+#block-block-14 .img-bj,
+#block-block-14 .img-hk,
+#block-block-14 .img-zb,
+#block-block-14 .img-sh{
+bottom: 64%;
+}
 .img-fj img,
 .img-gd img,
 .img-bj img,
