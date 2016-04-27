@@ -54,6 +54,7 @@ position:absolute;
 bottom: 33%;
 display:none;
 border:1px solid rgba(0, 0, 0, 0.3);
+z-index:1;
 }
 .img-fj img,
 .img-gd img,
