@@ -526,7 +526,7 @@ jQuery('.view-sales-network .view-grouping .view-grouping-content .view-grouping
 
   }else{
 
-	  jQuery(this).parent().parent().css({'background':'#fff'});
+	  jQuery(this).parent().parent().css({'background':'none'});
 
 	 if(jQuery('body').hasClass("i18n-zh-hant")){
 		 jQuery(this).html('展開介紹');
