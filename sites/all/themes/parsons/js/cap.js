@@ -9,10 +9,52 @@ if(jQuery("body").hasClass("i18n-zh-hant")){
 if(jQuery("body").hasClass("i18n-zh-hant")){
       jQuery("#block-webform-client-block-105 .webform-submit").attr("value","提交");
 }
-		jQuery(".wechat-con").mouseenter(function(){
-         jQuery(".wechat2").fadeIn(500);
-    jQuery(".wechat-con").mouseleave(function(){
-          jQuery(".wechat2").fadeOut(500);
+jQuery(".facebook-con").click(function(){
+     jQuery(".facebook-list").fadeToggle(100);
+     jQuery(".wechat-list").css("display","none");
+     jQuery(".arrow-facebook").fadeToggle(100);
+     jQuery(".arrow-wechat").css("display","none");
+});
+jQuery(".wechat-con").click(function(){
+     jQuery(".wechat-list").fadeToggle(100);
+     jQuery(".facebook-list").css("display","none");
+     jQuery(".arrow-wechat").fadeToggle(100);
+     jQuery(".arrow-facebook").css("display","none");
+});
+jQuery(".wechat-sh").mouseenter(function(){
+     jQuery(".img-sh").fadeIn(500);
+jQuery(".wechat-sh").mouseleave(function(){
+     jQuery(".img-sh").fadeOut(500);
+});
+});
+jQuery(".wechat-zb").mouseenter(function(){
+     jQuery(".img-zb").fadeIn(500);
+jQuery(".wechat-zb").mouseleave(function(){
+     jQuery(".img-zb").fadeOut(500);
+});
+});
+jQuery(".wechat-hk").mouseenter(function(){
+     jQuery(".img-hk").fadeIn(500);
+jQuery(".wechat-hk").mouseleave(function(){
+     jQuery(".img-hk").fadeOut(500);
+});
+});
+jQuery(".wechat-bj").mouseenter(function(){
+     jQuery(".img-bj").fadeIn(500);
+jQuery(".wechat-bj").mouseleave(function(){
+     jQuery(".img-bj").fadeOut(500);
+});
+});
+jQuery(".wechat-gd").mouseenter(function(){
+     jQuery(".img-gd").fadeIn(500);
+jQuery(".wechat-gd").mouseleave(function(){
+     jQuery(".img-gd").fadeOut(500);
+});
+});
+jQuery(".wechat-fj").mouseenter(function(){
+     jQuery(".img-fj").fadeIn(500);
+jQuery(".wechat-fj").mouseleave(function(){
+     jQuery(".img-fj").fadeOut(500);
 });
 });
 });

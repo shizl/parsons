@@ -1,3 +1,121 @@
+.arrow-facebook{
+width:17px;
+height:7px;
+position: absolute;
+bottom: -8px;
+left: 11px;
+display:none;
+}
+.arrow-wechat{
+width:17px;
+height:7px;
+position: absolute;
+bottom: -8px;
+left: 10px;
+display:none;
+}
+.arrow-wechat img,
+.arrow-facebook img{
+width:100% !important;
+height:auto !important;
+}
+.follow-us>a{
+display:inline-block;
+width:36px;
+height:36px;
+}
+.add-faceicon,
+.add-chaticon{
+display:inline-block;
+width:36px;
+height:36px;
+margin-right:5px;
+position:relative;
+}
+.add-faceicon a,
+.add-chaticon a{
+margin-right:0px;
+}
+.add-faceicon a,
+.add-chaticon a{
+display:inline-block;
+width:36px;
+height:36px;
+}
+.img-fj,
+.img-gd,
+.img-bj,
+.img-hk,
+.img-zb,
+.img-sh{
+width:250px;
+height:auto;
+position:absolute;
+bottom: 33%;
+display:none;
+border:1px solid rgba(0, 0, 0, 0.3);
+}
+.img-fj img,
+.img-gd img,
+.img-bj img,
+.img-hk img,
+.img-zb img,
+.img-sh img{
+width:100%;
+height:auto;
+}
+.facebook-list{
+overflow:hidden;
+padding-top:20px;
+display:none;
+border-top:1px solid #ccc;
+margin-top:15px;
+}
+.wechat-list{
+overflow:hidden;
+padding-top:20px;
+border-top:1px solid #ccc;
+margin-top:15px;
+display:none;
+}
+.wechat-list ul{
+width:50%;
+float:left;
+}
+.wechat-list .left-item{
+border-right:1px solid #ccc;
+}
+.wechat-list .right-item{
+padding-left:20px;
+}
+.wechat-list li{
+font-size:13px;
+cursor:pointer;
+margin-bottom:8px;
+}
+.wechat-list li:hover{
+color:#5DBF23;
+}
+.facebook-list .left-item{
+border-right:1px solid #ccc;
+}
+.facebook-list .right-item{
+padding-left:20px;
+}
+.facebook-list ul{
+width:50%;
+float:left;
+}
+.facebook-list li{
+margin-bottom: 8px;
+}
+.facebook-list a{
+color:#666;
+font-size:13px;
+}
+.facebook-list a:hover{
+color:#385892;
+}
 .page-node-244 .field-name-field-image{
 max-width:1400px !important;
 }
@@ -11,18 +129,6 @@ display:inline-block;
 #block-block-14 .content,
 #block-block-3 .content{
 position:relative;
-}
-#block-block-3 .wechat2{
-position: absolute;
-top: 22%;
-left: -2%;
-display:none;
-}
-#block-block-14 .wechat2{
-position: absolute;
-bottom: 0;
-left: -2%;
-display:none;
 }
 #block-block-14 .follow-us img,
 #block-block-3 .follow-us img{
@@ -221,6 +327,7 @@ margin-top:10px;
 border:1px solid #ccc;
 padding: 13px 25px;
 margin-top: 30px;
+position:relative;
 }
 #block-block-3 .company-footer{
 font-family: sans-serif;
@@ -561,6 +668,7 @@ width:33%;
 display:block;
 width:95%;
 margin:0 auto;
+margin-bottom: 10px;
 }
 }
 @media only screen and (min-width:961px) and (max-width:1295px){
