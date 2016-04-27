@@ -95,7 +95,7 @@
 
 <div class="for-freetiaokuan">
 <div class="free-content">
-<div class="closee">X</div>
+<div class="closee">×</div>
 
 <?php
 global $language;
