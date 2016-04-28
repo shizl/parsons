@@ -1,3 +1,7 @@
+.custom-images img{
+width:100%;
+height:auto;
+}
 .arrow-facebook{
 width:17px;
 height:7px;
@@ -466,6 +470,9 @@ font-size:18px;
 border-bottom:1px solid #ccc;
 }
 @media only screen and (min-width:320px) and (max-width:479px){
+#block-block-14 .follow-us{
+padding: 13px 18px;
+}
 #webform-client-form-442 .form-item-captcha-response,
 #webform-client-form-441 .form-item-captcha-response,
 #webform-client-form-105 .form-item-captcha-response{
