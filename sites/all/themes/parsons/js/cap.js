@@ -22,39 +22,39 @@ jQuery(".wechat-con").click(function(){
      jQuery(".arrow-facebook").css("display","none");
 });
 jQuery(".wechat-sh").mouseenter(function(){
-     jQuery(".img-sh").fadeIn(500);
+     jQuery(".img-sh").fadeIn(200);
 jQuery(".wechat-sh").mouseleave(function(){
-     jQuery(".img-sh").fadeOut(500);
+     jQuery(".img-sh").fadeOut(200);
 });
 });
 jQuery(".wechat-zb").mouseenter(function(){
-     jQuery(".img-zb").fadeIn(500);
+     jQuery(".img-zb").fadeIn(200);
 jQuery(".wechat-zb").mouseleave(function(){
-     jQuery(".img-zb").fadeOut(500);
+     jQuery(".img-zb").fadeOut(200);
 });
 });
 jQuery(".wechat-hk").mouseenter(function(){
-     jQuery(".img-hk").fadeIn(500);
+     jQuery(".img-hk").fadeIn(200);
 jQuery(".wechat-hk").mouseleave(function(){
-     jQuery(".img-hk").fadeOut(500);
+     jQuery(".img-hk").fadeOut(200);
 });
 });
 jQuery(".wechat-bj").mouseenter(function(){
-     jQuery(".img-bj").fadeIn(500);
+     jQuery(".img-bj").fadeIn(200);
 jQuery(".wechat-bj").mouseleave(function(){
-     jQuery(".img-bj").fadeOut(500);
+     jQuery(".img-bj").fadeOut(200);
 });
 });
 jQuery(".wechat-gd").mouseenter(function(){
-     jQuery(".img-gd").fadeIn(500);
+     jQuery(".img-gd").fadeIn(200);
 jQuery(".wechat-gd").mouseleave(function(){
-     jQuery(".img-gd").fadeOut(500);
+     jQuery(".img-gd").fadeOut(200);
 });
 });
 jQuery(".wechat-fj").mouseenter(function(){
-     jQuery(".img-fj").fadeIn(500);
+     jQuery(".img-fj").fadeIn(200);
 jQuery(".wechat-fj").mouseleave(function(){
-     jQuery(".img-fj").fadeOut(500);
+     jQuery(".img-fj").fadeOut(200);
 });
 });
 });
