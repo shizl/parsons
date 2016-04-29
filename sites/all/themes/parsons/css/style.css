@@ -2364,7 +2364,7 @@ padding-left:3%;
 padding-right:3%;
 }
 .view-culture .views-field-nothing .body p{
-
+    display: inline-block;
 margin:0px;
     margin-top: 2px;
 }
