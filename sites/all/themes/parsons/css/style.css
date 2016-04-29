@@ -2364,9 +2364,11 @@ padding-left:3%;
 padding-right:3%;
 }
 .view-culture .views-field-nothing .body p{
-    display: inline-block;
 margin:0px;
-    margin-top: 2px;
+margin-top: 2px;
+width: 229px;
+height: 18px;
+overflow: hidden; 
 }
 .view-culture .views-field-title{
 
@@ -2397,7 +2399,7 @@ height:auto;
 .view-culture .views-field-nothing .morelink2{
 
 float:right;
-    margin-top: 20px;
+    margin-top: 23px;
 }
 .view-culture .views-field-nothing{
 
