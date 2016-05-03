@@ -331,23 +331,22 @@ text-indent: 10px;
 color:#fff;
 }
 .manufacture-middle .col-1{
-width:31%;
+width:28.2%;
 float:left;
-margin-right:1%;
-height:980px;
+margin-right:1.5%;
 }
 
 
 .manufacture-middle .col-2{
-width:33%;
+width:34.5%;
 float:left;
-margin-right:1%;
-height:980px;
+margin-right:1.5%;
+
 }
 .manufacture-middle .col-3{
-width:34%;
+width:34.3%;
 float:left;
-height:980px;
+
 }
 .manufacture-middle  li{
 position: relative;
